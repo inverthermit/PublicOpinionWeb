@@ -1,8 +1,10 @@
 package com.szse.po.dao;
 
 import java.util.List;
+
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,14 +31,22 @@ public class TextdataDAO extends BaseHibernateDAO {
 
 	public void save(Textdata transientInstance) {
 		log.debug("saving Textdata instance");
+		 Transaction transaction= getSession().beginTransaction();  
 		try {
 			getSession().save(transientInstance);
+			transaction.commit();  
+			 getSession().flush();  
+			 getSession().close(); 
 			log.debug("save successful");
+			
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;
 		}
+		
+		
 	}
+	
 
 	public void delete(Textdata persistentInstance) {
 		log.debug("deleting Textdata instance");

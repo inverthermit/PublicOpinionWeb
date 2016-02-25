@@ -38,7 +38,7 @@ public class Hello {
 
             System.out.println("spring mvc hello world!");
 
-            return "hello";
+            return "index";
 
         }
 
