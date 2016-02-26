@@ -26,33 +26,32 @@ public class TextdataDAO extends BaseHibernateDAO {
 	// property constants
 	public static final String URL = "url";
 	public static final String TIME = "time";
-	public static final String TITLE = "title";
 	public static final String CONTENT = "content";
 	public static final String VECTOR = "vector";
 
 	public void save(Textdata transientInstance) {
-		Transaction transaction= getSession().beginTransaction();  
 		log.debug("saving Textdata instance");
+		 Transaction transaction= getSession().beginTransaction();  
 		try {
 			getSession().save(transientInstance);
 			transaction.commit();  
 			 getSession().flush();  
 			 getSession().close(); 
 			log.debug("save successful");
+			
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;
 		}
+		
+		
 	}
+	
 
 	public void delete(Textdata persistentInstance) {
-		Transaction transaction= getSession().beginTransaction(); 
 		log.debug("deleting Textdata instance");
 		try {
 			getSession().delete(persistentInstance);
-			transaction.commit();  
-			 getSession().flush();  
-			 getSession().close(); 
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
@@ -108,10 +107,6 @@ public class TextdataDAO extends BaseHibernateDAO {
 
 	public List findByTime(Object time) {
 		return findByProperty(TIME, time);
-	}
-
-	public List findByTitle(Object title) {
-		return findByProperty(TITLE, title);
 	}
 
 	public List findByContent(Object content) {

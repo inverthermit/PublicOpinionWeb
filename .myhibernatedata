@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Tue Feb 23 15:51:31 CST 2016
+#Fri Feb 26 14:32:07 CST 2016
 genBasicCompId=false
 sessionFactoryName=com.szse.po.sessionfactory.HibernateSessionFactory
 profile=
@@ -18,4 +18,4 @@ genAnnotations=false
 reSettingsFile=
 configFile=/PublicOpinionWeb/src/hibernate.cfg.xml
 createConfigFile=true
-baseDaoClass=BaseHibernateDAO
+baseDaoClass=com.szse.po.dao.BaseHibernateDAO

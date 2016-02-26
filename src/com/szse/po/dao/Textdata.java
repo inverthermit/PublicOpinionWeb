@@ -11,6 +11,7 @@ public class Textdata implements java.io.Serializable {
 	private Integer tid;
 	private String url;
 	private String time;
+	private String title;
 	private String content;
 	private String vector;
 
@@ -21,9 +22,11 @@ public class Textdata implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Textdata(String url, String time, String content, String vector) {
+	public Textdata(String url, String time, String title, String content,
+			String vector) {
 		this.url = url;
 		this.time = time;
+		this.title = title;
 		this.content = content;
 		this.vector = vector;
 	}
@@ -52,6 +55,14 @@ public class Textdata implements java.io.Serializable {
 
 	public void setTime(String time) {
 		this.time = time;
+	}
+
+	public String getTitle() {
+		return this.title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getContent() {
