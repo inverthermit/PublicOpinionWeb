@@ -9,8 +9,12 @@ public class classifier {
 	
 	public static Miningresult classify(Textdata td)
 	{
-		
 		Miningresult mr=new Miningresult();
+		
+		
+		return mr;
 	}
+	
+	
 
 }

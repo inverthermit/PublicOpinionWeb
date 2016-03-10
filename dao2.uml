@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="dao2">
+  <packagedElement xmi:type="uml:Package" xmi:id="_t0U-AOTaEeW9-v5zsjDGYw" name="dao">
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-KuTaEeW9-v5zsjDGYw" name="Systemlog" clientDependency="_t0U-MOTaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U-K-TaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Systemlog entity. @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_t0U-LOTaEeW9-v5zsjDGYw" name="sid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-LeTaEeW9-v5zsjDGYw" name="time" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-LuTaEeW9-v5zsjDGYw" name="category" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-L-TaEeW9-v5zsjDGYw" name="content" visibility="private"/>
+      <interfaceRealization xmi:id="_t0U-MOTaEeW9-v5zsjDGYw" name="java.io.Serializable" supplier="_t0U_juTaEeW9-v5zsjDGYw" client="_t0U-KuTaEeW9-v5zsjDGYw" contract="_t0U_juTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U-MeTaEeW9-v5zsjDGYw" name="getSid" visibility="public">
+        <ownedParameter xmi:id="_t0U-MuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-M-TaEeW9-v5zsjDGYw" name="setSid" visibility="public">
+        <ownedParameter xmi:id="_t0U-NOTaEeW9-v5zsjDGYw" name="sid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-NeTaEeW9-v5zsjDGYw" name="getTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-NuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-N-TaEeW9-v5zsjDGYw" name="setTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-OOTaEeW9-v5zsjDGYw" name="time"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-OeTaEeW9-v5zsjDGYw" name="getCategory" visibility="public">
+        <ownedParameter xmi:id="_t0U-OuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-O-TaEeW9-v5zsjDGYw" name="setCategory" visibility="public">
+        <ownedParameter xmi:id="_t0U-POTaEeW9-v5zsjDGYw" name="category"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-PeTaEeW9-v5zsjDGYw" name="getContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-PuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-P-TaEeW9-v5zsjDGYw" name="setContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-QOTaEeW9-v5zsjDGYw" name="content"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-xeTaEeW9-v5zsjDGYw" name="Miningresult" clientDependency="_t0U-1OTaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U-xuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Miningresult entity. @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_t0U-x-TaEeW9-v5zsjDGYw" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+        <ownedComment xmi:id="_t0U-yOTaEeW9-v5zsjDGYw">
+          <body>/** 
+ */
+</body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_t0U-yeTaEeW9-v5zsjDGYw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-yuTaEeW9-v5zsjDGYw" name="mid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-y-TaEeW9-v5zsjDGYw" name="tid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-zOTaEeW9-v5zsjDGYw" name="psentiment" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-zeTaEeW9-v5zsjDGYw" name="nsentiment" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-zuTaEeW9-v5zsjDGYw" name="textNum" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-z-TaEeW9-v5zsjDGYw" name="keywords" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-0OTaEeW9-v5zsjDGYw" name="updatetime" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-0eTaEeW9-v5zsjDGYw" name="lcrelated" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-0uTaEeW9-v5zsjDGYw" name="lcname" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-0-TaEeW9-v5zsjDGYw" name="categoryid" visibility="private"/>
+      <interfaceRealization xmi:id="_t0U-1OTaEeW9-v5zsjDGYw" name="java.io.Serializable" supplier="_t0U_juTaEeW9-v5zsjDGYw" client="_t0U-xeTaEeW9-v5zsjDGYw" contract="_t0U_juTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U-1eTaEeW9-v5zsjDGYw" name="getMid" visibility="public">
+        <ownedParameter xmi:id="_t0U-1uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-1-TaEeW9-v5zsjDGYw" name="setMid" visibility="public">
+        <ownedParameter xmi:id="_t0U-2OTaEeW9-v5zsjDGYw" name="mid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-2eTaEeW9-v5zsjDGYw" name="getTid" visibility="public">
+        <ownedParameter xmi:id="_t0U-2uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-2-TaEeW9-v5zsjDGYw" name="setTid" visibility="public">
+        <ownedParameter xmi:id="_t0U-3OTaEeW9-v5zsjDGYw" name="tid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-3eTaEeW9-v5zsjDGYw" name="getPsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-3uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-3-TaEeW9-v5zsjDGYw" name="setPsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-4OTaEeW9-v5zsjDGYw" name="psentiment"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-4eTaEeW9-v5zsjDGYw" name="getNsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-4uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-4-TaEeW9-v5zsjDGYw" name="setNsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-5OTaEeW9-v5zsjDGYw" name="nsentiment"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-5eTaEeW9-v5zsjDGYw" name="getTextNum" visibility="public">
+        <ownedParameter xmi:id="_t0U-5uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-5-TaEeW9-v5zsjDGYw" name="setTextNum" visibility="public">
+        <ownedParameter xmi:id="_t0U-6OTaEeW9-v5zsjDGYw" name="textNum"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-6eTaEeW9-v5zsjDGYw" name="getKeywords" visibility="public">
+        <ownedParameter xmi:id="_t0U-6uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-6-TaEeW9-v5zsjDGYw" name="setKeywords" visibility="public">
+        <ownedParameter xmi:id="_t0U-7OTaEeW9-v5zsjDGYw" name="keywords"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-7eTaEeW9-v5zsjDGYw" name="getUpdatetime" visibility="public">
+        <ownedParameter xmi:id="_t0U-7uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-7-TaEeW9-v5zsjDGYw" name="setUpdatetime" visibility="public">
+        <ownedParameter xmi:id="_t0U-8OTaEeW9-v5zsjDGYw" name="updatetime"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-8eTaEeW9-v5zsjDGYw" name="getLcrelated" visibility="public">
+        <ownedParameter xmi:id="_t0U-8uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-8-TaEeW9-v5zsjDGYw" name="setLcrelated" visibility="public">
+        <ownedParameter xmi:id="_t0U-9OTaEeW9-v5zsjDGYw" name="lcrelated"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-9eTaEeW9-v5zsjDGYw" name="getLcname" visibility="public">
+        <ownedParameter xmi:id="_t0U-9uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-9-TaEeW9-v5zsjDGYw" name="setLcname" visibility="public">
+        <ownedParameter xmi:id="_t0U--OTaEeW9-v5zsjDGYw" name="lcname"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U--eTaEeW9-v5zsjDGYw" name="getCategoryid" visibility="public">
+        <ownedParameter xmi:id="_t0U--uTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U---TaEeW9-v5zsjDGYw" name="setCategoryid" visibility="public">
+        <ownedParameter xmi:id="_t0U-_OTaEeW9-v5zsjDGYw" name="categoryid"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U_MeTaEeW9-v5zsjDGYw" name="Textdata" clientDependency="_t0U_OeTaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U_MuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Textdata entity. @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_t0U_M-TaEeW9-v5zsjDGYw" name="tid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_NOTaEeW9-v5zsjDGYw" name="url" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_NeTaEeW9-v5zsjDGYw" name="time" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_NuTaEeW9-v5zsjDGYw" name="title" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_N-TaEeW9-v5zsjDGYw" name="content" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_OOTaEeW9-v5zsjDGYw" name="vector" visibility="private"/>
+      <interfaceRealization xmi:id="_t0U_OeTaEeW9-v5zsjDGYw" name="java.io.Serializable" supplier="_t0U_juTaEeW9-v5zsjDGYw" client="_t0U_MeTaEeW9-v5zsjDGYw" contract="_t0U_juTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U_OuTaEeW9-v5zsjDGYw" name="getTid" visibility="public">
+        <ownedParameter xmi:id="_t0U_O-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_POTaEeW9-v5zsjDGYw" name="setTid" visibility="public">
+        <ownedParameter xmi:id="_t0U_PeTaEeW9-v5zsjDGYw" name="tid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_PuTaEeW9-v5zsjDGYw" name="getUrl" visibility="public">
+        <ownedParameter xmi:id="_t0U_P-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_QOTaEeW9-v5zsjDGYw" name="setUrl" visibility="public">
+        <ownedParameter xmi:id="_t0U_QeTaEeW9-v5zsjDGYw" name="url"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_QuTaEeW9-v5zsjDGYw" name="getTime" visibility="public">
+        <ownedParameter xmi:id="_t0U_Q-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_ROTaEeW9-v5zsjDGYw" name="setTime" visibility="public">
+        <ownedParameter xmi:id="_t0U_ReTaEeW9-v5zsjDGYw" name="time"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_RuTaEeW9-v5zsjDGYw" name="getTitle" visibility="public">
+        <ownedParameter xmi:id="_t0U_R-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_SOTaEeW9-v5zsjDGYw" name="setTitle" visibility="public">
+        <ownedParameter xmi:id="_t0U_SeTaEeW9-v5zsjDGYw" name="title"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_SuTaEeW9-v5zsjDGYw" name="getContent" visibility="public">
+        <ownedParameter xmi:id="_t0U_S-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_TOTaEeW9-v5zsjDGYw" name="setContent" visibility="public">
+        <ownedParameter xmi:id="_t0U_TeTaEeW9-v5zsjDGYw" name="content"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_TuTaEeW9-v5zsjDGYw" name="getVector" visibility="public">
+        <ownedParameter xmi:id="_t0U_T-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_UOTaEeW9-v5zsjDGYw" name="setVector" visibility="public">
+        <ownedParameter xmi:id="_t0U_UeTaEeW9-v5zsjDGYw" name="vector"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-BeTaEeW9-v5zsjDGYw" name="OutputresultDAO">
+      <ownedComment xmi:id="_t0U-BuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * A data access object (DAO) providing persistence and search support for Outputresult entities. Transaction control of the save(), update() and delete() operations can directly support Spring container-managed transactions or they can be augmented to handle user-managed Spring transactions. Each of these methods provides additional information for how to configure it for the desired type of transaction control.
+ * @see com.szse.po.dao.Outputresult
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_t0U-B-TaEeW9-v5zsjDGYw" general="_t0U_ieTaEeW9-v5zsjDGYw"/>
+      <ownedAttribute xmi:id="_t0U-COTaEeW9-v5zsjDGYw" name="log" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_t0U-CeTaEeW9-v5zsjDGYw" name="TIME" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-CuTaEeW9-v5zsjDGYw" value="time"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-C-TaEeW9-v5zsjDGYw" name="CONTENT" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-DOTaEeW9-v5zsjDGYw" value="content"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t0U-DeTaEeW9-v5zsjDGYw" name="save" visibility="public">
+        <ownedParameter xmi:id="_t0U-DuTaEeW9-v5zsjDGYw" name="transientInstance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-D-TaEeW9-v5zsjDGYw" name="delete" visibility="public">
+        <ownedParameter xmi:id="_t0U-EOTaEeW9-v5zsjDGYw" name="persistentInstance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-EeTaEeW9-v5zsjDGYw" name="findById" visibility="public">
+        <ownedParameter xmi:id="_t0U-EuTaEeW9-v5zsjDGYw" name="id"/>
+        <ownedParameter xmi:id="_t0U-E-TaEeW9-v5zsjDGYw" name="return" type="_t0U-QeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-FOTaEeW9-v5zsjDGYw" name="findByExample" visibility="public">
+        <ownedParameter xmi:id="_t0U-FeTaEeW9-v5zsjDGYw" name="instance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-FuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-F-TaEeW9-v5zsjDGYw" name="findByProperty" visibility="public">
+        <ownedParameter xmi:id="_t0U-GOTaEeW9-v5zsjDGYw" name="propertyName"/>
+        <ownedParameter xmi:id="_t0U-GeTaEeW9-v5zsjDGYw" name="value"/>
+        <ownedParameter xmi:id="_t0U-GuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-G-TaEeW9-v5zsjDGYw" name="findByTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-HOTaEeW9-v5zsjDGYw" name="time"/>
+        <ownedParameter xmi:id="_t0U-HeTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-HuTaEeW9-v5zsjDGYw" name="findByContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-H-TaEeW9-v5zsjDGYw" name="content"/>
+        <ownedParameter xmi:id="_t0U-IOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-IeTaEeW9-v5zsjDGYw" name="findAll" visibility="public">
+        <ownedParameter xmi:id="_t0U-IuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-I-TaEeW9-v5zsjDGYw" name="merge" visibility="public">
+        <ownedParameter xmi:id="_t0U-JOTaEeW9-v5zsjDGYw" name="detachedInstance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-JeTaEeW9-v5zsjDGYw" name="return" type="_t0U-QeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-JuTaEeW9-v5zsjDGYw" name="attachDirty" visibility="public">
+        <ownedParameter xmi:id="_t0U-J-TaEeW9-v5zsjDGYw" name="instance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-KOTaEeW9-v5zsjDGYw" name="attachClean" visibility="public">
+        <ownedParameter xmi:id="_t0U-KeTaEeW9-v5zsjDGYw" name="instance" type="_t0U-QeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-QeTaEeW9-v5zsjDGYw" name="Outputresult" clientDependency="_t0U-RuTaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U-QuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Outputresult entity. @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_t0U-Q-TaEeW9-v5zsjDGYw" name="oid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-ROTaEeW9-v5zsjDGYw" name="time" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U-ReTaEeW9-v5zsjDGYw" name="content" visibility="private"/>
+      <interfaceRealization xmi:id="_t0U-RuTaEeW9-v5zsjDGYw" name="java.io.Serializable" supplier="_t0U_juTaEeW9-v5zsjDGYw" client="_t0U-QeTaEeW9-v5zsjDGYw" contract="_t0U_juTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U-R-TaEeW9-v5zsjDGYw" name="getOid" visibility="public">
+        <ownedParameter xmi:id="_t0U-SOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-SeTaEeW9-v5zsjDGYw" name="setOid" visibility="public">
+        <ownedParameter xmi:id="_t0U-SuTaEeW9-v5zsjDGYw" name="oid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-S-TaEeW9-v5zsjDGYw" name="getTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-TOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-TeTaEeW9-v5zsjDGYw" name="setTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-TuTaEeW9-v5zsjDGYw" name="time"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-T-TaEeW9-v5zsjDGYw" name="getContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-UOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-UeTaEeW9-v5zsjDGYw" name="setContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-UuTaEeW9-v5zsjDGYw" name="content"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-_eTaEeW9-v5zsjDGYw" name="TextdataDAO">
+      <ownedComment xmi:id="_t0U-_uTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * A data access object (DAO) providing persistence and search support for Textdata entities. Transaction control of the save(), update() and delete() operations can directly support Spring container-managed transactions or they can be augmented to handle user-managed Spring transactions. Each of these methods provides additional information for how to configure it for the desired type of transaction control.
+ * @see com.szse.po.dao.Textdata
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_t0U-_-TaEeW9-v5zsjDGYw" general="_t0U_ieTaEeW9-v5zsjDGYw"/>
+      <ownedAttribute xmi:id="_t0U_AOTaEeW9-v5zsjDGYw" name="log" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_t0U_AeTaEeW9-v5zsjDGYw" name="URL" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_AuTaEeW9-v5zsjDGYw" value="url"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U_A-TaEeW9-v5zsjDGYw" name="TIME" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_BOTaEeW9-v5zsjDGYw" value="time"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U_BeTaEeW9-v5zsjDGYw" name="TITLE" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_BuTaEeW9-v5zsjDGYw" value="title"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U_B-TaEeW9-v5zsjDGYw" name="CONTENT" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_COTaEeW9-v5zsjDGYw" value="content"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U_CeTaEeW9-v5zsjDGYw" name="VECTOR" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_CuTaEeW9-v5zsjDGYw" value="vector"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t0U_C-TaEeW9-v5zsjDGYw" name="save" visibility="public">
+        <ownedParameter xmi:id="_t0U_DOTaEeW9-v5zsjDGYw" name="transientInstance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_DeTaEeW9-v5zsjDGYw" name="delete" visibility="public">
+        <ownedParameter xmi:id="_t0U_DuTaEeW9-v5zsjDGYw" name="persistentInstance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_D-TaEeW9-v5zsjDGYw" name="findById" visibility="public">
+        <ownedParameter xmi:id="_t0U_EOTaEeW9-v5zsjDGYw" name="id"/>
+        <ownedParameter xmi:id="_t0U_EeTaEeW9-v5zsjDGYw" name="return" type="_t0U_MeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_EuTaEeW9-v5zsjDGYw" name="findByExample" visibility="public">
+        <ownedParameter xmi:id="_t0U_E-TaEeW9-v5zsjDGYw" name="instance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U_FOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_FeTaEeW9-v5zsjDGYw" name="findByProperty" visibility="public">
+        <ownedParameter xmi:id="_t0U_FuTaEeW9-v5zsjDGYw" name="propertyName"/>
+        <ownedParameter xmi:id="_t0U_F-TaEeW9-v5zsjDGYw" name="value"/>
+        <ownedParameter xmi:id="_t0U_GOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_GeTaEeW9-v5zsjDGYw" name="findByUrl" visibility="public">
+        <ownedParameter xmi:id="_t0U_GuTaEeW9-v5zsjDGYw" name="url"/>
+        <ownedParameter xmi:id="_t0U_G-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_HOTaEeW9-v5zsjDGYw" name="findByTime" visibility="public">
+        <ownedParameter xmi:id="_t0U_HeTaEeW9-v5zsjDGYw" name="time"/>
+        <ownedParameter xmi:id="_t0U_HuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_H-TaEeW9-v5zsjDGYw" name="findByTitle" visibility="public">
+        <ownedParameter xmi:id="_t0U_IOTaEeW9-v5zsjDGYw" name="title"/>
+        <ownedParameter xmi:id="_t0U_IeTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_IuTaEeW9-v5zsjDGYw" name="findByContent" visibility="public">
+        <ownedParameter xmi:id="_t0U_I-TaEeW9-v5zsjDGYw" name="content"/>
+        <ownedParameter xmi:id="_t0U_JOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_JeTaEeW9-v5zsjDGYw" name="findByVector" visibility="public">
+        <ownedParameter xmi:id="_t0U_JuTaEeW9-v5zsjDGYw" name="vector"/>
+        <ownedParameter xmi:id="_t0U_J-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_KOTaEeW9-v5zsjDGYw" name="findAll" visibility="public">
+        <ownedParameter xmi:id="_t0U_KeTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_KuTaEeW9-v5zsjDGYw" name="merge" visibility="public">
+        <ownedParameter xmi:id="_t0U_K-TaEeW9-v5zsjDGYw" name="detachedInstance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U_LOTaEeW9-v5zsjDGYw" name="return" type="_t0U_MeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_LeTaEeW9-v5zsjDGYw" name="attachDirty" visibility="public">
+        <ownedParameter xmi:id="_t0U_LuTaEeW9-v5zsjDGYw" name="instance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_L-TaEeW9-v5zsjDGYw" name="attachClean" visibility="public">
+        <ownedParameter xmi:id="_t0U_MOTaEeW9-v5zsjDGYw" name="instance" type="_t0U_MeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_t0U-AeTaEeW9-v5zsjDGYw" name="IBaseHibernateDAO">
+      <ownedComment xmi:id="_t0U-AuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Data access interface for domain model
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedOperation xmi:id="_t0U-A-TaEeW9-v5zsjDGYw" name="getSession" visibility="public">
+        <ownedParameter xmi:id="_t0U-BOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_t0U_juTaEeW9-v5zsjDGYw" name="Serializable"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U_ieTaEeW9-v5zsjDGYw" name="BaseHibernateDAO" clientDependency="_t0U_i-TaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U_iuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Data access object (DAO) for domain model
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <interfaceRealization xmi:id="_t0U_i-TaEeW9-v5zsjDGYw" name="IBaseHibernateDAO" supplier="_t0U-AeTaEeW9-v5zsjDGYw" client="_t0U_ieTaEeW9-v5zsjDGYw" contract="_t0U-AeTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U_jOTaEeW9-v5zsjDGYw" name="getSession" visibility="public">
+        <ownedParameter xmi:id="_t0U_jeTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-feTaEeW9-v5zsjDGYw" name="MiningresultDAO">
+      <ownedComment xmi:id="_t0U-fuTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * A data access object (DAO) providing persistence and search support for Miningresult entities. Transaction control of the save(), update() and delete() operations can directly support Spring container-managed transactions or they can be augmented to handle user-managed Spring transactions. Each of these methods provides additional information for how to configure it for the desired type of transaction control.
+ * @see com.szse.po.dao.Miningresult
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_t0U-f-TaEeW9-v5zsjDGYw" general="_t0U_ieTaEeW9-v5zsjDGYw"/>
+      <ownedAttribute xmi:id="_t0U-gOTaEeW9-v5zsjDGYw" name="log" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_t0U-geTaEeW9-v5zsjDGYw" name="TID" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-guTaEeW9-v5zsjDGYw" value="tid"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-g-TaEeW9-v5zsjDGYw" name="PSENTIMENT" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-hOTaEeW9-v5zsjDGYw" value="psentiment"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-heTaEeW9-v5zsjDGYw" name="NSENTIMENT" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-huTaEeW9-v5zsjDGYw" value="nsentiment"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-h-TaEeW9-v5zsjDGYw" name="TEXT_NUM" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-iOTaEeW9-v5zsjDGYw" value="textNum"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-ieTaEeW9-v5zsjDGYw" name="KEYWORDS" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-iuTaEeW9-v5zsjDGYw" value="keywords"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-i-TaEeW9-v5zsjDGYw" name="UPDATETIME" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-jOTaEeW9-v5zsjDGYw" value="updatetime"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-jeTaEeW9-v5zsjDGYw" name="LCRELATED" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-juTaEeW9-v5zsjDGYw" value="lcrelated"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-j-TaEeW9-v5zsjDGYw" name="LCNAME" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-kOTaEeW9-v5zsjDGYw" value="lcname"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-keTaEeW9-v5zsjDGYw" name="CATEGORYID" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-kuTaEeW9-v5zsjDGYw" value="categoryid"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t0U-k-TaEeW9-v5zsjDGYw" name="save" visibility="public">
+        <ownedParameter xmi:id="_t0U-lOTaEeW9-v5zsjDGYw" name="transientInstance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-leTaEeW9-v5zsjDGYw" name="delete" visibility="public">
+        <ownedParameter xmi:id="_t0U-luTaEeW9-v5zsjDGYw" name="persistentInstance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-l-TaEeW9-v5zsjDGYw" name="findById" visibility="public">
+        <ownedParameter xmi:id="_t0U-mOTaEeW9-v5zsjDGYw" name="id"/>
+        <ownedParameter xmi:id="_t0U-meTaEeW9-v5zsjDGYw" name="return" type="_t0U-xeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-muTaEeW9-v5zsjDGYw" name="findByExample" visibility="public">
+        <ownedParameter xmi:id="_t0U-m-TaEeW9-v5zsjDGYw" name="instance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-nOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-neTaEeW9-v5zsjDGYw" name="findByProperty" visibility="public">
+        <ownedParameter xmi:id="_t0U-nuTaEeW9-v5zsjDGYw" name="propertyName"/>
+        <ownedParameter xmi:id="_t0U-n-TaEeW9-v5zsjDGYw" name="value"/>
+        <ownedParameter xmi:id="_t0U-oOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-oeTaEeW9-v5zsjDGYw" name="findByTid" visibility="public">
+        <ownedParameter xmi:id="_t0U-ouTaEeW9-v5zsjDGYw" name="tid"/>
+        <ownedParameter xmi:id="_t0U-o-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-pOTaEeW9-v5zsjDGYw" name="findByPsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-peTaEeW9-v5zsjDGYw" name="psentiment"/>
+        <ownedParameter xmi:id="_t0U-puTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-p-TaEeW9-v5zsjDGYw" name="findByNsentiment" visibility="public">
+        <ownedParameter xmi:id="_t0U-qOTaEeW9-v5zsjDGYw" name="nsentiment"/>
+        <ownedParameter xmi:id="_t0U-qeTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-quTaEeW9-v5zsjDGYw" name="findByTextNum" visibility="public">
+        <ownedParameter xmi:id="_t0U-q-TaEeW9-v5zsjDGYw" name="textNum"/>
+        <ownedParameter xmi:id="_t0U-rOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-reTaEeW9-v5zsjDGYw" name="findByKeywords" visibility="public">
+        <ownedParameter xmi:id="_t0U-ruTaEeW9-v5zsjDGYw" name="keywords"/>
+        <ownedParameter xmi:id="_t0U-r-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-sOTaEeW9-v5zsjDGYw" name="findByUpdatetime" visibility="public">
+        <ownedParameter xmi:id="_t0U-seTaEeW9-v5zsjDGYw" name="updatetime"/>
+        <ownedParameter xmi:id="_t0U-suTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-s-TaEeW9-v5zsjDGYw" name="findByLcrelated" visibility="public">
+        <ownedParameter xmi:id="_t0U-tOTaEeW9-v5zsjDGYw" name="lcrelated"/>
+        <ownedParameter xmi:id="_t0U-teTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-tuTaEeW9-v5zsjDGYw" name="findByLcname" visibility="public">
+        <ownedParameter xmi:id="_t0U-t-TaEeW9-v5zsjDGYw" name="lcname"/>
+        <ownedParameter xmi:id="_t0U-uOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-ueTaEeW9-v5zsjDGYw" name="findByCategoryid" visibility="public">
+        <ownedParameter xmi:id="_t0U-uuTaEeW9-v5zsjDGYw" name="categoryid"/>
+        <ownedParameter xmi:id="_t0U-u-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-vOTaEeW9-v5zsjDGYw" name="findAll" visibility="public">
+        <ownedParameter xmi:id="_t0U-veTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-vuTaEeW9-v5zsjDGYw" name="merge" visibility="public">
+        <ownedParameter xmi:id="_t0U-v-TaEeW9-v5zsjDGYw" name="detachedInstance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-wOTaEeW9-v5zsjDGYw" name="return" type="_t0U-xeTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-weTaEeW9-v5zsjDGYw" name="attachDirty" visibility="public">
+        <ownedParameter xmi:id="_t0U-wuTaEeW9-v5zsjDGYw" name="instance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-w-TaEeW9-v5zsjDGYw" name="attachClean" visibility="public">
+        <ownedParameter xmi:id="_t0U-xOTaEeW9-v5zsjDGYw" name="instance" type="_t0U-xeTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U-U-TaEeW9-v5zsjDGYw" name="SystemlogDAO">
+      <ownedComment xmi:id="_t0U-VOTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * A data access object (DAO) providing persistence and search support for Systemlog entities. Transaction control of the save(), update() and delete() operations can directly support Spring container-managed transactions or they can be augmented to handle user-managed Spring transactions. Each of these methods provides additional information for how to configure it for the desired type of transaction control.
+ * @see com.szse.po.dao.Systemlog
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_t0U-VeTaEeW9-v5zsjDGYw" general="_t0U_ieTaEeW9-v5zsjDGYw"/>
+      <ownedAttribute xmi:id="_t0U-VuTaEeW9-v5zsjDGYw" name="log" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_t0U-V-TaEeW9-v5zsjDGYw" name="TIME" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-WOTaEeW9-v5zsjDGYw" value="time"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-WeTaEeW9-v5zsjDGYw" name="CATEGORY" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-WuTaEeW9-v5zsjDGYw" value="category"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U-W-TaEeW9-v5zsjDGYw" name="CONTENT" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U-XOTaEeW9-v5zsjDGYw" value="content"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t0U-XeTaEeW9-v5zsjDGYw" name="save" visibility="public">
+        <ownedParameter xmi:id="_t0U-XuTaEeW9-v5zsjDGYw" name="transientInstance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-X-TaEeW9-v5zsjDGYw" name="delete" visibility="public">
+        <ownedParameter xmi:id="_t0U-YOTaEeW9-v5zsjDGYw" name="persistentInstance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-YeTaEeW9-v5zsjDGYw" name="findById" visibility="public">
+        <ownedParameter xmi:id="_t0U-YuTaEeW9-v5zsjDGYw" name="id"/>
+        <ownedParameter xmi:id="_t0U-Y-TaEeW9-v5zsjDGYw" name="return" type="_t0U-KuTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-ZOTaEeW9-v5zsjDGYw" name="findByExample" visibility="public">
+        <ownedParameter xmi:id="_t0U-ZeTaEeW9-v5zsjDGYw" name="instance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-ZuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-Z-TaEeW9-v5zsjDGYw" name="findByProperty" visibility="public">
+        <ownedParameter xmi:id="_t0U-aOTaEeW9-v5zsjDGYw" name="propertyName"/>
+        <ownedParameter xmi:id="_t0U-aeTaEeW9-v5zsjDGYw" name="value"/>
+        <ownedParameter xmi:id="_t0U-auTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-a-TaEeW9-v5zsjDGYw" name="findByTime" visibility="public">
+        <ownedParameter xmi:id="_t0U-bOTaEeW9-v5zsjDGYw" name="time"/>
+        <ownedParameter xmi:id="_t0U-beTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-buTaEeW9-v5zsjDGYw" name="findByCategory" visibility="public">
+        <ownedParameter xmi:id="_t0U-b-TaEeW9-v5zsjDGYw" name="category"/>
+        <ownedParameter xmi:id="_t0U-cOTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-ceTaEeW9-v5zsjDGYw" name="findByContent" visibility="public">
+        <ownedParameter xmi:id="_t0U-cuTaEeW9-v5zsjDGYw" name="content"/>
+        <ownedParameter xmi:id="_t0U-c-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-dOTaEeW9-v5zsjDGYw" name="findAll" visibility="public">
+        <ownedParameter xmi:id="_t0U-deTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-duTaEeW9-v5zsjDGYw" name="merge" visibility="public">
+        <ownedParameter xmi:id="_t0U-d-TaEeW9-v5zsjDGYw" name="detachedInstance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U-eOTaEeW9-v5zsjDGYw" name="return" type="_t0U-KuTaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-eeTaEeW9-v5zsjDGYw" name="attachDirty" visibility="public">
+        <ownedParameter xmi:id="_t0U-euTaEeW9-v5zsjDGYw" name="instance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U-e-TaEeW9-v5zsjDGYw" name="attachClean" visibility="public">
+        <ownedParameter xmi:id="_t0U-fOTaEeW9-v5zsjDGYw" name="instance" type="_t0U-KuTaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U_UuTaEeW9-v5zsjDGYw" name="UserconfigDAO">
+      <ownedComment xmi:id="_t0U_U-TaEeW9-v5zsjDGYw">
+        <body>/** 
+ * A data access object (DAO) providing persistence and search support for Userconfig entities. Transaction control of the save(), update() and delete() operations can directly support Spring container-managed transactions or they can be augmented to handle user-managed Spring transactions. Each of these methods provides additional information for how to configure it for the desired type of transaction control.
+ * @see com.szse.po.dao.Userconfig
+ * @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_t0U_VOTaEeW9-v5zsjDGYw" general="_t0U_ieTaEeW9-v5zsjDGYw"/>
+      <ownedAttribute xmi:id="_t0U_VeTaEeW9-v5zsjDGYw" name="log" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_t0U_VuTaEeW9-v5zsjDGYw" name="UID" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_V-TaEeW9-v5zsjDGYw" value="uid"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_t0U_WOTaEeW9-v5zsjDGYw" name="CONFIG" visibility="public" isStatic="true">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0U_WeTaEeW9-v5zsjDGYw" value="config"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t0U_WuTaEeW9-v5zsjDGYw" name="save" visibility="public">
+        <ownedParameter xmi:id="_t0U_W-TaEeW9-v5zsjDGYw" name="transientInstance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_XOTaEeW9-v5zsjDGYw" name="delete" visibility="public">
+        <ownedParameter xmi:id="_t0U_XeTaEeW9-v5zsjDGYw" name="persistentInstance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_XuTaEeW9-v5zsjDGYw" name="findById" visibility="public">
+        <ownedParameter xmi:id="_t0U_X-TaEeW9-v5zsjDGYw" name="id"/>
+        <ownedParameter xmi:id="_t0U_YOTaEeW9-v5zsjDGYw" name="return" type="_t0U_d-TaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_YeTaEeW9-v5zsjDGYw" name="findByExample" visibility="public">
+        <ownedParameter xmi:id="_t0U_YuTaEeW9-v5zsjDGYw" name="instance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U_Y-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_ZOTaEeW9-v5zsjDGYw" name="findByProperty" visibility="public">
+        <ownedParameter xmi:id="_t0U_ZeTaEeW9-v5zsjDGYw" name="propertyName"/>
+        <ownedParameter xmi:id="_t0U_ZuTaEeW9-v5zsjDGYw" name="value"/>
+        <ownedParameter xmi:id="_t0U_Z-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_aOTaEeW9-v5zsjDGYw" name="findByUid" visibility="public">
+        <ownedParameter xmi:id="_t0U_aeTaEeW9-v5zsjDGYw" name="uid"/>
+        <ownedParameter xmi:id="_t0U_auTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_a-TaEeW9-v5zsjDGYw" name="findByConfig" visibility="public">
+        <ownedParameter xmi:id="_t0U_bOTaEeW9-v5zsjDGYw" name="config"/>
+        <ownedParameter xmi:id="_t0U_beTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_buTaEeW9-v5zsjDGYw" name="findAll" visibility="public">
+        <ownedParameter xmi:id="_t0U_b-TaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_cOTaEeW9-v5zsjDGYw" name="merge" visibility="public">
+        <ownedParameter xmi:id="_t0U_ceTaEeW9-v5zsjDGYw" name="detachedInstance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+        <ownedParameter xmi:id="_t0U_cuTaEeW9-v5zsjDGYw" name="return" type="_t0U_d-TaEeW9-v5zsjDGYw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_c-TaEeW9-v5zsjDGYw" name="attachDirty" visibility="public">
+        <ownedParameter xmi:id="_t0U_dOTaEeW9-v5zsjDGYw" name="instance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_deTaEeW9-v5zsjDGYw" name="attachClean" visibility="public">
+        <ownedParameter xmi:id="_t0U_duTaEeW9-v5zsjDGYw" name="instance" type="_t0U_d-TaEeW9-v5zsjDGYw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0U_d-TaEeW9-v5zsjDGYw" name="Userconfig" clientDependency="_t0U_fOTaEeW9-v5zsjDGYw">
+      <ownedComment xmi:id="_t0U_eOTaEeW9-v5zsjDGYw">
+        <body>/** 
+ * Userconfig entity. @author MyEclipse Persistence Tools
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_t0U_eeTaEeW9-v5zsjDGYw" name="cid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_euTaEeW9-v5zsjDGYw" name="uid" visibility="private"/>
+      <ownedAttribute xmi:id="_t0U_e-TaEeW9-v5zsjDGYw" name="config" visibility="private"/>
+      <interfaceRealization xmi:id="_t0U_fOTaEeW9-v5zsjDGYw" name="java.io.Serializable" supplier="_t0U_juTaEeW9-v5zsjDGYw" client="_t0U_d-TaEeW9-v5zsjDGYw" contract="_t0U_juTaEeW9-v5zsjDGYw"/>
+      <ownedOperation xmi:id="_t0U_feTaEeW9-v5zsjDGYw" name="getCid" visibility="public">
+        <ownedParameter xmi:id="_t0U_fuTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_f-TaEeW9-v5zsjDGYw" name="setCid" visibility="public">
+        <ownedParameter xmi:id="_t0U_gOTaEeW9-v5zsjDGYw" name="cid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_geTaEeW9-v5zsjDGYw" name="getUid" visibility="public">
+        <ownedParameter xmi:id="_t0U_guTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_g-TaEeW9-v5zsjDGYw" name="setUid" visibility="public">
+        <ownedParameter xmi:id="_t0U_hOTaEeW9-v5zsjDGYw" name="uid"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_heTaEeW9-v5zsjDGYw" name="getConfig" visibility="public">
+        <ownedParameter xmi:id="_t0U_huTaEeW9-v5zsjDGYw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0U_h-TaEeW9-v5zsjDGYw" name="setConfig" visibility="public">
+        <ownedParameter xmi:id="_t0U_iOTaEeW9-v5zsjDGYw" name="config"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
