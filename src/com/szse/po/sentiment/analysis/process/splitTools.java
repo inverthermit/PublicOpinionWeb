@@ -1,79 +1,49 @@
-
-package com.szse.sentiment.analysis;
-
+package com.szse.po.sentiment.analysis.process;
 import java.util.*;
-import java.io.*;
 
-import com.szse.sentiment.NLPIR.code.NlpirDemo;
-
-public class SumCalculation {
+public class splitTools {
 
 	
-	public ArrayList<String> posdict=null;
-	public ArrayList<String> negdict=null;
-	
-	public ArrayList<String> mostdict =null;
-	public ArrayList<String> verydict =null;
-	public ArrayList<String> moredict =null;
-	public ArrayList<String> ishdict =null;
-	public ArrayList<String> insufficientdict =null;
-	public ArrayList<String> inversedict =null;
-	String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015\\";
-    NlpirDemo nlp=new NlpirDemo(argu);
+
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//dicInit(Config.ROOT_PATH);
-		
+		String a="a,s.e?f!d;w，x。v？z！w；e";
+		ArrayList<String> sp=splitSentences(a);
+		for(String b:sp)
+		System.out.println(b);
+
 	}
 	
-	public boolean dicInit(String filepath)
-	{
-		posdict=readTXTList(filepath+"posdict.txt");
-		negdict=readTXTList(filepath+"negdict.txt");
-		mostdict=readTXTList(filepath+"mostdict.txt");
-		verydict=readTXTList(filepath+"verydict.txt");
-		moredict=readTXTList(filepath+"moredict.txt");
-		ishdict=readTXTList(filepath+"ishdict.txt");
-		insufficientdict=readTXTList(filepath+"insufficientdict.txt");
-		inversedict=readTXTList(filepath+"inversedict.txt");
-		return true;
-	}
 	
-	public ArrayList<String> readTXTList(String path)
+	
+	public static ArrayList<String> splitSentences(String passage)
 	{
-		
-		try{
-			ArrayList<String> result=new ArrayList<String>();
-			//BufferedReader br=new BufferedReader(new FileReader(path));
-			InputStreamReader isr = new InputStreamReader(new FileInputStream(path), "GBK");
-			BufferedReader br = new BufferedReader(isr);
-			while(br.ready())
-			{
-				String line=br.readLine();
-				if(!line.equals(""))
-				{
-					result.add(line);
-					//System.out.println(line);
-				}
-										
-			}
-			br.close();
-			System.out.println(result.size()+"----"+path);
-			return result;
-		}
-		catch(Exception ee)
+		ArrayList<String> result=new ArrayList<String>();
+		//String[] s={",",".","?","!",";","，","。","？","！","；"};
+		passage=passage.replace("!", "*excl*!");
+		passage=passage.replace("！", "*excl*！");
+		String[] sp= passage.split("[,.?!;，。？！；]");
+		for(int i=0;i<sp.length;i++)
 		{
-			ee.printStackTrace();
-			return null;
+			result.add(sp[i].replace("*excl*", "!"));
 		}
+		return result;
 	}
 	
-	public int[] score(String sentence)
+	public int[] fun(String sentence)
 	{
-		
+		ArrayList<String> posdict=new ArrayList<String>();
+	    ArrayList<String> negdict=new ArrayList<String>();
+		ArrayList<String> segtmp =new ArrayList<String>();
+		ArrayList<String> mostdict =new ArrayList<String>();
+		ArrayList<String> verydict =new ArrayList<String>();
+		ArrayList<String> moredict =new ArrayList<String>();
+		ArrayList<String> ishdict =new ArrayList<String>();
+		ArrayList<String> insufficientdict =new ArrayList<String>();
+		ArrayList<String> inversedict =new ArrayList<String>();
 		int i = 0; //记录扫描到的词的位置
         int a = 0; //记录情感词的位置
         int poscount = 0; //积极词的第一次分值
@@ -82,15 +52,10 @@ public class SumCalculation {
         int negcount = 0;
         int negcount2 = 0;
         int negcount3 = 0;
-        ArrayList<String> segtmp =null;//SPLIT the SENTENCE!!!!!!!!!
-        
-        segtmp=nlp.parseWordReturnList(sentence);
         for(String word:segtmp)
         {
-        	System.out.println(word);
         	if(posdict.contains(word))
         	{
-        		System.out.println(word+":pos");
         		poscount += 1;                
                 int c = 0;
                 for(int x=a;x<i;x++){//扫描情感词前的程度词

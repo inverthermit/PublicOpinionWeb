@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_DB1ZYOdTEeWc9dCMMwWkLQ" activeDiagram="_DB1ZYedTEeWc9dCMMwWkLQ">
+  <model href="ProxyCatcher.uml#_qb8akM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_DB1ZYedTEeWc9dCMMwWkLQ" position="0,0" size="100,100" name="ProxyCatcher" zoom="0.75" viewport="65,113">
+    <property xmi:id="_DClAQOdTEeWc9dCMMwWkLQ" key="pageFormatName" value=""/>
+    <property xmi:id="_DClAQedTEeWc9dCMMwWkLQ" key="diagramWidth" value="1308"/>
+    <property xmi:id="_DClAQudTEeWc9dCMMwWkLQ" key="diagramHeight" value="1281"/>
+    <property xmi:id="_DClAQ-dTEeWc9dCMMwWkLQ" key="pageMarginName" value="A4"/>
+    <property xmi:id="_DClAROdTEeWc9dCMMwWkLQ" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_DClARedTEeWc9dCMMwWkLQ" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_DClARudTEeWc9dCMMwWkLQ" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_DClAR-dTEeWc9dCMMwWkLQ" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_DClASOdTEeWc9dCMMwWkLQ" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_DB1ZYudTEeWc9dCMMwWkLQ" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="ProxyCatcher.uml#_qb8akM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_IMcdEOdTEeWc9dCMMwWkLQ" position="34,34" size="1199,1172">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMcdEedTEeWc9dCMMwWkLQ">
+        <element href="ProxyCatcher.uml#_HqOg0OdTEeWc9dCMMwWkLQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_IMmOEOdTEeWc9dCMMwWkLQ" position="15,11" size="1169,1111">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMmOEedTEeWc9dCMMwWkLQ">
+          <element href="ProxyCatcher.uml#_HqOg0edTEeWc9dCMMwWkLQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_IMvYAOdTEeWc9dCMMwWkLQ" position="15,11" size="1139,1050">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYAedTEeWc9dCMMwWkLQ">
+            <element href="ProxyCatcher.uml#_HqOg0udTEeWc9dCMMwWkLQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_IMvYAudTEeWc9dCMMwWkLQ" position="15,11" size="1109,989">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYA-dTEeWc9dCMMwWkLQ">
+              <element href="ProxyCatcher.uml#_HqOg0-dTEeWc9dCMMwWkLQ"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_IMvYBOdTEeWc9dCMMwWkLQ" position="15,11" size="1079,928">
+              <anchorage xmi:id="_fkN0wOdTEeWc9dCMMwWkLQ"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYBedTEeWc9dCMMwWkLQ">
+                <element href="ProxyCatcher.uml#_HqOg1OdTEeWc9dCMMwWkLQ"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_IMvYBudTEeWc9dCMMwWkLQ" position="254,11" size="586,-1">
+                <anchorage xmi:id="_IOFb0udTEeWc9dCMMwWkLQ" graphEdge="_IOFb0-dTEeWc9dCMMwWkLQ"/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYB-dTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_HqOg1edTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:GraphNode" xmi:id="_IMvYCOdTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IMvYCedTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="37"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYCudTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1edTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYC-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYDOdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H36XxedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYDedTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYDudTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H36XxudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYD-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYEOdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H36Xx-dTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYEedTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYEudTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H36XyOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYE-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYFOdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIgOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+                <contained xsi:type="di:GraphNode" xmi:id="_IMvYFedTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IMvYFudTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="47"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYF-dTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1edTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYGOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYGedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIgedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYGudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYG-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIhudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYHOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYHedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIi-dTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IMvYHudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IMvYH-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIjedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_IM5JAOdTEeWc9dCMMwWkLQ" position="48,232" size="404,-1">
+                <anchorage xmi:id="_INx50udTEeWc9dCMMwWkLQ" graphEdge="_IOFb0-dTEeWc9dCMMwWkLQ"/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JAedTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_HqOg1udTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:GraphNode" xmi:id="_IM5JAudTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IM5JA-dTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="37"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JBOdTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1udTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JBedTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JBudTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIlOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JB-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JCOdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIledTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+                <contained xsi:type="di:GraphNode" xmi:id="_IM5JCedTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IM5JCudTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="47"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JC-dTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1udTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JDOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JDedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EIludTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JDudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JD-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EImOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JEOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JEedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4EImudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JEudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JE-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NScOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JFOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JFedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NScudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_IM5JFudTEeWc9dCMMwWkLQ" position="602,221" size="306,-1">
+                <anchorage xmi:id="_k49E0OdTEeWc9dCMMwWkLQ" graphEdge="_k49E0edTEeWc9dCMMwWkLQ"/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JF-dTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_HqOg1-dTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:GraphNode" xmi:id="_IM5JGOdTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IM5JGedTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="37"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JGudTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1-dTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JG-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JHOdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSdOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JHedTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JHudTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSdedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+                <contained xsi:type="di:GraphNode" xmi:id="_IM5JH-dTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_IM5JIOdTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="47"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JIedTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqOg1-dTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JIudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JI-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSdudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JJOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JJedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSeOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_IM5JJudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IM5JJ-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSe-dTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_INCS8OdTEeWc9dCMMwWkLQ" position="58,430" size="425,-1">
+                <anchorage xmi:id="_fkN0wedTEeWc9dCMMwWkLQ" graphEdge="_iXDv0edTEeWc9dCMMwWkLQ _k49E0edTEeWc9dCMMwWkLQ"/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS8edTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_HqYR0OdTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:GraphNode" xmi:id="_INCS8udTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_INCS8-dTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="37"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS9OdTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqYR0OdTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCS9edTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS9udTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4NSfedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCS9-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS-OdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4XDcOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCS-edTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS-udTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4XDcudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCS--dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS_OdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4XDdedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCS_edTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCS_udTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4XDdudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+                <contained xsi:type="di:GraphNode" xmi:id="_INCS_-dTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_INCTAOdTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="47"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTAedTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqYR0OdTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTAudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTA-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0cOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTBOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTBedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0dOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTBudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTB-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0dudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTCOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTCedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0eOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTCudTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTC-dTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0eudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INCTDOdTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INCTDedTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0fedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_INMD8OdTEeWc9dCMMwWkLQ" position="557,382" size="365,-1">
+                <anchorage xmi:id="_iXDv0OdTEeWc9dCMMwWkLQ" graphEdge="_iXDv0edTEeWc9dCMMwWkLQ"/>
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD8edTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_HqYR0udTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:GraphNode" xmi:id="_INMD8udTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_INMD8-dTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="37"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD9OdTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqYR0udTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INMD9edTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD9udTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4g0gedTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INMD9-dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD-OdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4p-YOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INMD-edTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD-udTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4p-YudTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                  <contained xsi:type="di:GraphNode" xmi:id="_INMD--dTEeWc9dCMMwWkLQ" position="219,394">
+                    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD_OdTEeWc9dCMMwWkLQ">
+                      <element href="ProxyCatcher.uml#_H4p-ZOdTEeWc9dCMMwWkLQ"/>
+                    </semanticModel>
+                  </contained>
+                </contained>
+                <contained xsi:type="di:GraphNode" xmi:id="_INMD_edTEeWc9dCMMwWkLQ">
+                  <property xmi:id="_INMD_udTEeWc9dCMMwWkLQ" key="eStructuralFeatureID" value="47"/>
+                  <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_INMD_-dTEeWc9dCMMwWkLQ">
+                    <element href="ProxyCatcher.uml#_HqYR0udTEeWc9dCMMwWkLQ"/>
+                  </semanticModel>
+                </contained>
+              </contained>
+              <contained xsi:type="di:GraphEdge" xmi:id="_IOFb0-dTEeWc9dCMMwWkLQ" anchor="_INx50udTEeWc9dCMMwWkLQ _IOFb0udTEeWc9dCMMwWkLQ">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IOFb1OdTEeWc9dCMMwWkLQ">
+                  <element href="ProxyCatcher.uml#_ICxjsOdTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphEdge" xmi:id="_iXDv0edTEeWc9dCMMwWkLQ" anchor="_fkN0wedTEeWc9dCMMwWkLQ _iXDv0OdTEeWc9dCMMwWkLQ">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_iXDv0udTEeWc9dCMMwWkLQ" presentation="default">
+                  <element href="ProxyCatcher.uml#_iXM5wOdTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:EdgeObjectOffset" xmi:id="_iXDv0-dTEeWc9dCMMwWkLQ" id="stereotypeEdgeObject"/>
+                <contained xsi:type="di:EdgeObjectOffset" xmi:id="_iXDv1OdTEeWc9dCMMwWkLQ" visible="false" id="middleNameEdgeObject"/>
+              </contained>
+              <contained xsi:type="di:GraphEdge" xmi:id="_k49E0edTEeWc9dCMMwWkLQ" anchor="_fkN0wedTEeWc9dCMMwWkLQ _k49E0OdTEeWc9dCMMwWkLQ">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k49E0udTEeWc9dCMMwWkLQ" presentation="default">
+                  <element href="ProxyCatcher.uml#_k49E2-dTEeWc9dCMMwWkLQ"/>
+                </semanticModel>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E0-dTEeWc9dCMMwWkLQ" id="srcNameEdgeObject" uDistance="10" vDistance="10"/>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E1OdTEeWc9dCMMwWkLQ" id="srcPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E1edTEeWc9dCMMwWkLQ" id="srcCountEdgeObject" uDistance="10" vDistance="-10"/>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E1udTEeWc9dCMMwWkLQ" id="targetNameEdgeObject" uDistance="10" vDistance="10"/>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E1-dTEeWc9dCMMwWkLQ" id="targetPropertiesEdgeObject" uDistance="25" vDistance="10"/>
+                <contained xsi:type="di:EdgeObjectUV" xmi:id="_k49E2OdTEeWc9dCMMwWkLQ" id="targetCountEdgeObject" uDistance="10" vDistance="-10"/>
+                <contained xsi:type="di:EdgeObjectOffset" xmi:id="_k49E2edTEeWc9dCMMwWkLQ" visible="false" id="middleNameEdgeObject" offset="0,10"/>
+                <contained xsi:type="di:EdgeObjectOffset" xmi:id="_k49E2udTEeWc9dCMMwWkLQ" id="stereotypeEdgeObject" offset="0,-10"/>
+              </contained>
+            </contained>
+          </contained>
+        </contained>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

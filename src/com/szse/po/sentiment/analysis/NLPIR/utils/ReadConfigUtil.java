@@ -1,4 +1,4 @@
-package com.szse.sentiment.NLPIR.utils;
+package com.szse.po.sentiment.analysis.NLPIR.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

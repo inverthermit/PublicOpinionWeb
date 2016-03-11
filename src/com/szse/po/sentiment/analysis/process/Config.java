@@ -1,4 +1,4 @@
-package com.szse.sentiment.analysis;
+package com.szse.po.sentiment.analysis.process;
 
 public class Config {
 

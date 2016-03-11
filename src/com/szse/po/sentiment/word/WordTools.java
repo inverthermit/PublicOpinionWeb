@@ -1,4 +1,4 @@
-package com.szse.po.service.sentimentword;
+package com.szse.po.sentiment.word;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;

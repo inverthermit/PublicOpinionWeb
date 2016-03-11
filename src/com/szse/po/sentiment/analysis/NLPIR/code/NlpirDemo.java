@@ -1,11 +1,9 @@
-package com.szse.sentiment.NLPIR.code;
+package com.szse.po.sentiment.analysis.NLPIR.code;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-
-import com.szse.sentiment.NLPIR.utils.*;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;

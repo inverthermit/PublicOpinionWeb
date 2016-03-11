@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="SAW">
+  <packagedElement xmi:type="uml:Package" xmi:id="_nQWToedLEeWc9dCMMwWkLQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nQgEoOdLEeWc9dCMMwWkLQ" name="szse">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nQgEoedLEeWc9dCMMwWkLQ" name="po">
+        <packagedElement xmi:type="uml:Package" xmi:id="_nQgEoudLEeWc9dCMMwWkLQ" name="sentiment">
+          <packagedElement xmi:type="uml:Package" xmi:id="_nQgEo-dLEeWc9dCMMwWkLQ" name="analysis">
+            <packagedElement xmi:type="uml:Package" xmi:id="_nQgEpOdLEeWc9dCMMwWkLQ" name="NLPIR">
+              <packagedElement xmi:type="uml:Package" xmi:id="_nQgEpedLEeWc9dCMMwWkLQ" name="code">
+                <packagedElement xmi:type="uml:Class" xmi:id="_nQgEpudLEeWc9dCMMwWkLQ" name="NlpirTest">
+                  <nestedClassifier xmi:type="uml:Interface" xmi:id="_nR_SYOdLEeWc9dCMMwWkLQ" name="CLibrary">
+                    <generalization xmi:id="_nuuRu-dLEeWc9dCMMwWkLQ" general="_nuuRuudLEeWc9dCMMwWkLQ"/>
+                    <ownedAttribute xmi:id="_nuuRvedLEeWc9dCMMwWkLQ" name="Instance" visibility="package" type="_nuuRvOdLEeWc9dCMMwWkLQ"/>
+                    <ownedOperation xmi:id="_nuuRv-dLEeWc9dCMMwWkLQ" name="NLPIR_Init" visibility="public">
+                      <ownedParameter xmi:id="_nuuRwOdLEeWc9dCMMwWkLQ" name="sDataPath">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRwedLEeWc9dCMMwWkLQ" name="encoding">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRwudLEeWc9dCMMwWkLQ" name="sLicenceCode">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRw-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nuuRxOdLEeWc9dCMMwWkLQ" name="NLPIR_ParagraphProcess" visibility="public">
+                      <ownedParameter xmi:id="_nuuRxedLEeWc9dCMMwWkLQ" name="sSrc">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRxudLEeWc9dCMMwWkLQ" name="bPOSTagged">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRx-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nuuRyedLEeWc9dCMMwWkLQ" name="NLPIR_GetKeyWords" visibility="public">
+                      <ownedParameter xmi:id="_nuuRyudLEeWc9dCMMwWkLQ" name="sLine">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRy-dLEeWc9dCMMwWkLQ" name="nMaxKeyLimit">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRzOdLEeWc9dCMMwWkLQ" name="bWeightOut">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuRzedLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nuuRzudLEeWc9dCMMwWkLQ" name="NLPIR_GetFileKeyWords" visibility="public">
+                      <ownedParameter xmi:id="_nuuRz-dLEeWc9dCMMwWkLQ" name="sLine">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuR0OdLEeWc9dCMMwWkLQ" name="nMaxKeyLimit">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuR0edLEeWc9dCMMwWkLQ" name="bWeightOut">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nuuR0udLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nu3boOdLEeWc9dCMMwWkLQ" name="NLPIR_AddUserWord" visibility="public">
+                      <ownedParameter xmi:id="_nu3boedLEeWc9dCMMwWkLQ" name="sWord">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nu3boudLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nu3bo-dLEeWc9dCMMwWkLQ" name="NLPIR_DelUsrWord" visibility="public">
+                      <ownedParameter xmi:id="_nu3bpOdLEeWc9dCMMwWkLQ" name="sWord">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nu3bpedLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nu3bpudLEeWc9dCMMwWkLQ" name="NLPIR_GetLastErrorMsg" visibility="public">
+                      <ownedParameter xmi:id="_nu3bp-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nu3bqOdLEeWc9dCMMwWkLQ" name="NLPIR_Exit" visibility="public"/>
+                  </nestedClassifier>
+                  <ownedOperation xmi:id="_nuuRsedLEeWc9dCMMwWkLQ" name="transString" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nuuRsudLEeWc9dCMMwWkLQ" name="aidString">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nuuRs-dLEeWc9dCMMwWkLQ" name="ori_encoding">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nuuRtOdLEeWc9dCMMwWkLQ" name="new_encoding">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nuuRtedLEeWc9dCMMwWkLQ" name="return" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_nuuRtudLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nuuRt-dLEeWc9dCMMwWkLQ" name="args">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nuuRuOdLEeWc9dCMMwWkLQ" value="*"/>
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nuuRuedLEeWc9dCMMwWkLQ"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_nR_SYedLEeWc9dCMMwWkLQ" name="NlpirDemo">
+                  <ownedAttribute xmi:id="_nu3bqudLEeWc9dCMMwWkLQ" name="stopWords" visibility="private" type="_nu3bqedLEeWc9dCMMwWkLQ"/>
+                  <ownedAttribute xmi:id="_nu3brOdLEeWc9dCMMwWkLQ" name="paragraphProcessMutex" visibility="private" type="_nu3bq-dLEeWc9dCMMwWkLQ"/>
+                  <nestedClassifier xmi:type="uml:Interface" xmi:id="_nR_SYudLEeWc9dCMMwWkLQ" name="CLibrary">
+                    <generalization xmi:id="_nvBMpOdLEeWc9dCMMwWkLQ" general="_nuuRuudLEeWc9dCMMwWkLQ"/>
+                    <ownedAttribute xmi:id="_nvBMpedLEeWc9dCMMwWkLQ" name="Instance" visibility="package" type="_nuuRvOdLEeWc9dCMMwWkLQ"/>
+                    <ownedOperation xmi:id="_nvBMpudLEeWc9dCMMwWkLQ" name="NLPIR_Init" visibility="public">
+                      <ownedParameter xmi:id="_nvBMp-dLEeWc9dCMMwWkLQ" name="sDataPath">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMqOdLEeWc9dCMMwWkLQ" name="encoding">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMqedLEeWc9dCMMwWkLQ" name="sLicenceCode">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMqudLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMq-dLEeWc9dCMMwWkLQ" name="NLPIR_ParagraphProcess" visibility="public">
+                      <ownedParameter xmi:id="_nvBMrOdLEeWc9dCMMwWkLQ" name="sSrc">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMredLEeWc9dCMMwWkLQ" name="bPOSTagged">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMrudLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMr-dLEeWc9dCMMwWkLQ" name="NLPIR_GetKeyWords" visibility="public">
+                      <ownedParameter xmi:id="_nvBMsOdLEeWc9dCMMwWkLQ" name="sLine">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMsedLEeWc9dCMMwWkLQ" name="nMaxKeyLimit">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMsudLEeWc9dCMMwWkLQ" name="bWeightOut">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMs-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMtOdLEeWc9dCMMwWkLQ" name="NLPIR_GetFileKeyWords" visibility="public">
+                      <ownedParameter xmi:id="_nvBMtedLEeWc9dCMMwWkLQ" name="sLine">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMtudLEeWc9dCMMwWkLQ" name="nMaxKeyLimit">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMt-dLEeWc9dCMMwWkLQ" name="bWeightOut">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMuOdLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMuedLEeWc9dCMMwWkLQ" name="NLPIR_AddUserWord" visibility="public">
+                      <ownedParameter xmi:id="_nvBMuudLEeWc9dCMMwWkLQ" name="sWord">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMu-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMvOdLEeWc9dCMMwWkLQ" name="NLPIR_DelUsrWord" visibility="public">
+                      <ownedParameter xmi:id="_nvBMvedLEeWc9dCMMwWkLQ" name="sWord">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:id="_nvBMvudLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMv-dLEeWc9dCMMwWkLQ" name="NLPIR_GetLastErrorMsg" visibility="public">
+                      <ownedParameter xmi:id="_nvBMwOdLEeWc9dCMMwWkLQ" name="return" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:id="_nvBMwedLEeWc9dCMMwWkLQ" name="NLPIR_Exit" visibility="public"/>
+                  </nestedClassifier>
+                  <ownedOperation xmi:id="_nu3bredLEeWc9dCMMwWkLQ" name="transString" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nu3brudLEeWc9dCMMwWkLQ" name="aidString">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nu3br-dLEeWc9dCMMwWkLQ" name="ori_encoding">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nu3bsOdLEeWc9dCMMwWkLQ" name="new_encoding">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nu3bsedLEeWc9dCMMwWkLQ" name="return" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_nu3bsudLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nu3bs-dLEeWc9dCMMwWkLQ" name="args">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nu3btOdLEeWc9dCMMwWkLQ" value="*"/>
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nu3btedLEeWc9dCMMwWkLQ"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_nvBMoOdLEeWc9dCMMwWkLQ" name="parseWordReturnList" visibility="public">
+                    <ownedParameter xmi:id="_nvBMoedLEeWc9dCMMwWkLQ" name="text">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nvBMoudLEeWc9dCMMwWkLQ" name="return" type="_nsL7F-dLEeWc9dCMMwWkLQ" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_nvBMo-dLEeWc9dCMMwWkLQ" name="exit" visibility="public"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_nuuRuudLEeWc9dCMMwWkLQ" name="Library"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_nTB0MOdLEeWc9dCMMwWkLQ" name="utils">
+                <packagedElement xmi:type="uml:Class" xmi:id="_nVQo0OdLEeWc9dCMMwWkLQ" name="ReadConfigUtil">
+                  <ownedAttribute xmi:id="_nvKWkOdLEeWc9dCMMwWkLQ" name="config" visibility="private" isStatic="true" type="_nsL7IOdLEeWc9dCMMwWkLQ"/>
+                  <ownedOperation xmi:id="_nvKWkedLEeWc9dCMMwWkLQ" name="getValue" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nvKWkudLEeWc9dCMMwWkLQ" name="key">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:id="_nvKWk-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:id="_nvKWlOdLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                    <ownedParameter xmi:id="_nvKWledLEeWc9dCMMwWkLQ" name="args">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nvKWludLEeWc9dCMMwWkLQ" value="*"/>
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nvKWl-dLEeWc9dCMMwWkLQ"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_nVaZ0OdLEeWc9dCMMwWkLQ" name="SystemParas">
+                  <ownedComment xmi:id="_nVaZ0edLEeWc9dCMMwWkLQ">
+                    <body>/** 
+ * 系统配置参数加载类
+ * @author kernal
+ */
+</body>
+                  </ownedComment>
+                  <ownedAttribute xmi:id="_nvKWmOdLEeWc9dCMMwWkLQ" name="dll_or_so_lib_path" visibility="public" isStatic="true">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedAttribute>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_nVaZ0udLEeWc9dCMMwWkLQ" name="process">
+              <packagedElement xmi:type="uml:Class" xmi:id="_nVaZ0-dLEeWc9dCMMwWkLQ" name="splitTools">
+                <ownedOperation xmi:id="_nvKWmedLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                  <ownedComment xmi:id="_nvKWnedLEeWc9dCMMwWkLQ">
+                    <body>/** 
+ * @param args
+ */
+</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_nvKWmudLEeWc9dCMMwWkLQ" name="args">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nvKWm-dLEeWc9dCMMwWkLQ" value="*"/>
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nvKWnOdLEeWc9dCMMwWkLQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_nvKWnudLEeWc9dCMMwWkLQ" name="splitSentences" visibility="public" isStatic="true">
+                  <ownedParameter xmi:id="_nvKWn-dLEeWc9dCMMwWkLQ" name="passage">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_nvKWoOdLEeWc9dCMMwWkLQ" name="return" type="_nsL7F-dLEeWc9dCMMwWkLQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_nvKWoedLEeWc9dCMMwWkLQ" name="fun" visibility="public">
+                  <ownedParameter xmi:id="_nvKWoudLEeWc9dCMMwWkLQ" name="sentence">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_nvKWo-dLEeWc9dCMMwWkLQ" name="return" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_nVjjwOdLEeWc9dCMMwWkLQ" name="SumCalculation">
+                <ownedAttribute xmi:id="_nvKWpedLEeWc9dCMMwWkLQ" name="posdict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvUHkOdLEeWc9dCMMwWkLQ" name="negdict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvUHkedLEeWc9dCMMwWkLQ" name="mostdict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvUHkudLEeWc9dCMMwWkLQ" name="verydict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvd4kOdLEeWc9dCMMwWkLQ" name="moredict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvd4kedLEeWc9dCMMwWkLQ" name="ishdict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvd4kudLEeWc9dCMMwWkLQ" name="insufficientdict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvd4k-dLEeWc9dCMMwWkLQ" name="inversedict" visibility="public" type="_nvKWpOdLEeWc9dCMMwWkLQ"/>
+                <ownedAttribute xmi:id="_nvnCgOdLEeWc9dCMMwWkLQ" name="argu" visibility="package">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_nvnCgedLEeWc9dCMMwWkLQ" value="D:\MyEclipse2015WorkSpace\JnaTest_NLPIR\ICTCLAS2015\"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:id="_nvnCgudLEeWc9dCMMwWkLQ" name="nlp" visibility="package" type="_nR_SYedLEeWc9dCMMwWkLQ" association="_n5k20OdLEeWc9dCMMwWkLQ"/>
+                <ownedOperation xmi:id="_nvnCg-dLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                  <ownedComment xmi:id="_nvnCh-dLEeWc9dCMMwWkLQ">
+                    <body>/** 
+ * @param args
+ */
+</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_nvnChOdLEeWc9dCMMwWkLQ" name="args">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nvnChedLEeWc9dCMMwWkLQ" value="*"/>
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nvnChudLEeWc9dCMMwWkLQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_nvnCiOdLEeWc9dCMMwWkLQ" name="dicInit" visibility="public">
+                  <ownedParameter xmi:id="_nvnCiedLEeWc9dCMMwWkLQ" name="filepath">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_nvnCiudLEeWc9dCMMwWkLQ" name="return" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_nvwzgOdLEeWc9dCMMwWkLQ" name="readTXTList" visibility="public">
+                  <ownedParameter xmi:id="_nvwzgedLEeWc9dCMMwWkLQ" name="path">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_nvwzgudLEeWc9dCMMwWkLQ" name="return" type="_nsL7F-dLEeWc9dCMMwWkLQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_nvwzg-dLEeWc9dCMMwWkLQ" name="score" visibility="public">
+                  <ownedParameter xmi:id="_nvwzhOdLEeWc9dCMMwWkLQ" name="sentence">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_nvwzhedLEeWc9dCMMwWkLQ" name="return" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_nVjjwedLEeWc9dCMMwWkLQ" name="Main">
+                <ownedOperation xmi:id="_nvwzhudLEeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                  <ownedComment xmi:id="_nvwziudLEeWc9dCMMwWkLQ">
+                    <body>/** 
+ * @param args
+ */
+</body>
+                  </ownedComment>
+                  <ownedParameter xmi:id="_nvwzh-dLEeWc9dCMMwWkLQ" name="args">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nvwziOdLEeWc9dCMMwWkLQ" value="*"/>
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nvwziedLEeWc9dCMMwWkLQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_nVjjwudLEeWc9dCMMwWkLQ" name="Config">
+                <ownedAttribute xmi:id="_nvwzi-dLEeWc9dCMMwWkLQ" name="ROOT_PATH" visibility="public" isStatic="true">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_nvwzjOdLEeWc9dCMMwWkLQ" value="D:\MyEclipse2015WorkSpace\SentimentAnalysis\Dicts\"/>
+                </ownedAttribute>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_n5k20OdLEeWc9dCMMwWkLQ" memberEnd="_nvnCgudLEeWc9dCMMwWkLQ _n5k20edLEeWc9dCMMwWkLQ">
+                <ownedEnd xmi:id="_n5k20edLEeWc9dCMMwWkLQ" name="SumCalculation" type="_nVjjwOdLEeWc9dCMMwWkLQ" association="_n5k20OdLEeWc9dCMMwWkLQ"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_cQwK1OdREeWc9dCMMwWkLQ" name="service">
+          <packagedElement xmi:type="uml:Package" xmi:id="_cQwK1edREeWc9dCMMwWkLQ" name="LDA">
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQwK1udREeWc9dCMMwWkLQ" name="Estimator">
+              <ownedAttribute xmi:id="_cevjgOdREeWc9dCMMwWkLQ" name="trnModel" visibility="protected" type="_cQ571edREeWc9dCMMwWkLQ" association="_cu9JwOdREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cevjgedREeWc9dCMMwWkLQ" name="option" visibility="package" type="_cQwK1-dREeWc9dCMMwWkLQ" association="_cu9JwudREeWc9dCMMwWkLQ"/>
+              <ownedOperation xmi:id="_cfVZYedREeWc9dCMMwWkLQ" name="init" visibility="public">
+                <ownedParameter xmi:id="_cfVZYudREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cfVZY-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cfVZZOdREeWc9dCMMwWkLQ" name="estimate" visibility="public"/>
+              <ownedOperation xmi:id="_cfVZZudREeWc9dCMMwWkLQ" name="sampling" visibility="public">
+                <ownedComment xmi:id="_cfVZaudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Do sampling
+ * @param m document number
+ * @param n word number
+ * @return topic id
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cfVZZ-dREeWc9dCMMwWkLQ" name="m">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cfVZaOdREeWc9dCMMwWkLQ" name="n">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cfVZaedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cfVZa-dREeWc9dCMMwWkLQ" name="computeTheta" visibility="public"/>
+              <ownedOperation xmi:id="_cfVZbOdREeWc9dCMMwWkLQ" name="computePhi" visibility="public"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQwK1-dREeWc9dCMMwWkLQ" name="LDACmdOption">
+              <ownedAttribute xmi:id="_cfVZbedREeWc9dCMMwWkLQ" name="est" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_cfVZbudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cfVZb-dREeWc9dCMMwWkLQ" name="estc" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_cfVZcOdREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cfVZcedREeWc9dCMMwWkLQ" name="inf" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_cfVZcudREeWc9dCMMwWkLQ" value="true"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKYedREeWc9dCMMwWkLQ" name="dir" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cffKYudREeWc9dCMMwWkLQ" value=""/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKY-dREeWc9dCMMwWkLQ" name="dfile" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cffKZOdREeWc9dCMMwWkLQ" value=""/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKZedREeWc9dCMMwWkLQ" name="modelName" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cffKZudREeWc9dCMMwWkLQ" value=""/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKaOdREeWc9dCMMwWkLQ" name="alpha" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKaedREeWc9dCMMwWkLQ" name="beta" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKaudREeWc9dCMMwWkLQ" name="K" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cffKa-dREeWc9dCMMwWkLQ" value="100"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKbOdREeWc9dCMMwWkLQ" name="niters" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cffKbedREeWc9dCMMwWkLQ" value="1000"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cffKbudREeWc9dCMMwWkLQ" name="savestep" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cffKb-dREeWc9dCMMwWkLQ" value="100"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cfoUUOdREeWc9dCMMwWkLQ" name="twords" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cfoUUedREeWc9dCMMwWkLQ" value="100"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cfoUUudREeWc9dCMMwWkLQ" name="withrawdata" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_cfoUU-dREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cfoUVOdREeWc9dCMMwWkLQ" name="wordMapFileName" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_cfoUVedREeWc9dCMMwWkLQ" value="wordmap.txt"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQwK2OdREeWc9dCMMwWkLQ" name="Inferencer">
+              <ownedAttribute xmi:id="_cfoUVudREeWc9dCMMwWkLQ" name="trnModel" visibility="public" type="_cQ571edREeWc9dCMMwWkLQ" association="_cu9JxOdREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cfoUV-dREeWc9dCMMwWkLQ" name="globalDict" visibility="public" type="_cRDs0edREeWc9dCMMwWkLQ" association="_cu9JxudREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cfyFUOdREeWc9dCMMwWkLQ" name="option" visibility="private" type="_cQwK1-dREeWc9dCMMwWkLQ" association="_cu9JyOdREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cfyFUedREeWc9dCMMwWkLQ" name="newModel" visibility="private" type="_cQ571edREeWc9dCMMwWkLQ" association="_cu9JyudREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cfyFUudREeWc9dCMMwWkLQ" name="niters" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cfyFU-dREeWc9dCMMwWkLQ" value="100"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_cfyFVOdREeWc9dCMMwWkLQ" name="init" visibility="public">
+                <ownedParameter xmi:id="_cfyFVedREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cfyFVudREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cfyFV-dREeWc9dCMMwWkLQ" name="inference" visibility="public">
+                <ownedParameter xmi:id="_cfyFWOdREeWc9dCMMwWkLQ" name="newData" type="_cQ570-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cfyFWedREeWc9dCMMwWkLQ" name="return" type="_cQ571edREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cf72UOdREeWc9dCMMwWkLQ" name="inference" visibility="public">
+                <ownedParameter xmi:id="_cf72UedREeWc9dCMMwWkLQ" name="strs">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cf72UudREeWc9dCMMwWkLQ" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cf72U-dREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cf72VOdREeWc9dCMMwWkLQ" name="return" type="_cQ571edREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cf72VedREeWc9dCMMwWkLQ" name="inference" visibility="public">
+                <ownedParameter xmi:id="_cf72VudREeWc9dCMMwWkLQ" name="return" type="_cQ571edREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cf72V-dREeWc9dCMMwWkLQ" name="infSampling" visibility="protected">
+                <ownedComment xmi:id="_cf72W-dREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * do sampling for inference m: document number n: word number?
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cf72WOdREeWc9dCMMwWkLQ" name="m">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cf72WedREeWc9dCMMwWkLQ" name="n">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cf72WudREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cf72XOdREeWc9dCMMwWkLQ" name="computeNewTheta" visibility="protected"/>
+              <ownedOperation xmi:id="_cf72XedREeWc9dCMMwWkLQ" name="computeNewPhi" visibility="protected"/>
+              <ownedOperation xmi:id="_cf72XudREeWc9dCMMwWkLQ" name="computeTrnTheta" visibility="protected"/>
+              <ownedOperation xmi:id="_cgFAQOdREeWc9dCMMwWkLQ" name="computeTrnPhi" visibility="protected"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ570OdREeWc9dCMMwWkLQ" name="Conversion">
+              <ownedOperation xmi:id="_cgFAQedREeWc9dCMMwWkLQ" name="ZeroPad" visibility="public" isStatic="true">
+                <ownedParameter xmi:id="_cgFAQudREeWc9dCMMwWkLQ" name="number">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cgFAQ-dREeWc9dCMMwWkLQ" name="width">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cgFAROdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ570edREeWc9dCMMwWkLQ" name="Document">
+              <ownedAttribute xmi:id="_cgFARedREeWc9dCMMwWkLQ" name="words" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgFARudREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgFAR-dREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgFASOdREeWc9dCMMwWkLQ" name="rawStr" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgFASedREeWc9dCMMwWkLQ" name="length" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ570udREeWc9dCMMwWkLQ" name="LDA">
+              <ownedOperation xmi:id="_cgFASudREeWc9dCMMwWkLQ" name="main" visibility="public" isStatic="true">
+                <ownedParameter xmi:id="_cgFAS-dREeWc9dCMMwWkLQ" name="args">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgFATOdREeWc9dCMMwWkLQ" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgFATedREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cgFAT-dREeWc9dCMMwWkLQ" name="showHelp" visibility="public" isStatic="true">
+                <ownedParameter xmi:id="_cgFAUOdREeWc9dCMMwWkLQ" name="parser" type="_cgFATudREeWc9dCMMwWkLQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ570-dREeWc9dCMMwWkLQ" name="LDADataset">
+              <ownedAttribute xmi:id="_cgOxQOdREeWc9dCMMwWkLQ" name="localDict" visibility="public" type="_cRDs0edREeWc9dCMMwWkLQ" association="_cu9JzOdREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cgOxQedREeWc9dCMMwWkLQ" name="docs" visibility="public" type="_cQ570edREeWc9dCMMwWkLQ" association="_cu9JzudREeWc9dCMMwWkLQ">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgOxQudREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgOxQ-dREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgOxROdREeWc9dCMMwWkLQ" name="M" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgOxRedREeWc9dCMMwWkLQ" name="V" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgX7MedREeWc9dCMMwWkLQ" name="lid2gid" visibility="public" type="_cgX7MOdREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cgX7MudREeWc9dCMMwWkLQ" name="globalDict" visibility="public" type="_cRDs0edREeWc9dCMMwWkLQ" association="_cu9J0OdREeWc9dCMMwWkLQ"/>
+              <ownedOperation xmi:id="_cgX7M-dREeWc9dCMMwWkLQ" name="setDoc" visibility="public">
+                <ownedComment xmi:id="_cgX7NudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * set the document at the index idx if idx is greater than 0 and less than M
+ * @param doc document to be set
+ * @param idx index in the document array
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cgX7NOdREeWc9dCMMwWkLQ" name="doc" type="_cQ570edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cgX7NedREeWc9dCMMwWkLQ" name="idx">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cgX7N-dREeWc9dCMMwWkLQ" name="setDoc" visibility="public">
+                <ownedComment xmi:id="_cgX7OudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * set the document at the index idx if idx is greater than 0 and less than M
+ * @param str string contains doc
+ * @param idx index in the document array
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cgX7OOdREeWc9dCMMwWkLQ" name="str">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cgX7OedREeWc9dCMMwWkLQ" name="idx">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cgX7O-dREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsMOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a stream, create new dictionary
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cgX7POdREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cgX7PedREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cghsMedREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsNedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a file with a preknown vocabulary
+ * @param filename file from which we read dataset
+ * @param dict the dictionary
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cghsMudREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cghsM-dREeWc9dCMMwWkLQ" name="dict" type="_cRDs0edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cghsNOdREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cghsNudREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsOedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a stream, create new dictionary
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cghsN-dREeWc9dCMMwWkLQ" name="reader">
+                  <type xmi:type="uml:DataType" href="#_cecomedREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cghsOOdREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cghsOudREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsPudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a stream with respect to a specified dictionary
+ * @param reader stream from which we read dataset
+ * @param dict the dictionary
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cghsO-dREeWc9dCMMwWkLQ" name="reader">
+                  <type xmi:type="uml:DataType" href="#_cecomedREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cghsPOdREeWc9dCMMwWkLQ" name="dict" type="_cRDs0edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cghsPedREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cghsP-dREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsROdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a string, create new dictionary
+ * @param str String from which we get the dataset, documents are seperated by newline character 
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cghsQOdREeWc9dCMMwWkLQ" name="strs">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cghsQedREeWc9dCMMwWkLQ" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cghsQudREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cghsQ-dREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cghsRedREeWc9dCMMwWkLQ" name="readDataSet" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_cghsS-dREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read a dataset from a string with respect to a specified dictionary
+ * @param str String from which we get the dataset, documents are seperated by newline character	
+ * @param dict the dictionary
+ * @return dataset if success and null otherwise
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cghsRudREeWc9dCMMwWkLQ" name="strs">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cghsR-dREeWc9dCMMwWkLQ" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cghsSOdREeWc9dCMMwWkLQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cghsSedREeWc9dCMMwWkLQ" name="dict" type="_cRDs0edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cghsSudREeWc9dCMMwWkLQ" name="return" type="_cQ570-dREeWc9dCMMwWkLQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ571OdREeWc9dCMMwWkLQ" name="Constants">
+              <ownedAttribute xmi:id="_cghsTedREeWc9dCMMwWkLQ" name="BUFFER_SIZE_LONG" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cghsTudREeWc9dCMMwWkLQ" value="1000000"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgrdMedREeWc9dCMMwWkLQ" name="BUFFER_SIZE_SHORT" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cgrdMudREeWc9dCMMwWkLQ" value="512"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgrdM-dREeWc9dCMMwWkLQ" name="MODEL_STATUS_UNKNOWN" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cgrdNOdREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cgrdNedREeWc9dCMMwWkLQ" name="MODEL_STATUS_EST" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cgrdNudREeWc9dCMMwWkLQ" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cg0nIOdREeWc9dCMMwWkLQ" name="MODEL_STATUS_ESTC" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cg0nIedREeWc9dCMMwWkLQ" value="2"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cg0nIudREeWc9dCMMwWkLQ" name="MODEL_STATUS_INF" visibility="public" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cg0nI-dREeWc9dCMMwWkLQ" value="3"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cQ571edREeWc9dCMMwWkLQ" name="Model">
+              <ownedAttribute xmi:id="_cg0nJOdREeWc9dCMMwWkLQ" name="tassignSuffix" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cg-YIOdREeWc9dCMMwWkLQ" name="thetaSuffix" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cg-YIedREeWc9dCMMwWkLQ" name="phiSuffix" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chHiEOdREeWc9dCMMwWkLQ" name="othersSuffix" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chRTEOdREeWc9dCMMwWkLQ" name="twordsSuffix" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chRTEedREeWc9dCMMwWkLQ" name="wordMapFile" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chbEEOdREeWc9dCMMwWkLQ" name="trainlogFile" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chkOAOdREeWc9dCMMwWkLQ" name="dir" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_chkOAedREeWc9dCMMwWkLQ" name="dfile" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cht_AOdREeWc9dCMMwWkLQ" name="modelName" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ch3I8OdREeWc9dCMMwWkLQ" name="modelStatus" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ch3I8edREeWc9dCMMwWkLQ" name="data" visibility="public" type="_cQ570-dREeWc9dCMMwWkLQ" association="_cu9J0udREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_ciA58OdREeWc9dCMMwWkLQ" name="M" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciKq8OdREeWc9dCMMwWkLQ" name="V" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciKq8edREeWc9dCMMwWkLQ" name="K" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciT04OdREeWc9dCMMwWkLQ" name="alpha" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciT04edREeWc9dCMMwWkLQ" name="beta" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cidl4OdREeWc9dCMMwWkLQ" name="niters" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cimv0OdREeWc9dCMMwWkLQ" name="liter" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cimv0edREeWc9dCMMwWkLQ" name="savestep" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciwg0OdREeWc9dCMMwWkLQ" name="twords" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ciwg0edREeWc9dCMMwWkLQ" name="withrawdata" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_ci6R0OdREeWc9dCMMwWkLQ" name="theta" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ci6R0edREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ci6R0udREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjDbwOdREeWc9dCMMwWkLQ" name="phi" visibility="public">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjDbwedREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjDbwudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjDbxOdREeWc9dCMMwWkLQ" name="z" visibility="public" type="_cjDbw-dREeWc9dCMMwWkLQ">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjDbxedREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjDbxudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjNMwOdREeWc9dCMMwWkLQ" name="nw" visibility="protected">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjNMwedREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjNMwudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjWWsOdREeWc9dCMMwWkLQ" name="nd" visibility="protected">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjWWsedREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjWWsudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjWWs-dREeWc9dCMMwWkLQ" name="nwsum" visibility="protected">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjWWtOdREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjWWtedREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjgHsOdREeWc9dCMMwWkLQ" name="ndsum" visibility="protected">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjgHsedREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjgHsudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_cjgHs-dREeWc9dCMMwWkLQ" name="p" visibility="protected">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjgHtOdREeWc9dCMMwWkLQ" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cjgHtedREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_cjp4sOdREeWc9dCMMwWkLQ" name="setDefaultValues" visibility="public">
+                <ownedComment xmi:id="_cjp4sedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Set default values for variables
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjp4sudREeWc9dCMMwWkLQ" name="readOthersFile" visibility="protected">
+                <ownedComment xmi:id="_cjp4tedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read other file to get parameters
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cjp4s-dREeWc9dCMMwWkLQ" name="otherFile">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cjp4tOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjp4tudREeWc9dCMMwWkLQ" name="readTAssignFile" visibility="protected">
+                <ownedParameter xmi:id="_cjp4t-dREeWc9dCMMwWkLQ" name="tassignFile">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cjp4uOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjzCoOdREeWc9dCMMwWkLQ" name="loadModel" visibility="public">
+                <ownedComment xmi:id="_cjzCoudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * load saved model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cjzCoedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjzCo-dREeWc9dCMMwWkLQ" name="saveModelTAssign" visibility="public">
+                <ownedComment xmi:id="_cjzCpudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save word-topic assignments for this model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cjzCpOdREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cjzCpedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjzCp-dREeWc9dCMMwWkLQ" name="saveModelTheta" visibility="public">
+                <ownedComment xmi:id="_cjzCqudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save theta (topic distribution) for this model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cjzCqOdREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cjzCqedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cjzCq-dREeWc9dCMMwWkLQ" name="saveModelPhi" visibility="public">
+                <ownedComment xmi:id="_cj8zoOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save word-topic distribution
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cjzCrOdREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cjzCredREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cj8zoedREeWc9dCMMwWkLQ" name="saveModelOthers" visibility="public">
+                <ownedComment xmi:id="_cj8zpOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save other information of this model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cj8zoudREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cj8zo-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cj8zpedREeWc9dCMMwWkLQ" name="saveModelTwords" visibility="public">
+                <ownedComment xmi:id="_cj8zqOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save model the most likely words for each topic
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cj8zpudREeWc9dCMMwWkLQ" name="filename">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cj8zp-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_cj8zqedREeWc9dCMMwWkLQ" name="saveModel" visibility="public">
+                <ownedComment xmi:id="_ckF9kOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Save model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_cj8zqudREeWc9dCMMwWkLQ" name="modelName">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_cj8zq-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ckF9kedREeWc9dCMMwWkLQ" name="init" visibility="protected">
+                <ownedComment xmi:id="_ckF9lOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * initialize the model
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ckF9kudREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckF9k-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ckF9ledREeWc9dCMMwWkLQ" name="initNewModel" visibility="public">
+                <ownedComment xmi:id="_ckF9mOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Init parameters for estimation
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ckF9ludREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckF9l-dREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ckF9medREeWc9dCMMwWkLQ" name="initNewModel" visibility="public">
+                <ownedComment xmi:id="_ckPukOdREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Init parameters for inference
+ * @param newData DataSet for which we do inference
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ckF9mudREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckF9m-dREeWc9dCMMwWkLQ" name="newData" type="_cQ570-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckF9nOdREeWc9dCMMwWkLQ" name="trnModel" type="_cQ571edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckF9nedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ckPukedREeWc9dCMMwWkLQ" name="initNewModel" visibility="public">
+                <ownedComment xmi:id="_ckPuledREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * Init parameters for inference reading new dataset from file
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ckPukudREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckPuk-dREeWc9dCMMwWkLQ" name="trnModel" type="_cQ571edREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckPulOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ckPuludREeWc9dCMMwWkLQ" name="initEstimatedModel" visibility="public">
+                <ownedComment xmi:id="_ckPumedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * init parameter for continue estimating or for later inference
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ckPul-dREeWc9dCMMwWkLQ" name="option" type="_cQwK1-dREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_ckPumOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cRDs0OdREeWc9dCMMwWkLQ" name="Pair" clientDependency="_cksagOdREeWc9dCMMwWkLQ">
+              <ownedAttribute xmi:id="_cksagudREeWc9dCMMwWkLQ" name="first" visibility="public" type="_cksagedREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cksahOdREeWc9dCMMwWkLQ" name="second" visibility="public" type="_cksag-dREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cksahedREeWc9dCMMwWkLQ" name="naturalOrder" visibility="public" isStatic="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_cksahudREeWc9dCMMwWkLQ"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_cksagOdREeWc9dCMMwWkLQ" name="Comparable&lt;Pair>" supplier="_ckPumudREeWc9dCMMwWkLQ" client="_cRDs0OdREeWc9dCMMwWkLQ" contract="_ckPumudREeWc9dCMMwWkLQ"/>
+              <ownedOperation xmi:id="_cksah-dREeWc9dCMMwWkLQ" name="compareTo" visibility="public">
+                <ownedParameter xmi:id="_cksaiOdREeWc9dCMMwWkLQ" name="p" type="_cRDs0OdREeWc9dCMMwWkLQ"/>
+                <ownedParameter xmi:id="_cksaiedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_cRDs0edREeWc9dCMMwWkLQ" name="Dictionary">
+              <ownedAttribute xmi:id="_cksai-dREeWc9dCMMwWkLQ" name="word2id" visibility="public" type="_cksaiudREeWc9dCMMwWkLQ"/>
+              <ownedAttribute xmi:id="_cksajedREeWc9dCMMwWkLQ" name="id2word" visibility="public" type="_cksajOdREeWc9dCMMwWkLQ"/>
+              <ownedOperation xmi:id="_ck1kcOdREeWc9dCMMwWkLQ" name="getWord" visibility="public">
+                <ownedParameter xmi:id="_ck1kcedREeWc9dCMMwWkLQ" name="id">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1kcudREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1kdOdREeWc9dCMMwWkLQ" name="getID" visibility="public">
+                <ownedParameter xmi:id="_ck1kdedREeWc9dCMMwWkLQ" name="word">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1kdudREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1kd-dREeWc9dCMMwWkLQ" name="contains" visibility="public">
+                <ownedComment xmi:id="_ck1keudREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * check if this dictionary contains a specified word
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ck1keOdREeWc9dCMMwWkLQ" name="word">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1keedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1ke-dREeWc9dCMMwWkLQ" name="contains" visibility="public">
+                <ownedParameter xmi:id="_ck1kfOdREeWc9dCMMwWkLQ" name="id">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1kfedREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1kfudREeWc9dCMMwWkLQ" name="addWord" visibility="public">
+                <ownedComment xmi:id="_ck1kgedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * add a word into this dictionary return the corresponding id
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ck1kf-dREeWc9dCMMwWkLQ" name="word">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1kgOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1kgudREeWc9dCMMwWkLQ" name="readWordMap" visibility="public">
+                <ownedComment xmi:id="_ck1khedREeWc9dCMMwWkLQ">
+                  <body>/** 
+ * read dictionary from file
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ck1kg-dREeWc9dCMMwWkLQ" name="wordMapFile">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1khOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ck1khudREeWc9dCMMwWkLQ" name="writeWordMap" visibility="public">
+                <ownedParameter xmi:id="_ck1kh-dREeWc9dCMMwWkLQ" name="wordMapFile">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ck1kiOdREeWc9dCMMwWkLQ" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_ckPumudREeWc9dCMMwWkLQ" name="Comparable&lt;Pair>"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JwOdREeWc9dCMMwWkLQ" memberEnd="_cevjgOdREeWc9dCMMwWkLQ _cu9JwedREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9JwedREeWc9dCMMwWkLQ" name="Estimator" type="_cQwK1udREeWc9dCMMwWkLQ" association="_cu9JwOdREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JwudREeWc9dCMMwWkLQ" memberEnd="_cevjgedREeWc9dCMMwWkLQ _cu9Jw-dREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9Jw-dREeWc9dCMMwWkLQ" name="Estimator" type="_cQwK1udREeWc9dCMMwWkLQ" association="_cu9JwudREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JxOdREeWc9dCMMwWkLQ" memberEnd="_cfoUVudREeWc9dCMMwWkLQ _cu9JxedREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9JxedREeWc9dCMMwWkLQ" name="Inferencer" type="_cQwK2OdREeWc9dCMMwWkLQ" association="_cu9JxOdREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JxudREeWc9dCMMwWkLQ" memberEnd="_cfoUV-dREeWc9dCMMwWkLQ _cu9Jx-dREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9Jx-dREeWc9dCMMwWkLQ" name="Inferencer" type="_cQwK2OdREeWc9dCMMwWkLQ" association="_cu9JxudREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JyOdREeWc9dCMMwWkLQ" memberEnd="_cfyFUOdREeWc9dCMMwWkLQ _cu9JyedREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9JyedREeWc9dCMMwWkLQ" name="Inferencer" type="_cQwK2OdREeWc9dCMMwWkLQ" association="_cu9JyOdREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JyudREeWc9dCMMwWkLQ" memberEnd="_cfyFUedREeWc9dCMMwWkLQ _cu9Jy-dREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9Jy-dREeWc9dCMMwWkLQ" name="Inferencer" type="_cQwK2OdREeWc9dCMMwWkLQ" association="_cu9JyudREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JzOdREeWc9dCMMwWkLQ" memberEnd="_cgOxQOdREeWc9dCMMwWkLQ _cu9JzedREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9JzedREeWc9dCMMwWkLQ" name="LDADataset" type="_cQ570-dREeWc9dCMMwWkLQ" association="_cu9JzOdREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9JzudREeWc9dCMMwWkLQ" memberEnd="_cgOxQedREeWc9dCMMwWkLQ _cu9Jz-dREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9Jz-dREeWc9dCMMwWkLQ" name="LDADataset" type="_cQ570-dREeWc9dCMMwWkLQ" association="_cu9JzudREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9J0OdREeWc9dCMMwWkLQ" memberEnd="_cgX7MudREeWc9dCMMwWkLQ _cu9J0edREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9J0edREeWc9dCMMwWkLQ" name="LDADataset" type="_cQ570-dREeWc9dCMMwWkLQ" association="_cu9J0OdREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_cu9J0udREeWc9dCMMwWkLQ" memberEnd="_ch3I8edREeWc9dCMMwWkLQ _cu9J0-dREeWc9dCMMwWkLQ">
+              <ownedEnd xmi:id="_cu9J0-dREeWc9dCMMwWkLQ" name="Model" type="_cQ571edREeWc9dCMMwWkLQ" association="_cu9J0udREeWc9dCMMwWkLQ"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_nsL7EedLEeWc9dCMMwWkLQ" name="sun">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nsL7EudLEeWc9dCMMwWkLQ" name="jna">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7E-dLEeWc9dCMMwWkLQ" name="Library"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7FOdLEeWc9dCMMwWkLQ" name="Native"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nsCxIOdLEeWc9dCMMwWkLQ" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nsCxIedLEeWc9dCMMwWkLQ" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7EOdLEeWc9dCMMwWkLQ" name="UnsupportedEncodingException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7FedLEeWc9dCMMwWkLQ" name="*"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7G-dLEeWc9dCMMwWkLQ" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7HOdLEeWc9dCMMwWkLQ" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7HedLEeWc9dCMMwWkLQ" name="FileNotFoundException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7HudLEeWc9dCMMwWkLQ" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7H-dLEeWc9dCMMwWkLQ" name="InputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_nsL7FudLEeWc9dCMMwWkLQ" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7F-dLEeWc9dCMMwWkLQ" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7GOdLEeWc9dCMMwWkLQ" name="List"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_nsL7GedLEeWc9dCMMwWkLQ" name="regex">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7GudLEeWc9dCMMwWkLQ" name="Pattern"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7IOdLEeWc9dCMMwWkLQ" name="Properties"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nsL7IedLEeWc9dCMMwWkLQ" name="*"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_nuuRvOdLEeWc9dCMMwWkLQ" name="CLibrary"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_nu3bqedLEeWc9dCMMwWkLQ" name="List&lt;String>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_nu3bq-dLEeWc9dCMMwWkLQ" name="Object"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_nvKWpOdLEeWc9dCMMwWkLQ" name="ArrayList&lt;String>"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_cecoledREeWc9dCMMwWkLQ" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_cecoludREeWc9dCMMwWkLQ" name="kohsuke">
+      <packagedElement xmi:type="uml:Package" xmi:id="_cecol-dREeWc9dCMMwWkLQ" name="args4j">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cecomOdREeWc9dCMMwWkLQ" name="*"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cgFATudREeWc9dCMMwWkLQ" name="CmdLineParser"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cgX7MOdREeWc9dCMMwWkLQ" name="Map&lt;Integer,Integer>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cjDbw-dREeWc9dCMMwWkLQ" name="Vector&lt;Integer>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cksagedREeWc9dCMMwWkLQ" name="Object"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cksag-dREeWc9dCMMwWkLQ" name="Comparable"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cksaiudREeWc9dCMMwWkLQ" name="Map&lt;String,Integer>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_cksajOdREeWc9dCMMwWkLQ" name="Map&lt;Integer,String>"/>
+</uml:Model>

@@ -1,4 +1,4 @@
-package com.szse.sentiment.NLPIR.utils;
+package com.szse.po.sentiment.analysis.NLPIR.utils;
 
 /**
  * 系统配置参数加载类

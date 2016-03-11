@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="controller">
+  <packagedElement xmi:type="uml:Package" xmi:id="_nGEVQedWEeWc9dCMMwWkLQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nGEVQudWEeWc9dCMMwWkLQ" name="szse">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nGEVQ-dWEeWc9dCMMwWkLQ" name="po">
+        <packagedElement xmi:type="uml:Package" xmi:id="_nGEVROdWEeWc9dCMMwWkLQ" name="controller"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_nTTgD-dWEeWc9dCMMwWkLQ" name="Ace">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nTTgEOdWEeWc9dCMMwWkLQ" name="controller">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgEedWEeWc9dCMMwWkLQ" name="User"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nTTgAOdWEeWc9dCMMwWkLQ" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nTTgAedWEeWc9dCMMwWkLQ" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgAudWEeWc9dCMMwWkLQ" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgA-dWEeWc9dCMMwWkLQ" name="PrintWriter"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nTTgBOdWEeWc9dCMMwWkLQ" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nTTgBedWEeWc9dCMMwWkLQ" name="servlet">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nTTgBudWEeWc9dCMMwWkLQ" name="http">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgB-dWEeWc9dCMMwWkLQ" name="HttpServletRequest"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgCOdWEeWc9dCMMwWkLQ" name="HttpServletResponse"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nTTgCedWEeWc9dCMMwWkLQ" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nTTgCudWEeWc9dCMMwWkLQ" name="springframework">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nTTgC-dWEeWc9dCMMwWkLQ" name="web">
+        <packagedElement xmi:type="uml:Package" xmi:id="_nTTgDOdWEeWc9dCMMwWkLQ" name="bind">
+          <packagedElement xmi:type="uml:Package" xmi:id="_nTTgDedWEeWc9dCMMwWkLQ" name="annotation">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_nTTgDudWEeWc9dCMMwWkLQ" name="RequestMapping"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nGEVRedWEeWc9dCMMwWkLQ" name="DispatcherController" clientDependency="_wXrDhudWEeWc9dCMMwWkLQ">
+    <ownedOperation xmi:id="_nUpj8OdWEeWc9dCMMwWkLQ" name="login" visibility="public">
+      <ownedParameter xmi:id="_nUpj8edWEeWc9dCMMwWkLQ" name="return" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpj8udWEeWc9dCMMwWkLQ" name="CorpResult" visibility="public">
+      <ownedParameter xmi:id="_nUpj8-dWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpj9OdWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpj9edWEeWc9dCMMwWkLQ" name="BoardResult" visibility="public">
+      <ownedParameter xmi:id="_nUpj9udWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpj9-dWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpj-OdWEeWc9dCMMwWkLQ" name="RegionResult" visibility="public">
+      <ownedParameter xmi:id="_nUpj-edWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpj-udWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpj--dWEeWc9dCMMwWkLQ" name="NegAlarmResult" visibility="public">
+      <ownedParameter xmi:id="_nUpj_OdWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpj_edWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpj_udWEeWc9dCMMwWkLQ" name="IndustryResult" visibility="public">
+      <ownedParameter xmi:id="_nUpj_-dWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpkAOdWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_nUpkAedWEeWc9dCMMwWkLQ" name="AttentionResult" visibility="public">
+      <ownedParameter xmi:id="_nUpkAudWEeWc9dCMMwWkLQ" name="request"/>
+      <ownedParameter xmi:id="_nUpkA-dWEeWc9dCMMwWkLQ" name="response"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_q81LcOdWEeWc9dCMMwWkLQ" name="service"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_wXrDhudWEeWc9dCMMwWkLQ" name="Dependency1" supplier="_q81LcOdWEeWc9dCMMwWkLQ" client="_nGEVRedWEeWc9dCMMwWkLQ"/>
+</uml:Model>

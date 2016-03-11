@@ -1,8 +1,6 @@
-package com.szse.sentiment.NLPIR.code;
+package com.szse.po.sentiment.analysis.NLPIR.code;
 
 import java.io.UnsupportedEncodingException;
-
-import com.szse.sentiment.NLPIR.utils.*;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;

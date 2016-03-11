@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="view">
+  <packagedElement xmi:type="uml:Package" xmi:id="_bbPr4OdhEeWc9dCMMwWkLQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_bbPr4edhEeWc9dCMMwWkLQ" name="szse">
+      <packagedElement xmi:type="uml:Package" xmi:id="_bbPr4udhEeWc9dCMMwWkLQ" name="po">
+        <packagedElement xmi:type="uml:Package" xmi:id="_bbPr4-dhEeWc9dCMMwWkLQ" name="view">
+          <packagedElement xmi:type="uml:Class" xmi:id="_bbPr5OdhEeWc9dCMMwWkLQ" name="Industry">
+            <ownedAttribute xmi:id="_bsE9dedhEeWc9dCMMwWkLQ" name="industry_info" visibility="public">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_bsE9dudhEeWc9dCMMwWkLQ" name="getIndustry_info" visibility="public">
+              <ownedParameter xmi:id="_bsE9d-dhEeWc9dCMMwWkLQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_bsE9eOdhEeWc9dCMMwWkLQ" name="setIndustry_info" visibility="public">
+              <ownedParameter xmi:id="_bsE9eedhEeWc9dCMMwWkLQ" name="industry_info">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_bbPr5edhEeWc9dCMMwWkLQ" name="Attention">
+            <ownedAttribute xmi:id="_bsE9eudhEeWc9dCMMwWkLQ" name="attention_info" visibility="public">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_bsE9e-dhEeWc9dCMMwWkLQ" name="getAttention_info" visibility="public">
+              <ownedParameter xmi:id="_bsE9fOdhEeWc9dCMMwWkLQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_bsOuMOdhEeWc9dCMMwWkLQ" name="setAttention_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuMedhEeWc9dCMMwWkLQ" name="attention_info">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_bbZc4OdhEeWc9dCMMwWkLQ" name="Top10">
+            <ownedAttribute xmi:id="_bsOuMudhEeWc9dCMMwWkLQ" name="top10_info" visibility="public">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_bsOuM-dhEeWc9dCMMwWkLQ" name="getTop10_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuNOdhEeWc9dCMMwWkLQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_bsOuNedhEeWc9dCMMwWkLQ" name="setTop10_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuNudhEeWc9dCMMwWkLQ" name="top10_info">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_bbZc4edhEeWc9dCMMwWkLQ" name="Board">
+            <ownedAttribute xmi:id="_bsOuN-dhEeWc9dCMMwWkLQ" name="board_info" visibility="public">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_bsOuOOdhEeWc9dCMMwWkLQ" name="getBoard_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuOedhEeWc9dCMMwWkLQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_bsOuOudhEeWc9dCMMwWkLQ" name="setBoard_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuO-dhEeWc9dCMMwWkLQ" name="board_info">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_bbZc4udhEeWc9dCMMwWkLQ" name="Region">
+            <ownedAttribute xmi:id="_bsOuPOdhEeWc9dCMMwWkLQ" name="region_info" visibility="public">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_bsOuPedhEeWc9dCMMwWkLQ" name="getRegion_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuPudhEeWc9dCMMwWkLQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_bsOuP-dhEeWc9dCMMwWkLQ" name="setRegion_info" visibility="public">
+              <ownedParameter xmi:id="_bsOuQOdhEeWc9dCMMwWkLQ" name="region_info">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

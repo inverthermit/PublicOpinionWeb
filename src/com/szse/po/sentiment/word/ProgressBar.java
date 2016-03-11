@@ -1,4 +1,4 @@
-package com.szse.po.service.sentimentword;
+package com.szse.po.sentiment.word;
 
 public class ProgressBar {
 
