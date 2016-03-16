@@ -76,6 +76,8 @@ public class spider {
 	{
 		return html.replaceAll("<script[\\s\\S]*?/script>", "").replace("<style[\\s\\S]*?/style>", "");
 	}
+	
+	
 
 	public static HashMap<String,String> GetDetails(String url)
 	{
@@ -120,7 +122,16 @@ public class spider {
 		    		time=time.replace("\n", " ");
 		    		time=HTMLFilter(time);
 		    		time=time.replace("发表于 ", "").replace(" 股吧网页版", "");
-    	    		result.put("time",time);
+		    		//\d{4}-\d{0,2}-\d{0,2}\s*(\d{0,2}:\d{0,2}:\d{0,2})?
+		    		Pattern p = Pattern.compile("\\d{4}-\\d{0,2}-\\d{0,2}\\s*(\\d{0,2}:\\d{0,2}:\\d{0,2})?");
+			    	Matcher m = p.matcher(time);
+			    	while (m.find()) 
+			    	{
+			    		result.put("time",m.group());
+			    		break;
+			    	}
+		    		
+    	    		
 		        }
 		        
 		      //**********************************get content**********************

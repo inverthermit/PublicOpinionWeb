@@ -14,7 +14,10 @@ import org.htmlparser.filters.HasAttributeFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.NodeList;
+
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class getURL {
 
@@ -23,13 +26,27 @@ public class getURL {
 	{
 		return url.replace("???", index+"");
 	}
-	public static int getPage=10;
+	public static int getPage=20;
 	
 	
 	public static void main(String[] args) throws Exception{
 		
 		System.out.println(getURLList());
 		
+	}
+	
+	public static boolean SZStockFilter(String code)
+	{
+		Pattern p = Pattern.compile("\\d{6}");
+    	Matcher m = p.matcher(code);
+    	if (m.find()) 
+    	{
+    		if(!code.startsWith("60"))
+    		{
+    			return true;
+    		}
+    	}
+		return false;
 	}
 	
 	public static ArrayList<String> getURLList()
@@ -64,10 +81,11 @@ public class getURL {
 			            	LinkTag l=(LinkTag)aNode;
 			            	//System.out.print("{\"http://guba.eastmoney.com/"+l.getAttribute("href")+"\",\""+html2Str(aNode.toHtml().replace(" <br />", "\",\"")).trim()+"\",\"");
 			                String link="http://guba.eastmoney.com"+l.getAttribute("href");
-			                String title=l.getAttribute("title");
-			            	if(!ResultLinks.contains(link))
+			                String code=l.getAttribute("href").split(",")[1];
+			                
+			            	if(!ResultLinks.contains(link)&&SZStockFilter(code))
 			            	{
-			            		
+			            		String title=l.getAttribute("title");
 			            		ResultLinks.add(link+"####"+title);
 			            		System.out.println(l.toHtml());
 			            	}
