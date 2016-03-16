@@ -18,12 +18,12 @@ import java.util.*;
 
 public class getURL {
 
-	public static String url="http://guba.eastmoney.com/default_1.html";
+	public static String url="http://guba.eastmoney.com/default_???.html";
 	public static String changeURLIndex(String url,int index)
 	{
 		return url.replace("???", index+"");
 	}
-	public static int getPage=1;
+	public static int getPage=10;
 	
 	
 	public static void main(String[] args) throws Exception{
