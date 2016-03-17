@@ -16,7 +16,7 @@ public class classifier {
 		{
 			td=l.get(i);
 			String code=getGubaCode(td.getUrl());
-			if(code.equals("002388"))
+			if(code.equals("002161"))
 			System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
 			if(!codemap.containsKey(code))
 			{

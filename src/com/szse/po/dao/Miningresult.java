@@ -8,10 +8,6 @@ public class Miningresult implements java.io.Serializable {
 
 	// Fields
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer mid;
 	private Integer tid;
 	private Double psentiment;
@@ -22,6 +18,8 @@ public class Miningresult implements java.io.Serializable {
 	private String lcrelated;
 	private String lcname;
 	private String categoryid;
+	private String industry;
+	private String region;
 
 	// Constructors
 
@@ -38,7 +36,8 @@ public class Miningresult implements java.io.Serializable {
 	/** full constructor */
 	public Miningresult(Integer tid, Double psentiment, Double nsentiment,
 			Integer textNum, String keywords, String updatetime,
-			String lcrelated, String lcname, String categoryid) {
+			String lcrelated, String lcname, String categoryid,
+			String industry, String region) {
 		this.tid = tid;
 		this.psentiment = psentiment;
 		this.nsentiment = nsentiment;
@@ -48,6 +47,8 @@ public class Miningresult implements java.io.Serializable {
 		this.lcrelated = lcrelated;
 		this.lcname = lcname;
 		this.categoryid = categoryid;
+		this.industry = industry;
+		this.region = region;
 	}
 
 	// Property accessors
@@ -130,6 +131,22 @@ public class Miningresult implements java.io.Serializable {
 
 	public void setCategoryid(String categoryid) {
 		this.categoryid = categoryid;
+	}
+
+	public String getIndustry() {
+		return this.industry;
+	}
+
+	public void setIndustry(String industry) {
+		this.industry = industry;
+	}
+
+	public String getRegion() {
+		return this.region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
 }

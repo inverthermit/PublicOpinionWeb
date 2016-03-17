@@ -26,7 +26,7 @@ public class getURL {
 	{
 		return url.replace("???", index+"");
 	}
-	public static int getPage=20;
+	public static int getPage=40;
 	
 	
 	public static void main(String[] args) throws Exception{

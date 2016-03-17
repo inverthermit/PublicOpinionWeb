@@ -1,8 +1,10 @@
 package com.szse.po.dao;
 
 import java.util.List;
+
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,11 +33,18 @@ public class MiningresultDAO extends BaseHibernateDAO {
 	public static final String LCRELATED = "lcrelated";
 	public static final String LCNAME = "lcname";
 	public static final String CATEGORYID = "categoryid";
+	public static final String INDUSTRY = "industry";
+	public static final String REGION = "region";
 
 	public void save(Miningresult transientInstance) {
+		
+		Transaction transaction= getSession().beginTransaction();  
 		log.debug("saving Miningresult instance");
 		try {
 			getSession().save(transientInstance);
+			transaction.commit();  
+			 getSession().flush();  
+			 getSession().close(); 
 			log.debug("save successful");
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
@@ -44,9 +53,14 @@ public class MiningresultDAO extends BaseHibernateDAO {
 	}
 
 	public void delete(Miningresult persistentInstance) {
+		
+		Transaction transaction= getSession().beginTransaction(); 
 		log.debug("deleting Miningresult instance");
 		try {
 			getSession().delete(persistentInstance);
+			transaction.commit();  
+			 getSession().flush();  
+			 getSession().close(); 
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
@@ -130,6 +144,14 @@ public class MiningresultDAO extends BaseHibernateDAO {
 
 	public List findByCategoryid(Object categoryid) {
 		return findByProperty(CATEGORYID, categoryid);
+	}
+
+	public List findByIndustry(Object industry) {
+		return findByProperty(INDUSTRY, industry);
+	}
+
+	public List findByRegion(Object region) {
+		return findByProperty(REGION, region);
 	}
 
 	public List findAll() {

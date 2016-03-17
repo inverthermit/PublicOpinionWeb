@@ -9,15 +9,15 @@ import com.szse.po.sentiment.analysis.NLPIR.code.NlpirDemo;
 public class SumCalculation {
 
 	
-	public ArrayList<String> posdict=null;
-	public ArrayList<String> negdict=null;
+	public static ArrayList<String> posdict=null;
+	public static ArrayList<String> negdict=null;
 	
-	public ArrayList<String> mostdict =null;
-	public ArrayList<String> verydict =null;
-	public ArrayList<String> moredict =null;
-	public ArrayList<String> ishdict =null;
-	public ArrayList<String> insufficientdict =null;
-	public ArrayList<String> inversedict =null;
+	public static ArrayList<String> mostdict =null;
+	public static ArrayList<String> verydict =null;
+	public static ArrayList<String> moredict =null;
+	public static ArrayList<String> ishdict =null;
+	public static ArrayList<String> insufficientdict =null;
+	public static ArrayList<String> inversedict =null;
 	String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015\\";
     NlpirDemo nlp=new NlpirDemo(argu);
 	/**
@@ -71,6 +71,19 @@ public class SumCalculation {
 		}
 	}
 	
+	public ArrayList<int[]> scoreParagragh(String para)
+	{
+		ArrayList<int[]> result=new ArrayList();
+		ArrayList<String> sentences=splitTools.splitSentences(para);
+		for(String sen:sentences)
+		{
+			int[] score=score(sen);
+			result.add(score);
+			System.out.println(score[0]+","+score[1]);
+		}
+		return result;
+	}
+	
 	public int[] score(String sentence)
 	{
 		
@@ -82,9 +95,10 @@ public class SumCalculation {
         int negcount = 0;
         int negcount2 = 0;
         int negcount3 = 0;
-        ArrayList<String> segtmp =null;//SPLIT the SENTENCE!!!!!!!!!
+        ArrayList<String> segtmp =null;//SPLIT the SENTENCE to words
         
         segtmp=nlp.parseWordReturnList(sentence);
+        //System.out.println(segtmp);
         for(String word:segtmp)
         {
         	//System.out.println(word);
@@ -123,6 +137,7 @@ public class SumCalculation {
         	}
         	else if(negdict.contains(word))
         	{
+        		//System.out.println(word);
         		negcount += 1;
                 int d = 0;
         		for(int x=a;x<i;x++){//扫描情感词前的程度词
