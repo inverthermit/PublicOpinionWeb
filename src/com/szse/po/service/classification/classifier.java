@@ -1,31 +1,51 @@
 package com.szse.po.service.classification;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.*;
+
 import com.szse.po.dao.*;
-public class classifier {
+public class Classifier {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Textdata td=new Textdata();
 		TextdataDAO tdd=new TextdataDAO();
+		Miningresult mr=new Miningresult();
+		MiningresultDAO mrd=new MiningresultDAO();
 		List<Textdata> l=tdd.findAll();
 		HashMap<String,Integer> codemap=new HashMap<String,Integer>();
+		Date date=new Date();
+		DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time=format.format(date);
 		for(int i=0;i<l.size();i++)
 		{
 			td=l.get(i);
 			String code=getGubaCode(td.getUrl());
-			if(code.equals("002161"))
-			System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
-			if(!codemap.containsKey(code))
+			if(code!=null)
 			{
-				codemap.put(code, 1);
+				if(code.equals("002161"))
+				System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
+				
+				mr.setTid(td.getTid());
+				mr.setLcname(code);
+				mr.setLcrelated("1");
+				
+				mr.setUpdatetime(time);
+				mrd.save(mr);
+				
+				if(!codemap.containsKey(code))
+				{
+					codemap.put(code, 1);
+				}
+				else
+				{
+					codemap.put(code, codemap.get(code)+1);
+				}
 			}
-			else
-			{
-				codemap.put(code, codemap.get(code)+1);
-			}
+			
 			
 		}
 		/*Iterator iter = codemap.entrySet().iterator();

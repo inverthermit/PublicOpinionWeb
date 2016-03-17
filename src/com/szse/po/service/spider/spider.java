@@ -24,7 +24,7 @@ import org.htmlparser.visitors.HtmlPage;
 
 import com.szse.po.dao.*;
 
-public class spider {
+public class Spider {
 
 	/**
 	 * @param args
@@ -49,6 +49,17 @@ public class spider {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
+	}
+	
+	public void StartSpider()
+	{
+		ArrayList<String> urls=getURL.getURLList();
+		for(int i=0;i<urls.size();i++)
+		{
+			HashMap<String,String> r=GetDetails(urls.get(i));
+			//System.out.println(r.get("time"));
+			saveTextData(r);
+		}
 	}
 	
 	
