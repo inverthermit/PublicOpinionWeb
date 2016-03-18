@@ -18,8 +18,8 @@ public class SumCalculation {
 	public static ArrayList<String> ishdict =null;
 	public static ArrayList<String> insufficientdict =null;
 	public static ArrayList<String> inversedict =null;
-	String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015\\";
-    NlpirDemo nlp=new NlpirDemo(argu);
+	public static String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015\\";
+    public static NlpirDemo nlp=null;
 	/**
 	 * @param args
 	 */
@@ -29,8 +29,39 @@ public class SumCalculation {
 		
 	}
 	
+	public static void nlpInit()
+	{
+		if(nlp==null)
+		nlp=new NlpirDemo(argu);
+	}
+	
+	public static void nlpUpdate()
+	{
+		nlp=new NlpirDemo(argu);
+	}
+	
 	public boolean dicInit(String filepath)
 	{
+		if(posdict==null&&negdict==null&&mostdict==null&&verydict==null&&moredict==null&&ishdict==null&&
+				insufficientdict==null&&inversedict==null	)
+		{
+		posdict=readTXTList(filepath+"posdict.txt");
+		negdict=readTXTList(filepath+"negdict.txt");
+		mostdict=readTXTList(filepath+"mostdict.txt");
+		verydict=readTXTList(filepath+"verydict.txt");
+		moredict=readTXTList(filepath+"moredict.txt");
+		ishdict=readTXTList(filepath+"ishdict.txt");
+		insufficientdict=readTXTList(filepath+"insufficientdict.txt");
+		inversedict=readTXTList(filepath+"inversedict.txt");
+		return true;
+		}
+		else
+			return true;
+	}
+	
+	public boolean dicUpdate(String filepath)
+	{
+		
 		posdict=readTXTList(filepath+"posdict.txt");
 		negdict=readTXTList(filepath+"negdict.txt");
 		mostdict=readTXTList(filepath+"mostdict.txt");
@@ -79,7 +110,7 @@ public class SumCalculation {
 		{
 			int[] score=score(sen);
 			result.add(score);
-			System.out.println(score[0]+","+score[1]);
+			//System.out.println(score[0]+","+score[1]);
 		}
 		return result;
 	}
@@ -96,7 +127,7 @@ public class SumCalculation {
         int negcount2 = 0;
         int negcount3 = 0;
         ArrayList<String> segtmp =null;//SPLIT the SENTENCE to words
-        
+        nlpInit();
         segtmp=nlp.parseWordReturnList(sentence);
         //System.out.println(segtmp);
         for(String word:segtmp)

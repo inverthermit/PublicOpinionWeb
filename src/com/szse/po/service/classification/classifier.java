@@ -8,9 +8,8 @@ import java.util.*;
 import com.szse.po.dao.*;
 public class Classifier {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void classify()
+	{
 		Textdata td=new Textdata();
 		TextdataDAO tdd=new TextdataDAO();
 		Miningresult mr=new Miningresult();
@@ -26,8 +25,8 @@ public class Classifier {
 			String code=getGubaCode(td.getUrl());
 			if(code!=null)
 			{
-				if(code.equals("002161"))
-				System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
+				//if(code.equals("002161"))
+				//System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
 				
 				mr.setTid(td.getTid());
 				mr.setLcname(code);
@@ -76,8 +75,6 @@ public class Classifier {
 		    if(infoIds.get(i).getValue()>5)
 		    System.out.println(id);
 		}
-		
-		
 	}
 	
 	public static Miningresult classify(Textdata td)
