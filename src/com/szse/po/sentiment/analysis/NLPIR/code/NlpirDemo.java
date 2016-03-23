@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
+import com.szse.po.sentiment.analysis.NLPIR.code.NlpirTest.CLibrary;
 
 public class NlpirDemo {
 
@@ -161,6 +162,20 @@ public class NlpirDemo {
 			e.printStackTrace();
 		}
     }
+	
+	public static String getKeywords(String text)
+	{
+		String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015";
+		// String system_charset = "GBK";//GBK----0
+		String system_charset = "UTF-8";
+		int charset_type = 1;
+		
+		int init_flag = CLibrary.Instance.NLPIR_Init(argu, charset_type, "0");
+		String keywords= CLibrary.Instance.NLPIR_GetKeyWords(text, 10,false);
+
+		System.out.println(keywords);
+		return keywords;
+	}
 	
 	public ArrayList<String> parseWordReturnList(String text){
 		ArrayList<String> resultAL = new ArrayList<String>();

@@ -54,7 +54,7 @@ public class NlpirTest {
 			return;
 		}
 
-		String sInput = "我就呵呵了啊啊啊";
+		String sInput = "今天大盘在晚间消息面偏向利空的带动下，两市大盘低开低走，最终以下跌19点报收，盘面上，两市个股涨跌互现，两市共40只个股涨停，没有个股跌停。  早盘我发帖分析说“板块上，昨天券商基本全线涨停，周小川鼓励储蓄入市对银行股构成利空，所以，昨天银行股回调，但晚间这条消息已经被澄清，今天建议关注银行的动态，如果券商回调，银行股不能启动，今天大盘或将出现跳水，回踩2970点附近”。结果今天券商回调，银行股强势护盘，大盘虽没有回踩2970点附近，但目前的发展态势还在我的预期之内。如能回踩到2950附近将是绝对的价值区域不可错过。  要注意今天的几个现象： 一是今天两市涨停家数远低于昨天涨停家数，主要是近期个股涨幅较大，目前都将面临回调； 二是今天大盘回调量能大幅萎缩，显示前期入场的资金没有出逃，所以，今天大盘还是正常调整； 三是今天大盘没有完全回补2970点附近的跳空缺口，显示大盘走势很强，这点主要是因为银行股强势的原因，但昨天的跳空缺口是周线缺口，没有留下来的必要，最终会被回补，迟补不如早补！ 所以，明天大盘还有回调，大盘还将回踩2970点附近，这附近大盘有望再次企稳，上攻3200点附近。  操作上，建议大家逢低加仓，随后持股待涨。";
 
 		//String nativeBytes = null;
 		try {
@@ -62,7 +62,7 @@ public class NlpirTest {
 
 			System.out.println("分词结果为： " + nativeBytes);
 			
-			CLibrary.Instance.NLPIR_AddUserWord("我就呵呵了啊啊啊 n");
+			//CLibrary.Instance.NLPIR_AddUserWord("我就呵呵了啊啊啊 n");
 			CLibrary.Instance.NLPIR_AddUserWord("华玉米的产地来源 n");
 			nativeBytes = CLibrary.Instance.NLPIR_ParagraphProcess(sInput, 1);
 			System.out.println("增加用户词典后分词结果为： " + nativeBytes);

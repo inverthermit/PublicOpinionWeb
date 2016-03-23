@@ -8,9 +8,9 @@ public class ProcessAll {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//Spider spi=new Spider();
-		//spi.StartSpider();
-		//Classifier.classify();
+		Spider spi=new Spider();
+		spi.StartSpider();
+		Classifier.classify();
 		SentimentAnalysis.analyseAll();
 		
 		
