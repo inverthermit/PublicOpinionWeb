@@ -10,17 +10,17 @@ public class ProcessAll {
 		// TODO Auto-generated method stub
 		
 		//Spider the Newest Data.
-		Spider spi=new Spider();
-		spi.StartSpider();
+		//Spider spi=new Spider();
+		//spi.StartSpider();
 		
 		//Classify and Get the Stock Code.
 		Classifier.classify();
 		
 		//Analyze the Sentiment.
-		SentimentAnalysis.analyseAll();
+		//SentimentAnalysis.analyseAll();
 		
 		//Get the Keywords.
-		SaveTools.saveKeywords();
+		//SaveTools.saveKeywords();
 		
 		//LDA Topic Generation.
 		

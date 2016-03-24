@@ -1,5 +1,8 @@
 package com.szse.po.service.tools;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,12 +21,13 @@ public class SaveTools {
 	public static void main(String[] args)
 	{
 		//saveKeywords();
-		saveVector();
+		//saveVector();
+		saveFilesLDA();
 	}
 
 	public static void saveKeywords()//Save NLPIR output Keywords to 'miningresult'
 	{
-		Textdata td=new Textdata();
+		Textdata td=null;
 		TextdataDAO tdd=new TextdataDAO();
 		Miningresult mr=null;
 		MiningresultDAO mrd=new MiningresultDAO();
@@ -43,8 +47,6 @@ public class SaveTools {
 				mr.setUpdatetime(time);
 				mrd.save(mr);
 			}
-			
-			
 			
 		}
 	}
@@ -91,12 +93,7 @@ public class SaveTools {
 				tdtemp.setVector(new String(sb));
 				tdd.save(tdtemp);
 				//System.out.println(tdtemp.getTid());
-				
-				
 			}
-			
-			
-			
 		}
 	}
 	
@@ -105,4 +102,46 @@ public class SaveTools {
 		
 	}
 
+	public static void saveFilesLDA()//Split.txt + Tid.txt : Store split result->Tid for LDA
+	{
+		Textdata td=null;
+		Miningresult mr=null;
+		MiningresultDAO mrd=new MiningresultDAO();
+		TextdataDAO tdd=new TextdataDAO();
+		List<Textdata> l=tdd.findAll();
+		String path="d://PublicOpinionWebData/20163241500/";
+		File file=new File(path);
+		file.mkdirs();
+		for(int i=0;i<l.size();i++)
+		{
+			td=l.get(i);
+			mr=(Miningresult)mrd.findByTid(td.getTid()).get(0);
+			String code=mr.getLcname();
+			
+			String filename=code+".txt";
+			String IDfilename=code+"ID.txt";
+			//if(code.equals("002226"))
+			//{
+			//System.out.println(td.getVector());
+			//System.out.println(td.getTid()+"");
+			append2file(path+filename,td.getVector());
+			append2file(path+IDfilename,td.getTid()+"");
+			//}
+			
+		}
+	}
+	
+	
+	public static void append2file(String path,String text)
+	{
+		try{
+			BufferedWriter bw=new BufferedWriter(new FileWriter(path,true));//append
+			bw.write(text+"\r\n");
+			bw.close();
+		}
+		catch(Exception ee)
+		{
+			ee.printStackTrace();
+		}
+	}
 }
