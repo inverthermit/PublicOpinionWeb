@@ -54,19 +54,17 @@ public class SaveTools {
 		String argu = "D:\\MyEclipse2015WorkSpace\\JnaTest_NLPIR\\ICTCLAS2015\\";
 		// String system_charset = "GBK";//GBK----0
 		NlpirDemo nd=new NlpirDemo(argu);
-		Textdata td=new Textdata();
+		Textdata td=null;
+		Textdata tdtemp=null;
 		TextdataDAO tdd=new TextdataDAO();
 		List<Textdata> l=tdd.findAll();
-		Date date=new Date();
-		DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String time=format.format(date);
 		for(int i=0;i<l.size();i++)
 		{
 			td=l.get(i);
 			
 			String text=td.getTitle()+" "+td.getContent();
 			//System.out.println(text);
-			if(td.getVector()!=null&&!text.equals(""))
+			if(!text.equals(""))
 			{
 				ArrayList<String> list=nd.parseWordReturnList(text);
 				StringBuffer sb=new StringBuffer();
@@ -78,9 +76,22 @@ public class SaveTools {
 						sb.append(" ");
 					}
 				}
-				System.out.println(new String(sb));
+				//This saving method is extremely strange!
+				/*
+				//System.out.println(new String(sb));
 				td.setVector(new String(sb));
+				//tdd=new TextdataDAO();
+				System.out.println(td.getTid());
 				tdd.save(td);
+				System.out.println(td.getTid());
+				*/
+				tdtemp=(Textdata)tdd.findById(td.getTid());
+				//System.out.println(td.getTid());
+				//td.setTid(td.getTid());
+				tdtemp.setVector(new String(sb));
+				tdd.save(tdtemp);
+				//System.out.println(tdtemp.getTid());
+				
 				
 			}
 			
