@@ -28,6 +28,9 @@
 
 package com.szse.po.service.LDA;
 
+import java.io.*;
+import java.util.ArrayList;
+
 import org.kohsuke.args4j.*;
 
 public class LDA {
@@ -81,23 +84,63 @@ public class LDA {
 		parser.printUsage(System.out);
 	}
 
-	public void process(String indir,String outdir)
+	public void process(String code,String indir,String outdir)
 	{
 		LDACmdOption ldaOption = new LDACmdOption();   
         ldaOption.est = true;  
         ldaOption.estc = false;  
-        ldaOption.modelName = "model20151218";  
+        ldaOption.modelName = code+"model";  
         //ldaOption.dfile = "trssplitresult.txt";  
         //ldaOption.dir="D:\\MyEclipse2015WorkSpace\\JGibbLDA-v.1.0\\model-trs20151218";
-        ldaOption.dfile = "trssplitresult.txt";  
-        ldaOption.dir="D:\\MyEclipse2015WorkSpace\\JGibbLDA-v.1.0\\model20151218";
-        
+        ldaOption.dfile = code+".txt";  
+        ldaOption.dir=outdir;//+code+"model"
+        File file=new File(ldaOption.dir);
+        file.mkdirs();
         ldaOption.alpha = 0.5;  
         ldaOption.beta = 0.1;  
-        ldaOption.K =100;  
-        ldaOption.niters = 2000;   
+        ldaOption.K =3;  
+        ldaOption.niters = 20;   
         Estimator estimator = new Estimator();  
         estimator.init(ldaOption);  
         estimator.estimate();
 	}
+	/*
+	public ArrayList<String> processFolder(String path)
+	{
+		File file=new File(path);
+		File[] tempList = file.listFiles();
+		//System.out.println("该目录下对象个数："+tempList.length);
+		for (int i = 0; i < tempList.length; i++) {
+		if (tempList[i].isFile()) {
+			
+			if(!tempList[i].toString().endsWith("ID.txt")&&count(tempList[i].toString())>1)
+			{
+				System.out.println("文     件："+tempList[i]);
+			}
+		}
+	  }
+	}
+	
+	public int count(String filename){
+		try{
+        InputStream is = new BufferedInputStream(new FileInputStream(filename));
+        byte[] c = new byte[1024];
+        int count = 0;
+        int readChars = 0;
+        while ((readChars = is.read(c)) != -1) {
+            for (int i = 0; i < readChars; ++i) {
+                if (c[i] == '\n')
+                    ++count;
+            }
+        }
+        is.close();
+        return count;
+		}
+		catch(Exception ee)
+		{
+			ee.printStackTrace();
+		}
+		return 0;
+    }
+	*/
 }

@@ -110,22 +110,22 @@ public class SaveTools {
 		TextdataDAO tdd=new TextdataDAO();
 		List<Textdata> l=tdd.findAll();
 		String path="d://PublicOpinionWebData/20163241500/";
-		File file=new File(path);
-		file.mkdirs();
+		
 		for(int i=0;i<l.size();i++)
 		{
 			td=l.get(i);
 			mr=(Miningresult)mrd.findByTid(td.getTid()).get(0);
 			String code=mr.getLcname();
-			
+			File file=new File(path+code+"/");
+			file.mkdirs();
 			String filename=code+".txt";
 			String IDfilename=code+"ID.txt";
 			//if(code.equals("002226"))
 			//{
 			//System.out.println(td.getVector());
 			//System.out.println(td.getTid()+"");
-			append2file(path+filename,td.getVector());
-			append2file(path+IDfilename,td.getTid()+"");
+			append2file(path+code+"/"+filename,td.getVector());
+			append2file(path+code+"/"+IDfilename,td.getTid()+"");
 			//}
 			
 		}

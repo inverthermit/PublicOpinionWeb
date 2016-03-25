@@ -28,6 +28,7 @@
 package com.szse.po.service.LDA;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -153,7 +154,7 @@ public class LDADataset {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					new FileInputStream(filename), "UTF-8"));
 			
-			LDADataset data = readDataSet(reader);
+			LDADataset data = readDataSet(reader,filename);
 			
 			reader.close();
 			return data;
@@ -191,13 +192,22 @@ public class LDADataset {
 	 *  read a dataset from a stream, create new dictionary
 	 *  @return dataset if success and null otherwise
 	 */
-	public static LDADataset readDataSet(BufferedReader reader){
+	public static LDADataset readDataSet(BufferedReader reader,String filename){
 		try {
 			//read number of document
 			String line;
-			line = reader.readLine();
-			int M = Integer.parseInt(line);
+			int count=0;
+			reader.mark((int)(new File(filename)).length());
+			while(reader.ready())
+			{
+				if(!reader.readLine().equals(""))
+					count++;
+				
+			}
+			int M = count;
+			System.out.println(M);
 			
+			reader.reset();
 			LDADataset data = new LDADataset(M);
 			for (int i = 0; i < M; ++i){
 				line = reader.readLine();

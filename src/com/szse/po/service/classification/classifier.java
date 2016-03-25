@@ -8,7 +8,7 @@ import java.util.*;
 import com.szse.po.dao.*;
 public class Classifier {
 
-	public static void classify()
+	public static List<Map.Entry<String, Integer>> classify()
 	{
 		Textdata td=new Textdata();
 		TextdataDAO tdd=new TextdataDAO();
@@ -75,6 +75,7 @@ public class Classifier {
 		    if(infoIds.get(i).getValue()>5)
 		    System.out.println(id);
 		}
+		return infoIds;
 	}
 	
 	public static Miningresult classify(Textdata td)
