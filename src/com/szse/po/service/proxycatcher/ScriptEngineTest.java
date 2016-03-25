@@ -13,9 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.script.Invocable;
-
- import javax.script.ScriptEngine;
-
+import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;  
 
 import org.apache.http.HttpEntity;
@@ -27,6 +25,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.DefaultProxyRoutePlanner;
 import org.apache.http.util.EntityUtils;
+import org.htmlparser.Parser;
+import org.htmlparser.filters.AndFilter;
+import org.htmlparser.filters.HasAttributeFilter;
+import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.util.NodeList;
  /**  * Java调用并执行js文件，传递参数，并活动返回值  *   * @author Tim Luo  */ 
 
  	public class ScriptEngineTest {    
@@ -36,8 +40,8 @@ import org.apache.http.util.EntityUtils;
  		public static int MAX_TRY=25;
  		public static ArrayList<String> list=null;
  		public static ArrayList<String> AvailableProxyList=new ArrayList<String>();
-	public static void main(String[] args){  
-		
+	public static void main(String[] args) throws Exception{  
+		//getProxies2();
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
 		Calendar calendar = Calendar.getInstance();
 		String date = format.format(calendar.getTime());
@@ -177,6 +181,54 @@ import org.apache.http.util.EntityUtils;
     		System.out.println(proxies.get(i));
     	}*/
     	return proxies;
+	}
+	
+	public static ArrayList<String> getProxies2() throws Exception//http://www.kuaidaili.com/free/inha/
+	{
+		
+		RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(10000).setConnectTimeout(10000).build();  
+		CloseableHttpClient httpclient = HttpClients.custom().setDefaultRequestConfig(requestConfig).build();  
+		
+		HttpGet httpGet = new HttpGet(Config.PROXY_LIST_URL2);
+		HttpResponse response = httpclient.execute(httpGet); 
+		HttpEntity entity = response.getEntity(); 
+		String htmls="";
+		if (entity != null) { 
+		    htmls=EntityUtils.toString(entity);
+		    //System.out.println(htmls);
+		}   
+		httpclient.close();
+		
+		ArrayList<String> list=new ArrayList<String>();
+	    Parser	parser=Parser.createParser(htmls, "utf-8");
+	    TagNameFilter TRFilter=new TagNameFilter("tr");
+   	    NodeList nodes4=parser.extractAllNodesThatMatch(TRFilter);
+   	    ArrayList<String> proxies=new ArrayList<String>();
+   	    for(int i=0;i<nodes4.size();i++)
+   	    {
+   	    	
+   	    	parser=Parser.createParser(nodes4.elementAt(i).toHtml(), "utf-8");
+   	    	TagNameFilter TDFilter=new TagNameFilter("td");
+   	   	    NodeList nodes3=parser.extractAllNodesThatMatch(TDFilter);
+   	   	    //System.out.println(nodes3.size());
+   	   	    if(nodes3.size()==7)
+   	   	    {
+   	   	    	String p=html2Str(nodes3.elementAt(0).toHtml())+":"+html2Str(nodes3.elementAt(1).toHtml());
+   	   	    	System.out.println(p);
+   	   	    	proxies.add(p);
+   	   	    }
+   	    	
+   	    }
+    	
+    	
+    	/*for(int i=0;i<proxies.size();i++)
+    	{
+    		System.out.println(proxies.get(i));
+    	}*/
+    	return proxies;
+	}
+	public static String html2Str(String html) { 
+		return html.replaceAll("<[^>]+>", "");
 	}
 	
 	public static boolean availableProxy(String url)

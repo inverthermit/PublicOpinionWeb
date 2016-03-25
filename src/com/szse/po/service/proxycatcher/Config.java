@@ -10,6 +10,8 @@ public class Config {
 	
 	public static String PROXY_LIST_URL="http://www.site-digger.com/html/articles/20110516/proxieslist.html";
 	
+	public static String PROXY_LIST_URL2="http://www.kuaidaili.com/free/inha/";
+	
 	
 	public static String IP_CHECK_URL="http://1212.ip138.com/ic.asp";
 	
