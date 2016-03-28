@@ -84,7 +84,7 @@ public class LDA {
 		parser.printUsage(System.out);
 	}
 
-	public void process(String code,String indir,String outdir)
+	public void process(String code,String outdir)
 	{
 		LDACmdOption ldaOption = new LDACmdOption();   
         ldaOption.est = true;  

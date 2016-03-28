@@ -21,29 +21,39 @@ public class ProcessAll {
 		//Analyze the Sentiment.
 		SentimentAnalysis.analyseAll();
 		
-		//Get the Keywords.
+		//Get the Keywords & Vectors.
 		SaveTools.saveKeywords();
+		
+		
+		SaveTools.saveVector();
 		
 		
 		//LDA Topic Generation.
 		SaveTools.saveFilesLDA();
-		*/
 		LDA lda=new LDA();
-		/*int count=lda.count("D:\\PublicOpinionWebData\\20163241500\\000002ID.txt");
-		System.out.println(count);*/
+		int count=lda.count("D:\\PublicOpinionWebData\\20163241500\\000002ID.txt");
+		System.out.println(count);
 		//lda.processFolder("D:\\PublicOpinionWebData\\20163241500");
-		List<Map.Entry<String, Integer>> list=Classifier.classify();
+		
+		List<Map.Entry<String, Integer>> list=Classifier.classifynotsave();
+		ArrayList<String> anaList=new ArrayList<String>();
 		String path="D:\\PublicOpinionWebData\\20163241500\\";
 		for (int i = 0; i < list.size(); i++) {
 		    
 		    if(list.get(i).getValue()>5)
 		    {
 		    	String code = list.get(i).getKey();
+		    	anaList.add(code);
 		    	//if(code.equals("002226"))
-		    	lda.process(code,path+code+"/" , path+code+"/");
+		    	lda.process(code, path+code+"/");
 		    }
 		    //System.out.println(code);
 		}
+		*/
+		
+		//Single Passage->topic   topic->topic words
+		 
+		
 		
 		
 	}
