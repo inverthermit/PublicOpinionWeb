@@ -10,10 +10,12 @@ import java.util.Map;
  
 
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
  
+
 
 
 import org.springframework.stereotype.Controller;
@@ -34,11 +36,13 @@ public class Hello {
 
         @RequestMapping(value="/hello")
 
-        public String hello(){
-
+        public void hello(HttpServletRequest request,
+                HttpServletResponse response) throws IOException{
+        	response.setContentType("application/json");
             System.out.println("spring mvc hello world!");
-
-            return "index";
+            PrintWriter out = response.getWriter(); 
+            out.write("{\"message\":\"spring mvc hello world!\"}");
+            //return "index";
 
         }
 
@@ -55,13 +59,13 @@ public class Hello {
         	System.out.println();
             String result =
                 "{\"name\":\""+user.getUsername()+"\",\"pwd\":\""+user.getPassword()+"\"}";//user
-                //½Óµ½Ç°Ì¨´«µ½µÄÊý¾Ý£¬²¢Æ´½Ó³ÉÐÂµÄjson¶ÔÏó 
-            response.setContentType("application/json");//ÉèÖÃresponseµÄ´«Êä¸ñÊ½Îªjson 
+                //ï¿½Óµï¿½Ç°Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Æ´ï¿½Ó³ï¿½ï¿½Âµï¿½jsonï¿½ï¿½ï¿½ï¿½ 
+            response.setContentType("application/json");//ï¿½ï¿½ï¿½ï¿½responseï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ê½Îªjson 
             System.out.println(result); 
             try {
             	 
                  PrintWriter out = response.getWriter(); 
-                 out.write(result);//¸øÒ³ÃæÉÏ´«Êäjson¶ÔÏó 
+                 out.write(result);//ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½jsonï¿½ï¿½ï¿½ï¿½ 
             } catch (IOException e) { 
                  e.printStackTrace(); 
             } 

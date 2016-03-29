@@ -4,7 +4,7 @@ public class Analysis {
 
 	//0:code 1:name 2:region 3:industry //board
 	//MainBoard SMEBoard ChiNextBoard
-	public HashMap<String,String> findByCode(String code)
+	public static HashMap<String,String> findByCode(String code)
 	{
 		HashMap<String,String> result=new HashMap<String,String>();
 		for(String[] temp:Data.MainBoard)
@@ -15,6 +15,7 @@ public class Analysis {
 				result.put("name", temp[1]);
 				result.put("region", temp[2]);
 				result.put("industry", temp[3]);
+				result.put("board", "main");
 				return result;
 			}
 		}
@@ -26,6 +27,7 @@ public class Analysis {
 				result.put("name", temp[1]);
 				result.put("region", temp[2]);
 				result.put("industry", temp[3]);
+				result.put("board", "sme");
 				return result;
 			}
 		}
@@ -37,6 +39,7 @@ public class Analysis {
 				result.put("name", temp[1]);
 				result.put("region", temp[2]);
 				result.put("industry", temp[3]);
+				result.put("board", "chinext");
 				return result;
 			}
 		}

@@ -4,6 +4,7 @@ import com.szse.po.service.LDA.*;
 import com.szse.po.service.classification.Classifier;
 import com.szse.po.service.spider.Spider;
 import com.szse.po.service.tools.SaveTools;
+import com.szse.po.service.tools.Statistics;
 
 import java.util.*;
 public class ProcessAll {
@@ -52,9 +53,11 @@ public class ProcessAll {
 		*/
 		
 		//Single Passage->topic   topic->topic words
-		 
-		
-		
+		//List<Map.Entry<String, Integer>> list=Classifier.classifynotsave();
+		//Statistics.getBoardInfo(list);
+		//Statistics.getRegionInfo(list);
+		//Statistics.getIndustryInfo(list);
+		Classifier.classifynotsaveNeg();
 		
 	}
 	

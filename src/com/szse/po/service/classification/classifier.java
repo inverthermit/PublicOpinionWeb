@@ -148,6 +148,69 @@ public class Classifier {
 		return infoIds;
 	}
 	
+	public static List<Map.Entry<String, Integer>> classifynotsaveNeg()
+	{
+		Textdata td=new Textdata();
+		TextdataDAO tdd=new TextdataDAO();
+		Miningresult mr=new Miningresult();
+		MiningresultDAO mrd=new MiningresultDAO();
+		List<Textdata> l=tdd.findAll();
+		HashMap<String,Integer> codemap=new HashMap<String,Integer>();
+		Date date=new Date();
+		DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time=format.format(date);
+		for(int i=0;i<l.size();i++)
+		{
+			td=l.get(i);
+			int tid=td.getTid();
+			mr=(Miningresult)mrd.findByTid(tid).get(0);
+			if(mr.getNsentiment()==1)
+			{
+				//if(code.equals("002161"))
+				//System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());
+				if(!codemap.containsKey(mr.getLcname()))
+				{
+					codemap.put(mr.getLcname(), 1);
+				}
+				else
+				{
+					codemap.put(mr.getLcname(), codemap.get(mr.getLcname())+1);
+				}
+			}
+			
+			
+		}
+		/*Iterator iter = codemap.entrySet().iterator();
+		while (iter.hasNext()) {
+		Map.Entry entry = (Map.Entry) iter.next();
+		Object key = entry.getKey();
+		Object val = entry.getValue();
+		System.out.println(key.toString()+":"+val.toString());
+		}*/
+		
+		Map<String, Integer> map = codemap;
+
+		List<Map.Entry<String, Integer>> infoIds =
+		    new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
+
+		
+		//排序
+		Collections.sort(infoIds, new Comparator<Map.Entry<String, Integer>>() {   
+		    public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {      
+		        return (o2.getValue() - o1.getValue()); 
+		        //return (o1.getKey()).toString().compareTo(o2.getKey());
+		    }
+		}); 
+
+		//排序后
+		for (int i = 0; i < infoIds.size(); i++) {
+		    String id = infoIds.get(i).toString();
+		    //if(infoIds.get(i).getValue()>5)
+		    System.out.println(id);
+		}
+		return infoIds;
+	}
+	
 	public static Miningresult classify(Textdata td)
 	{
 		Miningresult mr=new Miningresult();
