@@ -7,6 +7,8 @@ import com.szse.po.service.tools.SaveTools;
 import com.szse.po.service.tools.Statistics;
 
 import java.util.*;
+
+import net.sf.json.JSONObject;
 public class ProcessAll {
 
 	public static void main(String[] args) {
@@ -57,7 +59,16 @@ public class ProcessAll {
 		//Statistics.getBoardInfo(list);
 		//Statistics.getRegionInfo(list);
 		//Statistics.getIndustryInfo(list);
-		Classifier.classifynotsaveNeg();
+		//Classifier.classifynotsaveNeg();
+		
+		Map<String,Integer> map=Statistics.getBoardInfo(null);
+  	  JSONObject entry=new JSONObject();
+		    //entry.put("target", "course");
+		    entry.put("main", map.get("main"));
+		    entry.put("sme", map.get("sme"));
+		    entry.put("chinext", map.get("chinext"));
+		    entry.put("sum", map.get("sum"));
+		    System.out.println(entry.toString());
 		
 	}
 	

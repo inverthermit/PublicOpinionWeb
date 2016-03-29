@@ -3,11 +3,14 @@ package com.szse.po.service.tools;
 import java.util.*;
 
 import com.szse.po.service.classification.Analysis;
+import com.szse.po.service.classification.Classifier;
 
 public class Statistics {
 
 	public static Map<String,Integer> getBoardInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
+		if(infoIds==null)
+			infoIds=Classifier.classifynotsave();;
 		int MainCount=0;
 		int SMECount=0;
 		int ChiNextCount=0;
