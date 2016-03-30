@@ -1,5 +1,5 @@
 package com.szse.po.controller;
-
+import java.util.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class DispatcherController {
      	response.setContentType("application/json");
          System.out.println("spring mvc hello world!");
          PrintWriter out = response.getWriter(); 
-         out.write("{\"message\":\"二货麦砸\"}");
+         out.write("{\"message\":\"from controller.\"}");
          //return "index";
 
      }
@@ -55,41 +55,134 @@ public class DispatcherController {
      }  
       
 
+      
+      @RequestMapping(value="/board")
+      public void BoardResult(HttpServletRequest request,
+              HttpServletResponse response) throws IOException {
+    	 
+    	 Map<String,Integer> map=Statistics.getBoardInfo(null);
+     	 JSONObject entry=new JSONObject();
+     	 entry.put("type", "board");
+     	 JSONObject value=new JSONObject();
+     	 
+     	 //entry.put("target", "course");
+ 		 value.put("main", map.get("main"));
+ 		 value.put("sme", map.get("sme"));
+ 		 value.put("chinext", map.get("chinext"));
+ 		 value.put("sum", map.get("sum"));
+ 		 
+ 		 entry.put("value", value);
+ 	     System.out.println(value.toString());
+ 	     response.setCharacterEncoding("UTF-8");
+ 	     response.setContentType("application/json");
+          PrintWriter out = response.getWriter(); 
+          out.write(value.toString());
+		    
+      }  
+      
+      @RequestMapping(value="/region")
+      public void RegionResult(HttpServletRequest request,
+              HttpServletResponse response) throws IOException{
+    	 
+    	 Map<String,Integer> map=Statistics.getRegionInfo(null);
+    	 JSONObject entry=new JSONObject();
+    	 entry.put("type", "region");
+    	 JSONObject value=new JSONObject();
+    	 
+    	 Iterator iter=map.entrySet().iterator();
+    	 while(iter.hasNext())
+    	 {
+    		 Map.Entry entry1=(Map.Entry) iter.next();
+    		 value.put((String)entry1.getKey(), entry1.getValue());
+    	 }
+    	 
+		 entry.put("value", value);
+	     System.out.println(value.toString());
+	     response.setCharacterEncoding("UTF-8");
+	     response.setContentType("application/json");
+         PrintWriter out = response.getWriter(); 
+         out.write(value.toString());
+      	
+      }  
+      
+      @RequestMapping(value="/industry")
+      public void IndustryResult(HttpServletRequest request,
+              HttpServletResponse response) throws IOException{
+    	  
+    	 Map<String,Integer> map=Statistics.getIndustryInfo(null);
+     	 JSONObject entry=new JSONObject();
+     	 entry.put("type", "industry");
+     	 JSONObject value=new JSONObject();
+     	 
+     	 Iterator iter=map.entrySet().iterator();
+     	 while(iter.hasNext())
+     	 {
+     		 Map.Entry entry1=(Map.Entry) iter.next();
+     		 value.put((String)entry1.getKey(), entry1.getValue());
+     	 }
+     	 
+ 		 entry.put("value", value);
+ 	     System.out.println(value.toString());
+ 	     response.setCharacterEncoding("UTF-8");
+ 	     response.setContentType("application/json");
+         PrintWriter out = response.getWriter(); 
+         out.write(value.toString());
+      	
+      } 
+      
+      @RequestMapping(value="/top10")
+      public void Top10NegAlarmResult(HttpServletRequest request,
+              HttpServletResponse response) throws IOException{
+    	  //getTop10Info();
+    	  Map<String,Double> map=Statistics.getTop10Info(null);
+      	 JSONObject entry=new JSONObject();
+      	 entry.put("type", "top10");
+      	 JSONObject value=new JSONObject();
+      	 
+      	 Iterator iter=map.entrySet().iterator();
+      	 while(iter.hasNext())
+      	 {
+      		 Map.Entry entry1=(Map.Entry) iter.next();
+      		 value.put((String)entry1.getKey(), entry1.getValue());
+      	 }
+      	 
+  		 entry.put("value", value);
+  	     System.out.println(value.toString());
+  	     response.setCharacterEncoding("UTF-8");
+  	     response.setContentType("application/json");
+          PrintWriter out = response.getWriter(); 
+          out.write(value.toString());
+      }  
+
+     
+      @RequestMapping(value="/netizen")
+      public void NetizenAttentionResult(HttpServletRequest request,
+              HttpServletResponse response) throws IOException{
+    	  //getTop10Info();
+    	  Map<String,Double> map=Statistics.getTop10Info(null);
+      	 JSONObject entry=new JSONObject();
+      	 entry.put("type", "netizen");
+      	 JSONObject value=new JSONObject();
+      	 
+      	 Iterator iter=map.entrySet().iterator();
+      	 while(iter.hasNext())
+      	 {
+      		 Map.Entry entry1=(Map.Entry) iter.next();
+      		 value.put((String)entry1.getKey(), entry1.getValue());
+      	 }
+      	 
+  		 entry.put("value", value);
+  	     System.out.println(value.toString());
+  	     response.setCharacterEncoding("UTF-8");
+  	     response.setContentType("application/json");
+          PrintWriter out = response.getWriter(); 
+          out.write(value.toString());
+      }  
+      
       public void CorpResult(HttpServletRequest request,
               HttpServletResponse response) {
       	
       }  
       
-      @RequestMapping(value="/board")
-      public void BoardResult(HttpServletRequest request,
-              HttpServletResponse response) throws IOException {
-    	  Map<String,Integer> map=Statistics.getBoardInfo(null);
-    	  JSONObject entry=new JSONObject();
-		    //entry.put("target", "course");
-		    entry.put("main", map.get("main"));
-		    entry.put("sme", map.get("sme"));
-		    entry.put("chinext", map.get("chinext"));
-		    entry.put("sum", map.get("sum"));
-		    System.out.println(entry.toString());
-		    response.setContentType("application/json");
-	         PrintWriter out = response.getWriter(); 
-	         out.write(entry.toString());
-		    
-      }  
-      public void RegionResult(HttpServletRequest request,
-              HttpServletResponse response) {
-      	
-      }  
-      public void NegAlarmResult(HttpServletRequest request,
-              HttpServletResponse response) {
-      	
-      }  
-      public void IndustryResult(HttpServletRequest request,
-              HttpServletResponse response) {
-      	
-      }  
-      public void AttentionResult(HttpServletRequest request,
-              HttpServletResponse response) {
-      	
-      }  
+      
 }

@@ -10,7 +10,7 @@ public class Statistics {
 	public static Map<String,Integer> getBoardInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsave();;
+			infoIds=Classifier.classifynotsave();
 		int MainCount=0;
 		int SMECount=0;
 		int ChiNextCount=0;
@@ -46,6 +46,8 @@ public class Statistics {
 	
 	public static Map<String,Integer> getIndustryInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
+		if(infoIds==null)
+			infoIds=Classifier.classifynotsave();
 		Map<String,Integer> result=new HashMap<String,Integer>();
 		for (int i = 0; i < infoIds.size(); i++) {
 		    String id = infoIds.get(i).getKey();
@@ -80,6 +82,8 @@ public class Statistics {
 	
 	public static Map<String,Integer> getRegionInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
+		if(infoIds==null)
+			infoIds=Classifier.classifynotsave();
 		Map<String,Integer> result=new HashMap<String,Integer>();
 		for (int i = 0; i < infoIds.size(); i++) {
 		    String id = infoIds.get(i).getKey();
@@ -110,5 +114,75 @@ public class Statistics {
 		System.out.println(key+","+val);
 		}
 		return result;
+	}
+
+	public static Map<String,Double> getTop10Info(List<Map.Entry<String, Integer>> infoIds)
+	{
+		if(infoIds==null)
+			infoIds=Classifier.classifynotsaveNeg();
+		Map<String,Double> result=new HashMap<String,Double>();
+		for (int i = 0; i < infoIds.size(); i++) {
+			if(i>=10)
+				break;
+		    String id = infoIds.get(i).getKey();
+		    int n=infoIds.get(i).getValue();
+		    HashMap<String,String> info=Analysis.findByCode(id);
+		    if(info!=null){
+		    	String temp=info.get("name");
+		    	String key=id+"#"+temp;
+		    	if(key!=null&&!key.equals("#"))
+		    	{
+		    		if(!result.containsKey(key))
+		    		{
+		    			result.put(key, n*3.66);
+		    		}
+		    	}
+		    }
+		    
+		}
+		Iterator iter = result.entrySet().iterator();
+		while (iter.hasNext()) {
+		Map.Entry entry = (Map.Entry) iter.next();
+		Object key = entry.getKey();
+		Object val = entry.getValue();
+		System.out.println(key+","+val);
+		}
+		return result;
+		
+	}
+	
+	public static Map<String,Double> getNetizenAttention(List<Map.Entry<String, Integer>> infoIds)
+	{
+		if(infoIds==null)
+			infoIds=Classifier.classifynotsave();
+		Map<String,Double> result=new HashMap<String,Double>();
+		for (int i = 0; i < infoIds.size(); i++) {
+			if(i>=10)
+				break;
+		    String id = infoIds.get(i).getKey();
+		    int n=infoIds.get(i).getValue();
+		    HashMap<String,String> info=Analysis.findByCode(id);
+		    if(info!=null){
+		    	String temp=info.get("name");
+		    	String key=id+"#"+temp;
+		    	if(key!=null&&!key.equals("#"))
+		    	{
+		    		if(!result.containsKey(key))
+		    		{
+		    			result.put(key, n*1.0);
+		    		}
+		    	}
+		    }
+		    
+		}
+		Iterator iter = result.entrySet().iterator();
+		while (iter.hasNext()) {
+		Map.Entry entry = (Map.Entry) iter.next();
+		Object key = entry.getKey();
+		Object val = entry.getValue();
+		System.out.println(key+","+val);
+		}
+		return result;
+		
 	}
 }
