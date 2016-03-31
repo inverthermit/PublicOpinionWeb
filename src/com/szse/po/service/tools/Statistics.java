@@ -7,10 +7,13 @@ import com.szse.po.service.classification.Classifier;
 
 public class Statistics {
 
+	
+	public static List<Map.Entry<String, Integer>> classifylist=Classifier.classifynotsave();
+	public static List<Map.Entry<String, Integer>> classifylistNeg=Classifier.classifynotsaveNeg();
 	public static Map<String,Integer> getBoardInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsave();
+			infoIds=classifylist;
 		int MainCount=0;
 		int SMECount=0;
 		int ChiNextCount=0;
@@ -31,7 +34,6 @@ public class Statistics {
 		    		
 		    	}
 		    }
-		    
 		}
 		int sum=MainCount+SMECount+ChiNextCount;
 		System.out.println("主板："+MainCount+"；中小板："+SMECount+"；创业板："+ChiNextCount+"|共："+sum);
@@ -47,7 +49,7 @@ public class Statistics {
 	public static Map<String,Integer> getIndustryInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsave();
+			infoIds=classifylist;
 		Map<String,Integer> result=new HashMap<String,Integer>();
 		for (int i = 0; i < infoIds.size(); i++) {
 		    String id = infoIds.get(i).getKey();
@@ -83,7 +85,7 @@ public class Statistics {
 	public static Map<String,Integer> getRegionInfo(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsave();
+			infoIds=classifylist;
 		Map<String,Integer> result=new HashMap<String,Integer>();
 		for (int i = 0; i < infoIds.size(); i++) {
 		    String id = infoIds.get(i).getKey();
@@ -119,7 +121,7 @@ public class Statistics {
 	public static Map<String,Double> getTop10Info(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsaveNeg();
+			infoIds=classifylistNeg;
 		Map<String,Double> result=new HashMap<String,Double>();
 		for (int i = 0; i < infoIds.size(); i++) {
 			if(i>=10)
@@ -154,7 +156,7 @@ public class Statistics {
 	public static Map<String,Double> getNetizenAttention(List<Map.Entry<String, Integer>> infoIds)
 	{
 		if(infoIds==null)
-			infoIds=Classifier.classifynotsave();
+			infoIds=classifylist;
 		Map<String,Double> result=new HashMap<String,Double>();
 		for (int i = 0; i < infoIds.size(); i++) {
 			if(i>=10)
