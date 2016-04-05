@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
@@ -56,7 +57,7 @@ public class DispatcherController {
       
 
       
-      @RequestMapping(value="/board")
+      @RequestMapping(value="/boarddata")
       public void BoardResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException {
     	 
@@ -80,103 +81,111 @@ public class DispatcherController {
 		    
       }  
       
-      @RequestMapping(value="/region")
+      @RequestMapping(value="/regiondata")
       public void RegionResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	 
     	 Map<String,Integer> map=Statistics.getRegionInfo(null);
+    	 JSONObject result = new JSONObject();  
+ 		 JSONArray data=new JSONArray();  
     	 JSONObject entry=new JSONObject();
-    	 entry.put("type", "region");
-    	 JSONObject value=new JSONObject();
-    	 
+    	 result.put("type", "region");
     	 Iterator iter=map.entrySet().iterator();
     	 while(iter.hasNext())
     	 {
     		 Map.Entry entry1=(Map.Entry) iter.next();
-    		 value.put((String)entry1.getKey(), entry1.getValue());
+    		 JSONObject obj = new JSONObject();   
+			  obj.put("key", (String)entry1.getKey());
+			  obj.put("value", entry1.getValue());
+			  data.put(obj);
     	 }
-    	 
-		 entry.put("value", value);
-	     System.out.println(value.toString());
+ 		 result.put("data", data);
+	     System.out.println(result.toString());
 	     response.setCharacterEncoding("UTF-8");
 	     response.setContentType("application/json");
          PrintWriter out = response.getWriter(); 
-         out.write(value.toString());
+         out.write(result.toString());
       	
       }  
       
-      @RequestMapping(value="/industry")
+      @RequestMapping(value="/industrydata")
       public void IndustryResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  
     	 Map<String,Integer> map=Statistics.getIndustryInfo(null);
-     	 JSONObject entry=new JSONObject();
-     	 entry.put("type", "industry");
-     	 JSONObject value=new JSONObject();
-     	 
-     	 Iterator iter=map.entrySet().iterator();
-     	 while(iter.hasNext())
-     	 {
-     		 Map.Entry entry1=(Map.Entry) iter.next();
-     		 value.put((String)entry1.getKey(), entry1.getValue());
-     	 }
-     	 
- 		 entry.put("value", value);
- 	     System.out.println(value.toString());
- 	     response.setCharacterEncoding("UTF-8");
- 	     response.setContentType("application/json");
+    	 JSONObject result = new JSONObject();  
+ 		 JSONArray data=new JSONArray();  
+    	 JSONObject entry=new JSONObject();
+    	 result.put("type", "industry");
+    	 Iterator iter=map.entrySet().iterator();
+    	 while(iter.hasNext())
+    	 {
+    		 Map.Entry entry1=(Map.Entry) iter.next();
+    		 JSONObject obj = new JSONObject();   
+			  obj.put("key", (String)entry1.getKey());
+			  obj.put("value", entry1.getValue());
+			  data.put(obj);
+    	 }
+ 		 result.put("data", data);
+	     System.out.println(result.toString());
+	     response.setCharacterEncoding("UTF-8");
+	     response.setContentType("application/json");
          PrintWriter out = response.getWriter(); 
-         out.write(value.toString());
+         out.write(result.toString());
       	
       } 
       
-      @RequestMapping(value="/top10")
+      @RequestMapping(value="/top10data")
       public void Top10NegAlarmResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  //getTop10Info();
     	  Map<String,Double> map=Statistics.getTop10Info(null);
-      	 JSONObject entry=new JSONObject();
-      	 entry.put("type", "top10");
-      	 JSONObject value=new JSONObject();
-      	 
-      	 Iterator iter=map.entrySet().iterator();
-      	 while(iter.hasNext())
-      	 {
-      		 Map.Entry entry1=(Map.Entry) iter.next();
-      		 value.put((String)entry1.getKey(), entry1.getValue());
-      	 }
-      	 
-  		 entry.put("value", value);
-  	     System.out.println(value.toString());
-  	     response.setCharacterEncoding("UTF-8");
-  	     response.setContentType("application/json");
+    	  JSONObject result = new JSONObject();  
+  		 JSONArray data=new JSONArray();  
+     	 JSONObject entry=new JSONObject();
+     	 result.put("type", "top10");
+     	 Iterator iter=map.entrySet().iterator();
+     	 while(iter.hasNext())
+     	 {
+     		 Map.Entry entry1=(Map.Entry) iter.next();
+     		 JSONObject obj = new JSONObject();   
+ 			  obj.put("key", (String)entry1.getKey());
+ 			  obj.put("value", entry1.getValue());
+ 			  data.put(obj);
+     	 }
+  		 result.put("data", data);
+ 	     System.out.println(result.toString());
+ 	     response.setCharacterEncoding("UTF-8");
+ 	     response.setContentType("application/json");
           PrintWriter out = response.getWriter(); 
-          out.write(value.toString());
+          out.write(result.toString());
       }  
 
      
-      @RequestMapping(value="/netizen")
+      @RequestMapping(value="/netizendata")
       public void NetizenAttentionResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  //getTop10Info();
     	  Map<String,Double> map=Statistics.getTop10Info(null);
-      	 JSONObject entry=new JSONObject();
-      	 entry.put("type", "netizen");
-      	 JSONObject value=new JSONObject();
-      	 
-      	 Iterator iter=map.entrySet().iterator();
-      	 while(iter.hasNext())
-      	 {
-      		 Map.Entry entry1=(Map.Entry) iter.next();
-      		 value.put((String)entry1.getKey(), entry1.getValue());
-      	 }
-      	 
-  		 entry.put("value", value);
-  	     System.out.println(value.toString());
-  	     response.setCharacterEncoding("UTF-8");
-  	     response.setContentType("application/json");
+    	  JSONObject result = new JSONObject();  
+  		 JSONArray data=new JSONArray();  
+     	 JSONObject entry=new JSONObject();
+     	 result.put("type", "top10");
+     	 Iterator iter=map.entrySet().iterator();
+     	 while(iter.hasNext())
+     	 {
+     		 Map.Entry entry1=(Map.Entry) iter.next();
+     		 JSONObject obj = new JSONObject();   
+ 			  obj.put("key", (String)entry1.getKey());
+ 			  obj.put("value", entry1.getValue());
+ 			  data.put(obj);
+     	 }
+  		 result.put("data", data);
+ 	     System.out.println(result.toString());
+ 	     response.setCharacterEncoding("UTF-8");
+ 	     response.setContentType("application/json");
           PrintWriter out = response.getWriter(); 
-          out.write(value.toString());
+          out.write(result.toString());
       }  
       
       public void CorpResult(HttpServletRequest request,
