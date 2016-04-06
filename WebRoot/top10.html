@@ -14,7 +14,8 @@
   <script src="./dist/semantic.js"></script>
     	
 		<!-- 1. Add these JavaScript inclusions in the head of your page -->
-		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		
 		<script src="js/echarts.min.js"></script>
 <link rel="stylesheet" type="text/css" href="kitchensink.css">
 </head>
@@ -34,11 +35,36 @@
   <a class="item" href="region.html">地区分析</a>
 </div>
     <div class='ui ignored info message'>
-
+	
         <div style="text-align:center">
               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
+    $.get("top10data.do",function(data,status){
+    var arr=data.data;
+    var keys=new Array();
+    var values=new Array();
+   //console.log(arr[0].value);
+    for(var o in arr){  
+        keys[9-o]=arr[o].key;//.split('#')[1];
+         values[9-o]=arr[o].value;
+      }
+      
+    for(var i=0;i<values.length-1;i++){
+  for(var j=0;j<values.length-i-1;j++){
+   if(values[j]>values[j+1]){
+    var swap=keys[j];
+    keys[j]=keys[j+1];
+    keys[j+1]=swap;
+    
+    var swap2=values[j];
+    values[j]=values[j+1];
+    values[j+1]=swap2;
+	   }
+	  }
+	 }
+	 
+	 
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
 
@@ -73,19 +99,20 @@
     yAxis : [
         {
             type : 'category',
-            data : ['世界人口','世界人口','美国人口','印度人口','中国人口','世界人口']
+            data : keys.split('#')[1]
         }
     ],
     series : [
         {
             name:'负面舆情指数',
             type:'bar',
-            data:[30, 40, 46, 52, 70, 71]
+            data:values
         }
     ]
 };
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+        });
     </script>
        <table class="ui celled table">
   <thead>
@@ -94,7 +121,6 @@
         <th >公司简称</th>
     <th>股票代码</th>
     <th>负面舆情指数</th>
-    <th>正面舆情指数</th>
     <th>查看</th>
   </tr></thead>
   <tbody>
@@ -106,7 +132,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
     <tr>
@@ -116,7 +141,6 @@
       </td>
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
       <tr>
@@ -127,7 +151,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
     <tr>
@@ -137,7 +160,6 @@
       </td>
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a href="">查看详情</a></th>
     </tr>
        <tr>
@@ -148,7 +170,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
     <tr>
@@ -158,7 +179,6 @@
       </td>
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
        <tr>
@@ -169,7 +189,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
     <tr>
@@ -179,7 +198,6 @@
       </td>
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
        <tr>
@@ -190,7 +208,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
        <tr>
@@ -201,7 +218,6 @@
         
       <td>000001</td>
       <td>20</td>
-        <td>10</td>
         <th><a>查看详情</a></th>
     </tr>
       
