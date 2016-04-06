@@ -1,4 +1,5 @@
 package com.szse.po.controller;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -57,7 +58,7 @@ public class DispatcherController {
       
 
       
-      @RequestMapping(value="/boarddata")
+      @RequestMapping(value="/boarddata.do")
       public void BoardResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException {
     	 
@@ -81,34 +82,79 @@ public class DispatcherController {
 		    
       }  
       
-      @RequestMapping(value="/regiondata")
+      @RequestMapping(value="/regiondata.do")
       public void RegionResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
-    	 
+    	 StringBuffer resultString=new StringBuffer();
+    	 resultString.append("{");
     	 Map<String,Integer> map=Statistics.getRegionInfo(null);
     	 JSONObject result = new JSONObject();  
- 		 JSONArray data=new JSONArray();  
+    	 JSONObject data=new JSONObject();  
     	 JSONObject entry=new JSONObject();
     	 result.put("type", "region");
+    	 
+    	 //Count Sum
+    	 int sum=0;
+    	 Iterator countiter=map.entrySet().iterator();
+    	 while(countiter.hasNext())
+    	 {
+    		 Map.Entry entry0=(Map.Entry) countiter.next();
+    		 sum+=(int)entry0.getValue();
+    	 }
+    	 
     	 Iterator iter=map.entrySet().iterator();
+    	 int index=1;
+    	 JSONObject obj = new JSONObject();   
     	 while(iter.hasNext())
     	 {
     		 Map.Entry entry1=(Map.Entry) iter.next();
-    		 JSONObject obj = new JSONObject();   
-			  obj.put("key", (String)entry1.getKey());
+    		 
+    		 JSONObject innerobj = new JSONObject();
+    		 double val=((int)entry1.getValue()/(sum+0.0)*100);
+    		 //Round to 2 decimal places
+    		 DecimalFormat df = new DecimalFormat("#.00");  
+             if(df.format(val).startsWith("."))
+            	 innerobj.put("value", "0"+df.format(val)+"%");
+             else
+    		 innerobj.put("value", df.format(val)+"%");
+    		 innerobj.put("index",index);
+    		 
+    		 //Get state color
+    		 int[] stateArr={10,7,5,4,3,1,0};
+    		 int state=7;
+    		 for(int i=0;i<stateArr.length;i++)
+    		 {
+    			 if(val>stateArr[i])
+    			 {
+    				 state=i;
+    				 break;
+    			 }
+    		 }
+    		 innerobj.put("stateInitColor",state);
+    		 
+    		 index++;
+    		 obj.put((String)entry1.getKey(), innerobj);
+    		 if(index!=2)
+    		 {
+    			 resultString.append(",");
+    		 }
+    		 resultString.append("\""+(String)entry1.getKey()+"\":"+innerobj.toString());
+			  /*obj.put("key", (String)entry1.getKey());
 			  obj.put("value", entry1.getValue());
-			  data.put(obj);
+			  */
+    		 //data.(obj);
     	 }
- 		 result.put("data", data);
-	     System.out.println(result.toString());
+    	 resultString.append("}");
+ 		 //result.put("data", data);
+	     System.out.println(resultString.toString());
 	     response.setCharacterEncoding("UTF-8");
 	     response.setContentType("application/json");
          PrintWriter out = response.getWriter(); 
-         out.write(result.toString());
+         out.write(resultString.toString());
       	
-      }  
+      }
       
-      @RequestMapping(value="/industrydata")
+      @RequestMapping(value="/industrydata.do")
       public void IndustryResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  
@@ -135,7 +181,7 @@ public class DispatcherController {
       	
       } 
       
-      @RequestMapping(value="/top10data")
+      @RequestMapping(value="/top10data.do")
       public void Top10NegAlarmResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  //getTop10Info();
@@ -162,7 +208,7 @@ public class DispatcherController {
       }  
 
      
-      @RequestMapping(value="/netizendata")
+      @RequestMapping(value="/netizendata.do")
       public void NetizenAttentionResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  //getTop10Info();

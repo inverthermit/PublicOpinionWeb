@@ -1,6 +1,7 @@
 package com.szse.po.service.tools;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 import com.szse.po.service.classification.Analysis;
 import com.szse.po.service.classification.Classifier;
@@ -92,7 +93,7 @@ public class Statistics {
 		    int n=infoIds.get(i).getValue();
 		    HashMap<String,String> info=Analysis.findByCode(id);
 		    if(info!=null){
-		    	String temp=info.get("region");
+		    	String temp=getRegionPinyin(info.get("region"));
 		    	if(temp!=null&&!temp.equals(""))
 		    	{
 		    		if(!result.containsKey(temp))
@@ -108,6 +109,7 @@ public class Statistics {
 		    }
 		    
 		}
+		result=sortMap(result);
 		Iterator iter = result.entrySet().iterator();
 		while (iter.hasNext()) {
 		Map.Entry entry = (Map.Entry) iter.next();
@@ -187,4 +189,71 @@ public class Statistics {
 		return result;
 		
 	}
+	
+	public static String getRegionPinyin(String chinese)
+	{
+		for(int i=0;i<provinces.length;i++)
+		{
+			if(chinese.equals(provinces[i][0]))
+				return provinces[i][1];
+		}
+		System.out.println(chinese+" has no Pinyin!");
+		return chinese;
+	}
+
+
+	 public static Map sortMap(Map oldMap) {  
+	        ArrayList<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(oldMap.entrySet());  
+	        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {  
+	  
+	            @Override  
+	            public int compare(Entry<java.lang.String, Integer> arg0,  
+	                    Entry<java.lang.String, Integer> arg1) {  
+	                return  arg1.getValue()-arg0.getValue() ;  
+	            }  
+	        });  
+	        Map newMap = new LinkedHashMap();  
+	        for (int i = 0; i < list.size(); i++) {  
+	            newMap.put(list.get(i).getKey(), list.get(i).getValue());  
+	        }  
+	        return newMap;  
+	    }  
+	
+	
+	public static String[][] provinces={
+		{"黑龙江","heilongjiang"},
+		{"河北","hebei"},
+		{"甘肃","gansu"},
+		{"云南","yunnan"},
+		{"四川","sichuan"},
+		{"吉林","jilin"},
+		{"辽宁","liaoning"},
+		{"青海","qinghai"},
+		{"陕西","shanxi"},
+		{"河南","henan"},
+		{"山东","shandong"},
+		{"山西","shanxi"},
+		{"安徽","anhui"},
+		{"湖北","hubei"},
+		{"湖南","hunan"},
+		{"江苏","jiangsu"},
+		{"贵州","guizhou"},
+		{"浙江","zhejiang"},
+		{"江西","jiangxi"},
+		{"广东","guangdong"},
+		{"福建","fujian"},
+		{"台湾","taiwan"},
+		{"海南","hainan"},
+		{"广西","guangxi"},
+		{"内蒙古","neimenggu"},
+		{"宁夏","ningxia"},
+		{"新疆","xinjiang"},
+		{"西藏","xizang"},
+		{"澳门","aomen"},
+		{"北京","beijing"},
+		{"上海","shanghai"},
+		{"香港","xianggang"},
+		{"天津","tianjin"},
+		{"重庆","chongqing"}
+	};
 }
