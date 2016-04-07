@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Templete Page</title>
+  <title>负面舆情前十名</title>
 
   <link rel="stylesheet" type="text/css" href="./dist/semantic.css">
 
@@ -63,6 +63,16 @@
 	   }
 	  }
 	 }
+	
+	var names=new Array();
+	var codes=new Array();
+	for(var i=0;i<keys.length;i++)
+	{
+		names[i]=keys[i].split('#')[1];
+		codes[i]=keys[i].split('#')[0];
+	}
+	
+	 
 	 
 	 
         // 基于准备好的dom，初始化echarts实例
@@ -99,7 +109,7 @@
     yAxis : [
         {
             type : 'category',
-            data : keys.split('#')[1]
+            data : names
         }
     ],
     series : [
@@ -112,18 +122,35 @@
 };
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+        
+        //设置表格
+        var tableString;
+        for(var i=keys.length-1;i>=0;i--)
+		{
+		
+		    tableString+='<tr>';
+		    tableString+='<td>'+(10-i)+'</td>';
+		    tableString+='<td>'+names[i]+'</td>';
+		    tableString+='<td>'+codes[i]+'</td>';
+		    tableString+='<td>'+values[i]+'</td>';
+		    tableString+='<td><a href="corp/'+codes[i]+'">查看详情</a></td>';
+			tableString+='</tr>';
+		}
+        
+        $("#top10table").html(tableString);
+        
         });
     </script>
        <table class="ui celled table">
   <thead>
     <tr >
-        <th >Rank</th>
+        <th class='collapsed'>Rank</th>
         <th >公司简称</th>
     <th>股票代码</th>
     <th>负面舆情指数</th>
     <th>查看</th>
   </tr></thead>
-  <tbody>
+  <tbody id='top10table'>
     <tr>
         <td>1.</td>
       <td>

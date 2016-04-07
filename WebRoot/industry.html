@@ -34,7 +34,83 @@
   <a class="item" href="region.html">地区分析</a>
 </div>
     <div class='ui ignored info message'>
+            <script type="text/javascript">
+    $.get("industrydata.do",function(data,status){
+    var arr=data.data;
+    var keys=new Array();
+    var values=new Array();
+   //console.log(arr[0].value);
+    for(var o in arr){  
+        keys[o]=arr[o].key;//.split('#')[1];
+         values[o]=arr[o].value;
+      }
+      
+    for(var i=0;i<values.length-1;i++){
+  for(var j=0;j<values.length-i-1;j++){
+   if(values[j]<values[j+1]){
+    var swap=keys[j];
+    keys[j]=keys[j+1];
+    keys[j+1]=swap;
+    
+    var swap2=values[j];
+    values[j]=values[j+1];
+    values[j+1]=swap2;
+	   }
+	  }
+	 }
+	
+	var names=new Array();
+	var codes=new Array();
+	for(var i=0;i<values.length;i++)
+	{
+		console.log(keys[i]+":"+values[i]);
+	}
+	
+	var icons=['计算机# desktop','医药生物#pink heartbeat','电气设备#yellow lightning','机械设备# setting','通信#blue feed','化工#red lab',
+	'传媒# film',	'房地产#grey building','家用电器#green power','商业贸易#grey shop','采矿业#brown bomb','综合# square','钢铁#grey road','有色金属#yellow cube'
+	,'建筑业#purple gift','国防军工# military','汽车#blue car','纺织服装# cloth','制造业#blue rain','农林牧渔#yellow lemon','食品饮料#grey food',
+	'休闲服务#red sound','公共环保#green university ','运输仓储# shipping','电子#orange plug','银行#green bank','金融业#green money','信息技术#orange book',
+	'水电煤气#yellow lightning','批发零售#red cart','科研服务#blue student',	'商务服务# fax','文化传播#orange film','住宿餐饮#grey food'];
+	 
+	 
+	 
         
+        //设置表格
+        var tableString;
+        for(var i=0;i<keys.length;i++)
+		{
+		
+		    tableString+='<tr>';
+		    tableString+='<td class="collapsing center aligned">'+keys[i]+'</td>';
+		    var selectedicon;
+		    for(var j=0;j<icons.length;j++)
+		    {
+		    	//console.log(keys[i]+"----"+icons[j].split(' ')[0]);
+		       if(keys[i]==icons[j].split('#')[0])
+		       {
+		       		selectedicon=icons[j].split('#')[1];
+		       		break;
+		       }
+		       
+		       
+		    }
+		    var iconn;
+		    for(var k=0;k<values[i];k++)
+		    {
+		    	iconn+='<i class="'+selectedicon+' large icon"></i>';
+		    }
+		    
+		    
+		    tableString+='<td>'+iconn.replace('undefined','')+'</td>';
+			tableString+='</tr>';
+			iconn='';
+		}
+        
+        $("#industrytable").html(tableString);
+        
+        });
+    </script>
+   
         <h4 class="ui header">
   <i class='browser icon'></i>
   <div class="content">
@@ -47,7 +123,7 @@
       结果列表
     </th>
   </tr></thead>
-  <tbody>
+  <tbody id='industrytable'>
     <tr>
       <td class="collapsing center aligned">
           <a href='#'>计算机</a>
@@ -79,7 +155,7 @@
       <td><i class='blue feed large icon'></i><i class='blue feed large icon'></i></td>
     </tr>
   </tbody>
-</table>
+</table><!-- 
  计算机 <i class='desktop large icon'></i><br>
 医药生物 <i class='pink heartbeat large icon'></i><br>
 电气设备 <i class='yellow lightning large icon'></i><br>
@@ -108,7 +184,7 @@
 电子 <i class='orange plug large icon'></i><br>
 银行 <i class='green dollar large icon'></i><br>
 非银金融 <i class='green money large icon'></i><br>
-        
+         -->
     </div>
     </div>
     </div>

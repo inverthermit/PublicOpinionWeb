@@ -163,13 +163,21 @@ public class DispatcherController {
  		 JSONArray data=new JSONArray();  
     	 JSONObject entry=new JSONObject();
     	 result.put("type", "industry");
+    	 Iterator sumiter=map.entrySet().iterator();
+    	 int sum=0;
+    	 while(sumiter.hasNext())
+    	 {
+    		 Map.Entry entry1=(Map.Entry) sumiter.next();
+    		 JSONObject obj = new JSONObject();   
+			 sum+= (int)entry1.getValue();
+    	 }
     	 Iterator iter=map.entrySet().iterator();
     	 while(iter.hasNext())
     	 {
     		 Map.Entry entry1=(Map.Entry) iter.next();
     		 JSONObject obj = new JSONObject();   
-			  obj.put("key", (String)entry1.getKey());
-			  obj.put("value", entry1.getValue());
+			  obj.put("key", ((String)entry1.getKey()).split(" ")[1]);
+			  obj.put("value", (int)((int)entry1.getValue()*30/(sum+0.0))+1);
 			  data.put(obj);
     	 }
  		 result.put("data", data);
