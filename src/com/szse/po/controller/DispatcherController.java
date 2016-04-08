@@ -220,7 +220,7 @@ public class DispatcherController {
       public void NetizenAttentionResult(HttpServletRequest request,
               HttpServletResponse response) throws IOException{
     	  //getTop10Info();
-    	  Map<String,Double> map=Statistics.getTop10Info(null);
+    	  Map<String,Double> map=Statistics.getNetizenAttention(null);
     	  JSONObject result = new JSONObject();  
   		 JSONArray data=new JSONArray();  
      	 JSONObject entry=new JSONObject();

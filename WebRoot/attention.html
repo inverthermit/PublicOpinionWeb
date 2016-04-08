@@ -7,16 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Templete Page</title>
+  <title>关注度分析</title>
 
   <link rel="stylesheet" type="text/css" href="./dist/semantic.css">
 
   <script src="./dist/semantic.js"></script>
     	
 		<!-- 1. Add these JavaScript inclusions in the head of your page -->
-		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 		
+		<script src="js/echarts.min.js"></script>
 <link rel="stylesheet" type="text/css" href="kitchensink.css">
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#meitibutton").click(function(){
+    $("html, body").scrollTop(0).animate({scrollTop: $("#wangminbutton").offset().top});
+  });
+});
+$(document).ready(function(){
+  $("#wangminbutton").click(function(){
+    $("html, body").scrollTop(0).animate({scrollTop: $("body").offset().top});
+  });
+});
+</script>
 </head>
 <body >
             <div class="ui grid">
@@ -34,20 +47,489 @@
   <a class="item" href="region.html">地区分析</a>
 </div>
     <div class='ui ignored info message'>
-  <h4 class="ui header">
-  <i class='find icon'></i>
+	    <h4 class="ui header">
+  <i class="find icon"></i>
   <div class="content">
-  关注度分析
+    关注度分析
   </div>
 </h4>
-           
+<div class="ui secondary  menu">
+  <a class="item active">
+    网民关注度
+  </a>
+  <a class="item" id='meitibutton'>
+    媒体关注度
+  </a>
+  </div>
+        <div>
+        
+              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+      <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+option = {
+    title: {
+        x: 'center',
+        text: '网民关注度',
+        subtext: '数据来自 深圳证券交易所',
+        link: 'http://www.szse.cn'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    calculable: true,
+    grid: {
+        borderWidth: 0,
+        y: 80,
+        y2: 60
+    },
+    xAxis: [
+        {
+            type: 'category',
+            show: false,
+            data: ['Line', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            show: false
+        }
+    ],
+    series: [
+        {
+            name: 'ECharts例子个数统计',
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
+                    }
+                }
+            },
+            data: [12,21,10,4,12,5,6,5,25,23,7],
+            markPoint: {
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    formatter: function(params){
+                        return '<img src="' 
+                                + params.data.symbol.replace('image://', '')
+                                + '"/>';
+                    }
+                },
+                data: [
+                    {xAxis:0, y: 350, name:'Line', symbolSize:20, symbol: 'image://../asset/ico/折线图.png'},
+                    {xAxis:1, y: 350, name:'Bar', symbolSize:20, symbol: 'image://../asset/ico/柱状图.png'},
+                    {xAxis:2, y: 350, name:'Scatter', symbolSize:20, symbol: 'image://../asset/ico/散点图.png'},
+                    {xAxis:3, y: 350, name:'K', symbolSize:20, symbol: 'image://../asset/ico/K线图.png'},
+                    {xAxis:4, y: 350, name:'Pie', symbolSize:20, symbol: 'image://../asset/ico/饼状图.png'},
+                    {xAxis:5, y: 350, name:'Radar', symbolSize:20, symbol: 'image://../asset/ico/雷达图.png'},
+                    {xAxis:6, y: 350, name:'Chord', symbolSize:20, symbol: 'image://../asset/ico/和弦图.png'},
+                    {xAxis:7, y: 350, name:'Force', symbolSize:20, symbol: 'image://../asset/ico/力导向图.png'},
+                    {xAxis:8, y: 350, name:'Map', symbolSize:20, symbol: 'image://../asset/ico/地图.png'},
+                    {xAxis:9, y: 350, name:'Gauge', symbolSize:20, symbol: 'image://../asset/ico/仪表盘.png'},
+                    {xAxis:10, y: 350, name:'Funnel', symbolSize:20, symbol: 'image://../asset/ico/漏斗图.png'},
+                ]
+            }
+        }
+    ]
+};
+                    
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+       <table class="ui celled table" id='wangmintable'>
+  <thead>
+    <tr >
+        <th class='collapsed'>Rank</th>
+        <th >公司简称</th>
+    <th>股票代码</th>
+    <th>负面舆情指数</th>
+    <th>查看</th>
+  </tr></thead>
+  <tbody id='top10table'>
+    <tr>
+        <td>1.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>2.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+      <tr>
+        <td >3.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>4.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a href="">查看详情</a></th>
+    </tr>
+       <tr>
+        <td >5.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>6.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >7.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>8.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >9.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >10.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+      
+  </tbody>
+  <tfoot>
+    <tr><th colspan="3">
+      <div class="ui right floated pagination menu">
+        <a class="icon item">
+          <i class="left chevron icon"></i>
+        </a>
+        <a class="item">1</a>
+        <a class="item">2</a>
+        <a class="item">3</a>
+        <a class="item">4</a>
+        <a class="icon item">
+          <i class="right chevron icon"></i>
+        </a>
+      </div>
+    </th>
+  </tr></tfoot>
+</table>   
+
+
+
+
+
+<div class="ui secondary  menu">
+  <a class="item" id='wangminbutton'>
+    网民关注度
+  </a>
+  <a class="item active" >
+    媒体关注度
+  </a>
+  </div>
+        <div>
+        
+              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main2" style="width: 600px;height:400px;"></div>
+      <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'));
+
+option = {
+    title: {
+        x: 'center',
+        text: '媒体关注度',
+        subtext: '数据来自 深圳证券交易所',
+        link: 'http://www.szse.cn'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    calculable: true,
+    grid: {
+        borderWidth: 0,
+        y: 80,
+        y2: 60
+    },
+    xAxis: [
+        {
+            type: 'category',
+            show: false,
+            data: ['Line', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            show: false
+        }
+    ],
+    series: [
+        {
+            name: 'ECharts例子个数统计',
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
+                    }
+                }
+            },
+            data: [12,21,10,4,12,5,6,5,25,23,7],
+            markPoint: {
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    formatter: function(params){
+                        return '<img src="' 
+                                + params.data.symbol.replace('image://', '')
+                                + '"/>';
+                    }
+                },
+                data: [
+                    {xAxis:0, y: 350, name:'Line', symbolSize:20, symbol: 'image://../asset/ico/折线图.png'},
+                    {xAxis:1, y: 350, name:'Bar', symbolSize:20, symbol: 'image://../asset/ico/柱状图.png'},
+                    {xAxis:2, y: 350, name:'Scatter', symbolSize:20, symbol: 'image://../asset/ico/散点图.png'},
+                    {xAxis:3, y: 350, name:'K', symbolSize:20, symbol: 'image://../asset/ico/K线图.png'},
+                    {xAxis:4, y: 350, name:'Pie', symbolSize:20, symbol: 'image://../asset/ico/饼状图.png'},
+                    {xAxis:5, y: 350, name:'Radar', symbolSize:20, symbol: 'image://../asset/ico/雷达图.png'},
+                    {xAxis:6, y: 350, name:'Chord', symbolSize:20, symbol: 'image://../asset/ico/和弦图.png'},
+                    {xAxis:7, y: 350, name:'Force', symbolSize:20, symbol: 'image://../asset/ico/力导向图.png'},
+                    {xAxis:8, y: 350, name:'Map', symbolSize:20, symbol: 'image://../asset/ico/地图.png'},
+                    {xAxis:9, y: 350, name:'Gauge', symbolSize:20, symbol: 'image://../asset/ico/仪表盘.png'},
+                    {xAxis:10, y: 350, name:'Funnel', symbolSize:20, symbol: 'image://../asset/ico/漏斗图.png'},
+                ]
+            }
+        }
+    ]
+};
+                    
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+       <table class="ui celled table" id='meititable'>
+  <thead>
+    <tr >
+        <th class='collapsed'>Rank</th>
+        <th >公司简称</th>
+    <th>股票代码</th>
+    <th>负面舆情指数</th>
+    <th>查看</th>
+  </tr></thead>
+  <tbody id='top10table'>
+    <tr>
+        <td>1.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>2.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+      <tr>
+        <td >3.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>4.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a href="">查看详情</a></th>
+    </tr>
+       <tr>
+        <td >5.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>6.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >7.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+    <tr>
+        <td>8.</td>
+      <td>
+        <div>招商证券</div>
+      </td>
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >9.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+       <tr>
+        <td >10.</td>
+      <td>
+        <div>平安银行</div>
+      </td>
+        
+      <td>000001</td>
+      <td>20</td>
+        <th><a>查看详情</a></th>
+    </tr>
+      
+  </tbody>
+  <tfoot>
+    <tr><th colspan="3">
+      <div class="ui right floated pagination menu">
+        <a class="icon item">
+          <i class="left chevron icon"></i>
+        </a>
+        <a class="item">1</a>
+        <a class="item">2</a>
+        <a class="item">3</a>
+        <a class="item">4</a>
+        <a class="icon item">
+          <i class="right chevron icon"></i>
+        </a>
+      </div>
+    </th>
+  </tr></tfoot>
+</table>   
+
         
     </div>
+        </div>
+   
     </div>
     </div>
   
 </body>
 
 </html>
-
-
