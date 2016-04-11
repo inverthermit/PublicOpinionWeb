@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Templete Page</title>
+  <title>行业分析</title>
 
   <link rel="stylesheet" type="text/css" href="./dist/semantic.css">
 
@@ -34,6 +34,7 @@
   <a class="item" href="region.html">地区分析</a>
 </div>
     <div class='ui ignored info message'>
+
             <script type="text/javascript">
     $.get("industrydata.do",function(data,status){
     var arr=data.data;
@@ -79,7 +80,28 @@
         var tableString;
         for(var i=0;i<keys.length;i++)
 		{
-		
+			
+			if(i==0)
+			{
+				$('#no1').html(keys[i]);
+				$('#no1num').html(values[i]);
+			}
+			else if(i==1)
+			{
+				$('#no2').html(keys[i]);
+				$('#no2num').html(values[i]);
+			}
+			else if(i==2)
+			{
+				$('#no3').html(keys[i]);
+				$('#no3num').html(values[i]);
+			}
+			else if(i==3)
+			{
+				$('#no4').html(keys[i]);
+				$('#no4num').html(values[i]);
+			}
+			
 		    tableString+='<tr>';
 		    tableString+='<td class="collapsing center aligned">'+keys[i]+'</td>';
 		    var selectedicon;
@@ -102,6 +124,7 @@
 		    
 		    
 		    tableString+='<td>'+iconn.replace('undefined','')+'</td>';
+		    tableString+='<td>'+values[i]+'</td>';
 			tableString+='</tr>';
 			iconn='';
 		}
@@ -117,10 +140,20 @@
    行业舆情分析
   </div>
 </h4>
+    <div class="ui ignored warning message">
+行业方面，出现舆情最多的是<nobr id='no1'></nobr>，指数为<nobr id='no1num'></nobr>;紧随其后的有<nobr id='no2'></nobr>(<nobr id='no2num'></nobr>),<nobr id='no3'></nobr>(<nobr id='no3num'></nobr>),<nobr id='no4'></nobr>(<nobr id='no4num'></nobr>)
+
+</div>
 <table class="ui orange celled striped table">
   <thead>
-    <tr><th colspan="2">
-      结果列表
+    <tr><th>
+      行业
+    </th>
+    <th>
+      
+    </th>
+    <th>
+      指数
     </th>
   </tr></thead>
   <tbody id='industrytable'>

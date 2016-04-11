@@ -76,6 +76,28 @@ $(function(){
 			for(k in data){
 				if(i <= 12){
 					var _cls = i < 4 ? 'active' : ''; 
+					
+					if(i==1)
+					{
+						$('#no1').html(chinaMapConfig.names[k]);
+						$('#no1num').html(data[k].value);
+					}
+					else if(i==2)
+					{
+						$('#no2').html(chinaMapConfig.names[k]);
+						$('#no2num').html(data[k].value);
+					}
+					else if(i==3)
+					{
+						$('#no3').html(chinaMapConfig.names[k]);
+						$('#no3num').html(data[k].value);
+					}
+					else if(i==4)
+					{
+						$('#no4').html(chinaMapConfig.names[k]);
+						$('#no4num').html(data[k].value);
+					}
+			
 					$('#MapControl .list1').append('<li name="'+k+'"><div class="mapInfo"><i class="'+_cls+'">'+(i++)+'</i><span>'+chinaMapConfig.names[k]+'</span><b>'+data[k].value+'</b></div></li>')
 				}else if(i <= 24){
 					$('#MapControl .list2').append('<li name="'+k+'"><div class="mapInfo"><i>'+(i++)+'</i><span>'+chinaMapConfig.names[k]+'</span><b>'+data[k].value+'</b></div></li>')
@@ -132,6 +154,7 @@ $(function(){
 			});
 			
 			$('#MapColor').show();
+			
 	// 	}
 	// });
 
@@ -162,6 +185,9 @@ $(function(){
     地区舆情分析
   </div>
 </h4>
+    <div nowrap class="ui ignored warning message">
+地区方面，出现舆情最多的是<nobr id='no1'></nobr>，占比为<nobr id='no1num'></nobr>;紧随其后的有<nobr id='no2'></nobr>(<nobr id='no2num'></nobr>),<nobr id='no3'></nobr>(<nobr id='no3num'></nobr>),<nobr id='no4'></nobr>(<nobr id='no4num'></nobr>)
+</div>
 	<div>
 		
 

@@ -42,6 +42,14 @@
 		$("#smeperc").html(persme+'%');
 		$("#chinextnum").html(chinext);
 		$("#chinextperc").html(perchinext+'%');
+		
+		$("#wordmainnum").html(main);
+		$("#wordmainperc").html(permain+'%');
+		$("#wordsmenum").html(sme);
+		$("#wordsmeperc").html(persme+'%');
+		$("#wordchinextnum").html(chinext);
+		$("#wordchinextperc").html(perchinext+'%');
+		
 		//console.log(permain+','+persme+','+perchinext);
 		var d = new Date();
 		var str = d.getFullYear()+"."+(d.getMonth()+1)+"."+d.getDate();
@@ -111,7 +119,7 @@
 			});
 				});
 		</script>
-<link rel="stylesheet" type="text/css" href="kitchensink.css">
+
 </head>
 <body id="sink">
             <div class="ui grid">
@@ -135,6 +143,11 @@
     <div id='titletime'>2016.3.10</div> 深市各版块舆情情况分析
   </div>
 </h4>
+<div class="ui ignored warning message">
+<p>板块方面，深市主板出现舆情数目为<nobr id='wordmainnum'></nobr>，占比<nobr id='wordmainperc'></nobr>；
+中小板舆情数目为<nobr id='wordsmenum'></nobr>，占比<nobr id='wordsmeperc'></nobr>；
+创业板舆情数目为<nobr id='wordchinextnum'></nobr>，占比<nobr id='wordchinextperc'></nobr>。</p>
+</div>
         <table class="ui celled table">
   <thead>
     <tr><th>板块</th>

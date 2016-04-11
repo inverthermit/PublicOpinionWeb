@@ -64,8 +64,40 @@ $(document).ready(function(){
         <div>
         
               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="width: 800px;height:400px;"></div>
       <script type="text/javascript">
+       $.get("netizendata.do",function(data,status){
+    var arr=data.data;
+    var keys=new Array();
+    var values=new Array();
+   //console.log(arr[0].value);
+    for(var o in arr){  
+        keys[9-o]=arr[o].key;//.split('#')[1];
+         values[9-o]=arr[o].value;
+      }
+      
+    for(var i=0;i<values.length-1;i++){
+  for(var j=0;j<values.length-i-1;j++){
+   if(values[j]>values[j+1]){
+    var swap=keys[j];
+    keys[j]=keys[j+1];
+    keys[j+1]=swap;
+    
+    var swap2=values[j];
+    values[j]=values[j+1];
+    values[j+1]=swap2;
+	   }
+	  }
+	 }
+	
+	var names=new Array();
+	var codes=new Array();
+	for(var i=0;i<keys.length;i++)
+	{
+		names[i]=keys[i].split('#')[1];
+		codes[i]=keys[i].split('#')[0];
+	}
+	
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
 
@@ -97,7 +129,7 @@ option = {
         {
             type: 'category',
             show: false,
-            data: ['Line', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']
+            data: names
         }
     ],
     yAxis: [
@@ -108,7 +140,7 @@ option = {
     ],
     series: [
         {
-            name: 'ECharts例子个数统计',
+            name: '网民关注度',
             type: 'bar',
             itemStyle: {
                 normal: {
@@ -128,7 +160,7 @@ option = {
                     }
                 }
             },
-            data: [12,21,10,4,12,5,6,5,25,23,7],
+            data: values,
             markPoint: {
                 tooltip: {
                     trigger: 'item',
@@ -159,6 +191,23 @@ option = {
                     
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+        
+        //设置表格
+        var tableString;
+        for(var i=keys.length-1;i>=0;i--)
+		{
+		
+		    tableString+='<tr>';
+		    tableString+='<td>'+(10-i)+'</td>';
+		    tableString+='<td>'+names[i]+'</td>';
+		    tableString+='<td>'+codes[i]+'</td>';
+		    tableString+='<td>'+values[i]+'</td>';
+		    tableString+='<td><a href="corp/'+codes[i]+'">查看详情</a></td>';
+			tableString+='</tr>';
+		}
+        
+        $("#netizentable").html(tableString);
+        });
     </script>
        <table class="ui celled table" id='wangmintable'>
   <thead>
@@ -169,104 +218,7 @@ option = {
     <th>负面舆情指数</th>
     <th>查看</th>
   </tr></thead>
-  <tbody id='top10table'>
-    <tr>
-        <td>1.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>2.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-      <tr>
-        <td >3.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>4.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a href="">查看详情</a></th>
-    </tr>
-       <tr>
-        <td >5.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>6.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >7.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>8.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >9.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >10.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-      
+  <tbody id='netizentable'>
   </tbody>
   <tfoot>
     <tr><th colspan="3">
@@ -301,7 +253,7 @@ option = {
         <div>
         
               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main2" style="width: 600px;height:400px;"></div>
+    <div id="main2" style="width: 800px;height:400px;"></div>
       <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main2'));
