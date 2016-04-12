@@ -22,7 +22,8 @@ public class SaveTools {
 	{
 		//saveKeywords();
 		//saveVector();
-		saveFilesLDA();
+		//saveFilesLDA();
+		getContentbyCode("300431");
 	}
 
 	public static void saveKeywords()//Save NLPIR output Keywords to 'miningresult'
@@ -49,6 +50,28 @@ public class SaveTools {
 			}
 			
 		}
+	}
+	
+	public static ArrayList<String> getContentbyCode(String code)//Save NLPIR output Keywords to 'miningresult'
+	{
+		ArrayList<String> result=new ArrayList<String>();
+		Textdata td=null;
+		TextdataDAO tdd=new TextdataDAO();
+		Miningresult mr=null;
+		MiningresultDAO mrd=new MiningresultDAO();
+		List<Miningresult> l=mrd.findByLcname(code);
+		Date date=new Date();
+		DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		for(int i=0;i<l.size();i++)
+		{
+			mr=l.get(i);
+			td=tdd.findById(mr.getTid());
+			String text=td.getTitle()+"##split##"+td.getContent()+"##split##"+td.getTime()+"##split##"+td.getUrl();
+			result.add(text);
+			//System.out.println(text);
+			
+		}
+		return result;
 	}
 	
 	public static void saveVector()//Save Content Vector 'textdata'

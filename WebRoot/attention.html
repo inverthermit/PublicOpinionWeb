@@ -202,7 +202,7 @@ option = {
 		    tableString+='<td>'+names[i]+'</td>';
 		    tableString+='<td>'+codes[i]+'</td>';
 		    tableString+='<td>'+values[i]+'</td>';
-		    tableString+='<td><a href="corp/'+codes[i]+'">查看详情</a></td>';
+		    tableString+='<td><a href="corp.html?code='+codes[i]+'">查看详情</a></td>';
 			tableString+='</tr>';
 		}
         
@@ -215,7 +215,7 @@ option = {
         <th class='collapsed'>Rank</th>
         <th >公司简称</th>
     <th>股票代码</th>
-    <th>负面舆情指数</th>
+    <th>舆情指数</th>
     <th>查看</th>
   </tr></thead>
   <tbody id='netizentable'>
@@ -286,7 +286,7 @@ option = {
         {
             type: 'category',
             show: false,
-            data: ['Line', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']
+            data: ['新联电子', '徐工机械', '德美化工', '天齐锂业', '多氟多', '世纪瑞尔', '暴风科技', '财信发展', '辉丰股份', '大亚科技']
         }
     ],
     yAxis: [
@@ -317,7 +317,7 @@ option = {
                     }
                 }
             },
-            data: [12,21,10,4,12,5,6,5,25,23,7],
+            data: [10,11,11,12,12,12,12,13,17,22],
             markPoint: {
                 tooltip: {
                     trigger: 'item',
@@ -355,108 +355,9 @@ option = {
         <th class='collapsed'>Rank</th>
         <th >公司简称</th>
     <th>股票代码</th>
-    <th>负面舆情指数</th>
+    <th>舆情指数</th>
     <th>查看</th>
-  </tr></thead>
-  <tbody id='top10table'>
-    <tr>
-        <td>1.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>2.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-      <tr>
-        <td >3.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>4.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a href="">查看详情</a></th>
-    </tr>
-       <tr>
-        <td >5.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>6.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >7.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-    <tr>
-        <td>8.</td>
-      <td>
-        <div>招商证券</div>
-      </td>
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >9.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-       <tr>
-        <td >10.</td>
-      <td>
-        <div>平安银行</div>
-      </td>
-        
-      <td>000001</td>
-      <td>20</td>
-        <th><a>查看详情</a></th>
-    </tr>
-      
-  </tbody>
+  </tr></thead><tbody id="meititable"><tr><td>1</td><td>大亚科技</td><td>000910</td><td>22</td><td><a href="corp/000910">查看详情</a></td></tr><tr><td>2</td><td>辉丰股份</td><td>002496</td><td>17</td><td><a href="corp/002496">查看详情</a></td></tr><tr><td>3</td><td>财信发展</td><td>000838</td><td>13</td><td><a href="corp/000838">查看详情</a></td></tr><tr><td>4</td><td>暴风科技</td><td>300431</td><td>12</td><td><a href="corp/300431">查看详情</a></td></tr><tr><td>5</td><td>世纪瑞尔</td><td>300150</td><td>12</td><td><a href="corp/300150">查看详情</a></td></tr><tr><td>6</td><td>多氟多</td><td>002407</td><td>12</td><td><a href="corp/002407">查看详情</a></td></tr><tr><td>7</td><td>天齐锂业</td><td>002466</td><td>12</td><td><a href="corp/002466">查看详情</a></td></tr><tr><td>8</td><td>德美化工</td><td>002054</td><td>11</td><td><a href="corp/002054">查看详情</a></td></tr><tr><td>9</td><td>徐工机械</td><td>000425</td><td>11</td><td><a href="corp/000425">查看详情</a></td></tr><tr><td>10</td><td>新联电子</td><td>002546</td><td>10</td><td><a href="corp/002546">查看详情</a></td></tr></tbody>
   <tfoot>
     <tr><th colspan="3">
       <div class="ui right floated pagination menu">
@@ -481,7 +382,7 @@ option = {
    
     </div>
     </div>
-  
+  </div>
 </body>
 
 </html>

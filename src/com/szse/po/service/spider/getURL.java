@@ -74,7 +74,7 @@ public class getURL {
 			    		AndFilter linkFilter=new AndFilter(new TagNameFilter("a"),
 			                    new HasAttributeFilter("class","note"));
 			            NodeList nodes = parser.extractAllNodesThatMatch(linkFilter);
-			            //System.out.println(nodes3.size());
+			            System.out.println("数据条数："+nodes.size());
 			            for(int j=0;j<nodes.size();j++)
 			            {
 			            	Node aNode=nodes.elementAt(j);
@@ -87,11 +87,12 @@ public class getURL {
 			            	{
 			            		String title=l.getAttribute("title");
 			            		ResultLinks.add(link+"####"+title);
-			            		System.out.println(l.toHtml());
+			            		//System.out.println(l.toHtml());
 			            	}
 			            	
 			            }
 			            i++;
+			            
 					}
 					catch(Exception ee)
 					{

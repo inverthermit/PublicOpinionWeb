@@ -53,6 +53,7 @@ public class Spider {
 	
 	public void StartSpider()
 	{
+		System.out.println("开始采集数据...");
 		ArrayList<String> urls=getURL.getURLList();
 		for(int i=0;i<urls.size();i++)
 		{
@@ -60,6 +61,7 @@ public class Spider {
 			//System.out.println(r.get("time"));
 			saveTextData(r);
 		}
+		System.out.println("采集数据结束...");
 	}
 	
 	
@@ -79,7 +81,7 @@ public class Spider {
 		td.setTitle(data.get("title"));
 		TextdataDAO ud=new TextdataDAO();
 		ud.save(td);
-		System.out.println(td.getTid());
+		//System.out.println(td.getTid());
 		
 	}
 

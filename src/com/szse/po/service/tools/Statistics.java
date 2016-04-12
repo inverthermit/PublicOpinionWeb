@@ -8,7 +8,10 @@ import com.szse.po.service.classification.Classifier;
 
 public class Statistics {
 
-	
+	public static void main(String[] args)
+	{
+		getTop10Info(null);
+	}
 	public static List<Map.Entry<String, Integer>> classifylist=Classifier.classifynotsave();
 	public static List<Map.Entry<String, Integer>> classifylistNeg=Classifier.classifynotsaveNeg();
 	public static Map<String,Integer> getBoardInfo(List<Map.Entry<String, Integer>> infoIds)
@@ -125,9 +128,9 @@ public class Statistics {
 		if(infoIds==null)
 			infoIds=classifylistNeg;
 		Map<String,Double> result=new HashMap<String,Double>();
+		
 		for (int i = 0; i < infoIds.size(); i++) {
-			if(i>=10)
-				break;
+			
 		    String id = infoIds.get(i).getKey();
 		    int n=infoIds.get(i).getValue();
 		    HashMap<String,String> info=Analysis.findByCode(id);
@@ -139,6 +142,8 @@ public class Statistics {
 		    		if(!result.containsKey(key))
 		    		{
 		    			result.put(key, n*3.66);
+		    			if(result.size()==10)
+		    				break;
 		    		}
 		    	}
 		    }
@@ -161,8 +166,7 @@ public class Statistics {
 			infoIds=classifylist;
 		Map<String,Double> result=new HashMap<String,Double>();
 		for (int i = 0; i < infoIds.size(); i++) {
-			if(i>=10)
-				break;
+			
 		    String id = infoIds.get(i).getKey();
 		    int n=infoIds.get(i).getValue();
 		    HashMap<String,String> info=Analysis.findByCode(id);
@@ -174,6 +178,8 @@ public class Statistics {
 		    		if(!result.containsKey(key))
 		    		{
 		    			result.put(key, n*1.0);
+		    			if(result.size()==10)
+		    				break;
 		    		}
 		    	}
 		    }
@@ -189,7 +195,11 @@ public class Statistics {
 		return result;
 		
 	}
-	
+
+	public static ArrayList<String> getgetContentbyCode(String code)
+	{
+		return SaveTools.getContentbyCode(code);
+	}
 	public static String getRegionPinyin(String chinese)
 	{
 		for(int i=0;i<provinces.length;i++)

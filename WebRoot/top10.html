@@ -17,7 +17,6 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		
 		<script src="js/echarts.min.js"></script>
-<link rel="stylesheet" type="text/css" href="kitchensink.css">
 </head>
 <body >
             <div class="ui grid">
@@ -47,9 +46,10 @@
    //console.log(arr[0].value);
     for(var o in arr){  
         keys[9-o]=arr[o].key;//.split('#')[1];
+        
          values[9-o]=arr[o].value;
       }
-      
+      //console.log(keys[1]);
     for(var i=0;i<values.length-1;i++){
   for(var j=0;j<values.length-i-1;j++){
    if(values[j]>values[j+1]){
@@ -63,11 +63,12 @@
 	   }
 	  }
 	 }
-	
+	//console.log(keys[0]);
 	var names=new Array();
 	var codes=new Array();
 	for(var i=0;i<keys.length;i++)
 	{
+		//console.log(keys[i]);
 		names[i]=keys[i].split('#')[1];
 		codes[i]=keys[i].split('#')[0];
 	}
@@ -133,7 +134,7 @@
 		    tableString+='<td>'+names[i]+'</td>';
 		    tableString+='<td>'+codes[i]+'</td>';
 		    tableString+='<td>'+values[i]+'</td>';
-		    tableString+='<td><a href="corp/'+codes[i]+'">查看详情</a></td>';
+		    tableString+='<td><a href="corp.html?code='+codes[i]+'">查看详情</a></td>';
 			tableString+='</tr>';
 		}
         

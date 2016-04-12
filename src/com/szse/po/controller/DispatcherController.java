@@ -242,10 +242,46 @@ public class DispatcherController {
           out.write(result.toString());
       }  
       
+      @RequestMapping(value="/corpdata.do")
       public void CorpResult(HttpServletRequest request,
-              HttpServletResponse response) {
-      	
-      }  
+              HttpServletResponse response) throws IOException{
+    	  //getTop10Info();
+    	  String code=(String)request.getParameter("code");
+    	  //System.out.println("hello?");
+    	  System.out.println(code);
+    	  if(!code.equals("null"))
+    	  {
+    		  ArrayList<String> corpsresult=Statistics.getgetContentbyCode(code);
+    		  if(corpsresult.size()>0)
+    		  {
+    			  JSONObject result = new JSONObject();  
+    		  		 JSONArray data=new JSONArray();  
+    		     	 result.put("type", "corpdata");
+    			  for(int i=0;i<corpsresult.size();i++)
+        		  {
+    				  String[] array=corpsresult.get(i).split("##split##");
+    				  if(array.length==4)
+    				  {
+    					  JSONObject obj = new JSONObject();   
+        	 			  obj.put("title", array[0]);
+        	 			  obj.put("content", array[1]);
+        	 			  obj.put("time", array[2]);
+        	 			  obj.put("url", array[3]);
+        	 			  data.put(obj);
+    				  }
+    				  
+        		  }
+    			  result.put("data", data);
+    		 	     System.out.println(result.toString());
+    		 	     response.setCharacterEncoding("UTF-8");
+    		 	     response.setContentType("application/json");
+    		          PrintWriter out = response.getWriter(); 
+    		          out.write(result.toString());
+    		  }
+    		  
+    	  }
+    	 
+      } 
       
       
 }

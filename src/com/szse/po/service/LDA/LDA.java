@@ -119,7 +119,7 @@ public class LDA {
 			}
 		}
 	  }
-	}
+	}*/
 	
 	public int count(String filename){
 		try{
@@ -142,5 +142,5 @@ public class LDA {
 		}
 		return 0;
     }
-	*/
+	
 }

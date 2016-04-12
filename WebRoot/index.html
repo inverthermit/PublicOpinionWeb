@@ -34,109 +34,84 @@
   <a class="item" href="industry.html">行业分析</a>
   <a class="item" href="region.html">地区分析</a>
 </div>
-    <div class='ui ignored info message'><div stype="text-align:center">
+    <div class='ui ignored info message'><div style="text-align:center">
+
+            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+            <div class="ui grid">
+            <div class="eight wide column">
+             <h3 class="ui header">
+  <i class='dashboard icon'></i>
+  <div class="content">
+   上市公司数目
+  </div>
+</h3>
+            <div id="main" style="width: 450px;height:450px;"></div>
+            </div>
+            <div class="eight wide column">
+             <h3 class="ui header">
+  <i class='dashboard icon'></i>
+  <div class="content">
+   数据采集速度
+  </div>
+</h3>
+            <div id="main2" style="width: 450px;height:450px;"></div>
+            <!-- <div id="main" style="width: 1000px;height:500px;"></div> -->
+            </div>
+    </div>
+         <h3 class="ui header">
+  <i class='browser icon'></i>
+  <div class="content">
+   深证成指
+  </div>
+</h3>
     <object type="application/x-shockwave-flash" data="http://finance.sina.com.cn/flash/cn.swf?" width="800" height="800" id="flash" style="visibility: visible;"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><param name="flashvars" value="symbol=sz399001&amp;code=iddg64geja6fea4eafh9jbj7c5j4ie5d&amp;s=3"></object>
     </div>
-            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 800px;height:500px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-var option = {
+        var myChart2 = echarts.init(document.getElementById('main2'));
+option = {
     tooltip : {
-        formatter: "{a} <br/>{c} {b}"
+        formatter: "{a} <br/>{b} : {c}家"
     },
     toolbox: {
-        show: true,
         feature: {
-            restore: {show: true},
-            saveAsImage: {show: true}
         }
     },
-    series : [
+    series: [
         {
             name: '上市公司数目',
             type: 'gauge',
-            z: 3,
             min: 1700,
-            max: 1920,
-            splitNumber: 11,
-            radius: '50%',
-            axisLine: {            // 坐标轴线
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    width: 10
-                }
-            },
-            axisTick: {            // 坐标轴小标记
-                length: 15,        // 属性length控制线长
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    color: 'auto'
-                }
-            },
-            splitLine: {           // 分隔线
-                length: 20,         // 属性length控制线长
-                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                    color: 'auto'
-                }
-            },
-            title : {
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder',
-                    fontSize: 20,
-                    fontStyle: 'italic'
-                }
-            },
-            detail : {
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder'
-                }
-            },
-            data:[{value: 	1761, name: '上市公司(家)'}]
-        },
+            max: 1900,
+            detail: {formatter:'{value}家'},
+            data: [{value: 1761, name: '上市公司数目'}]
+        }
+    ]
+};
+option2 = {
+    tooltip : {
+        formatter: "{a} <br/>{b} : {c}家"
+    },
+    toolbox: {
+        feature: {
+        }
+    },
+    series: [
         {
             name: '数据采集速度',
             type: 'gauge',
-            center: ['20%', '55%'],    // 默认全局居中
-            radius: '35%',
-            min:0,
-            max:7,
-            endAngle:45,
-            splitNumber:7,
-            axisLine: {            // 坐标轴线
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    width: 8
-                }
-            },
-            axisTick: {            // 坐标轴小标记
-                length:12,        // 属性length控制线长
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    color: 'auto'
-                }
-            },
-            splitLine: {           // 分隔线
-                length:20,         // 属性length控制线长
-                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                    color: 'auto'
-                }
-            },
-            pointer: {
-                width:5
-            },
-            title: {
-                offsetCenter: [0, '-30%'],       // x, y，单位px
-            },
-            detail: {
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder'
-                }
-            },
-            data:[{value: 2.6, name: 'x100 条/分钟'}]
+            min: 100,
+            max: 320,
+            detail: {formatter:'{value}条/分钟'},
+            data: [{value: 170, name: '数据采集速度'}]
         }
     ]
 };
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+         myChart2.setOption(option2);
     </script>
         
     </div>
