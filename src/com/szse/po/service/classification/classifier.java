@@ -23,7 +23,7 @@ public class Classifier {
 		{
 			td=l.get(i);
 			String code=getGubaCode(td.getUrl());
-			if(code!=null)
+			if(code!=null&&mrd.findByTid(td.getTid()).size()==0)
 			{
 				//if(code.equals("002161"))
 				//System.out.println(td.getUrl()+td.getTime()+td.getTitle()+td.getContent());

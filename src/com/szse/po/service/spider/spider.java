@@ -55,7 +55,7 @@ public class Spider {
 	{
 		System.out.println("开始采集数据...");
 		ArrayList<String> urls=getURL.getURLList();
-		for(int i=0;i<urls.size();i++)
+		for(int i=0;i<urls.size();i++)//
 		{
 			HashMap<String,String> r=GetDetails(urls.get(i));
 			//System.out.println(r.get("time"));

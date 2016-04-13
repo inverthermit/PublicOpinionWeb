@@ -74,7 +74,7 @@ public class getURL {
 			    		AndFilter linkFilter=new AndFilter(new TagNameFilter("a"),
 			                    new HasAttributeFilter("class","note"));
 			            NodeList nodes = parser.extractAllNodesThatMatch(linkFilter);
-			            System.out.println("数据条数："+nodes.size());
+			            //System.out.println("数据条数："+nodes.size());
 			            for(int j=0;j<nodes.size();j++)
 			            {
 			            	Node aNode=nodes.elementAt(j);

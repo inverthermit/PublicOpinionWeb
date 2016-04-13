@@ -14,10 +14,10 @@ public class ProcessAll {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*//Spider the Newest Data.
+		//Spider the Newest Data.
 		Spider spi=new Spider();
 		spi.StartSpider();
-		*/
+		
 		//Classify and Get the Stock Code.
 		System.out.println("开始分类...");
 		List<Map.Entry<String, Integer>> list=Classifier.classify();
